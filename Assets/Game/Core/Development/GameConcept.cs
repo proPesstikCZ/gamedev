@@ -72,6 +72,8 @@ namespace Game.Core
         NotEnoughMoney = 10,
         ProjectAlreadyRunning = 11,
         Bankrupt = 12,
+        /// <summary>The game would be released after the platform's last year (EndYear).</summary>
+        PlatformEndsBeforeRelease = 13,
     }
 
     public static class ConceptValidator
@@ -118,7 +120,9 @@ namespace Game.Core
             if (studio != null)
             {
                 if (studio.IsBankrupt) errors.Add(ConceptError.Bankrupt);
-                if (studio.Money < UpfrontCost(concept, db, studio)) errors.Add(ConceptError.NotEnoughMoney);
+                // A free start (own dev kit, own engine) is allowed even in debt: it is the way out of it.
+                long cost = UpfrontCost(concept, db, studio);
+                if (cost > 0 && studio.Money < cost) errors.Add(ConceptError.NotEnoughMoney);
             }
             return errors;
         }

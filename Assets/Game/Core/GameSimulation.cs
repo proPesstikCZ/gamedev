@@ -13,6 +13,8 @@ namespace Game.Core
         private List<TrendNews> _news = new List<TrendNews>();
         // Costs paid at the start of the active project; reported with the released game.
         private long _projectCost;
+        // Set when a month starts; rent and bankruptcy are settled after the week's sales.
+        private bool _monthEndPending;
 
         public GameDatabaseData Database { get; }
         public GameClock Clock { get; }
@@ -80,11 +82,29 @@ namespace Game.Core
         }
 
         /// <summary>Errors that would stop this concept from starting now. Empty = can start.</summary>
-        public List<ConceptError> ValidateConcept(GameConcept concept)
+        public List<ConceptError> ValidateConcept(GameConcept concept, int qaWeeks = 0)
         {
             var errors = ConceptValidator.Validate(concept, Database, Date.Year, Studio);
             if (ActiveProject != null) errors.Add(ConceptError.ProjectAlreadyRunning);
+            if (!errors.Contains(ConceptError.UnknownPlatform) && !errors.Contains(ConceptError.PlatformNotAvailable)
+                && qaWeeks > MaxQaWeeksFor(concept))
+                errors.Add(ConceptError.PlatformEndsBeforeRelease);
             return errors;
+        }
+
+        /// <summary>
+        /// Most QA weeks a game started now can have and still be released while the platform
+        /// takes new games (until the end of its EndYear). -1 = cannot be released in time even without QA.
+        /// </summary>
+        public int MaxQaWeeksFor(GameConcept concept)
+        {
+            var dev = Database.Balance.Development;
+            var platform = Database.GetPlatform(concept?.PlatformId);
+            if (platform == null) return -1;
+            int workWeeks = dev.PreProductionWeeks + dev.ProductionWeeks + dev.FinishingWeeks;
+            int lastWeek = (platform.EndYear - Clock.StartYear + 1) * GameDate.WeeksPerYear - 1;
+            int weeksLeft = lastWeek - Clock.TotalWeeks;
+            return Math.Min(dev.MaxQaWeeks, weeksLeft - workWeeks);
         }
 
         /// <summary>
@@ -93,28 +113,31 @@ namespace Game.Core
         /// </summary>
         public List<ConceptError> StartProject(GameConcept concept, int qaWeeks = 0)
         {
-            var errors = ValidateConcept(concept);
-            if (errors.Count > 0) return errors;
-
             var dev = Database.Balance.Development;
             if (qaWeeks < 0 || qaWeeks > dev.MaxQaWeeks) throw new ArgumentOutOfRangeException(nameof(qaWeeks), qaWeeks, $"Must be 0..{dev.MaxQaWeeks}.");
+            var errors = ValidateConcept(concept, qaWeeks);
+            if (errors.Count > 0) return errors;
+
             var platform = Database.GetPlatform(concept.PlatformId);
             long cost = ConceptValidator.UpfrontCost(concept, Database, Studio);
             Studio.Spend(cost);
             Studio.AddDevKit(platform.Id);
 
             float tech = DevelopmentProject.TechnologyFor(concept.Engine, platform, dev);
-            ActiveProject = new DevelopmentProject(concept, dev, Studio.Skill, tech, qaWeeks);
+            // QA cannot be stretched later past the platform's last year.
+            ActiveProject = new DevelopmentProject(concept, dev, Studio.Skill, tech, qaWeeks, MaxQaWeeksFor(concept));
             _projectCost = cost;
             return errors;
         }
 
-        /// <summary>Moves the game one week forward. Does nothing after bankruptcy.</summary>
+        /// <summary>
+        /// Moves the game one week forward: sales, development and release first, then rent and
+        /// the bankruptcy check, so the week's income counts. Does nothing after bankruptcy.
+        /// </summary>
         public void AdvanceWeek()
         {
             if (IsGameOver) return;
             Clock.AdvanceWeek();
-            if (IsGameOver) return;
 
             for (int i = 0; i < _releasedGames.Count; i++)
             {
@@ -125,6 +148,13 @@ namespace Game.Core
             }
 
             if (ActiveProject != null && ActiveProject.AdvanceWeek()) Release();
+
+            if (_monthEndPending)
+            {
+                _monthEndPending = false;
+                var balance = Database.Balance;
+                Studio.ApplyMonthEnd(balance.MonthlyGarageCost, balance.MonthsInDebtBeforeBankruptcy);
+            }
         }
 
         private void Release()
@@ -178,11 +208,7 @@ namespace Game.Core
             };
         }
 
-        private void OnMonthStarted(GameDate date)
-        {
-            var balance = Database.Balance;
-            Studio.ApplyMonthEnd(balance.MonthlyGarageCost, balance.MonthsInDebtBeforeBankruptcy);
-        }
+        private void OnMonthStarted(GameDate date) => _monthEndPending = true;
 
         private void OnYearStarted(GameDate date)
         {

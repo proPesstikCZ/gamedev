@@ -51,8 +51,9 @@ namespace Game.Core
             var concept = Strategy == BotStrategy.FollowWeights ? ChooseByWeights(sim) : ChooseRandomly(sim);
             if (concept == null) return false;
 
-            var dev = sim.Database.Balance.Development;
-            int qa = Strategy == BotStrategy.FollowWeights ? Math.Min(QaWeeksForWeightBot, dev.MaxQaWeeks) : _random.Next(0, dev.MaxQaWeeks + 1);
+            int maxQa = sim.MaxQaWeeksFor(concept);
+            if (maxQa < 0) return false;
+            int qa = Strategy == BotStrategy.FollowWeights ? Math.Min(QaWeeksForWeightBot, maxQa) : _random.Next(0, maxQa + 1);
             if (sim.StartProject(concept, qa).Count > 0) return false;
             _gamesStarted++;
 
@@ -133,7 +134,8 @@ namespace Game.Core
             foreach (var p in sim.Database.AvailablePlatforms(sim.Date.Year))
             {
                 long kit = sim.Studio.OwnsDevKit(p.Id) ? 0 : p.DevKitCost;
-                if (kit <= sim.Studio.Money) yield return p;
+                bool releasable = sim.MaxQaWeeksFor(new GameConcept("x", null, null, p.Id, Audience.Everyone)) >= 0;
+                if ((kit == 0 || kit <= sim.Studio.Money) && releasable) yield return p;
             }
         }
 

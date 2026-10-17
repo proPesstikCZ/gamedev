@@ -45,14 +45,16 @@ namespace Game.Core
 
         private DevelopmentProject() { }
 
-        public DevelopmentProject(GameConcept concept, DevelopmentBalance balance, float skill, float technology, int qaWeeks = 0)
+        /// <param name="qaWeeksLimit">Optional lower QA limit than the balance allows, e.g. when the platform ends soon.</param>
+        public DevelopmentProject(GameConcept concept, DevelopmentBalance balance, float skill, float technology, int qaWeeks = 0,
+            int? qaWeeksLimit = null)
         {
             if (balance == null) throw new ArgumentNullException(nameof(balance));
             if (!(skill > 0f) || float.IsInfinity(skill)) throw new ArgumentOutOfRangeException(nameof(skill), skill, "Must be positive.");
             if (!(technology > 0f) || float.IsInfinity(technology)) throw new ArgumentOutOfRangeException(nameof(technology), technology, "Must be positive.");
             this.concept = concept ?? throw new ArgumentNullException(nameof(concept));
             phaseWeeks = new[] { Math.Max(1, balance.PreProductionWeeks), Math.Max(1, balance.ProductionWeeks), Math.Max(1, balance.FinishingWeeks) };
-            maxQaWeeks = Math.Max(0, balance.MaxQaWeeks);
+            maxQaWeeks = Math.Max(0, qaWeeksLimit.HasValue ? Math.Min(balance.MaxQaWeeks, qaWeeksLimit.Value) : balance.MaxQaWeeks);
             pointsPerWeek = balance.PointsPerWeek;
             this.skill = skill;
             this.technology = technology;
