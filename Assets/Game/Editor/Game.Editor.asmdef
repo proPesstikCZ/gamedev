@@ -3,7 +3,9 @@
     "rootNamespace": "Game.Editor",
     "references": [
         "Game.Core",
-        "Game.Data"
+        "Game.Data",
+        "Unity.Localization",
+        "Unity.Localization.Editor"
     ],
     "includePlatforms": [
         "Editor"

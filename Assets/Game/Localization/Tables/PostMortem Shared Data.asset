@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: PostMortem Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: PostMortem
+  m_TableCollectionNameGuidString: 8a00e2325394a8d40a1063d4674a874a
+  m_Entries:
+  - m_Id: 344641536
+    m_Key: postmortem.review
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374001664
+    m_Key: postmortem.expectations.above
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374001665
+    m_Key: postmortem.expectations.met
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374001666
+    m_Key: postmortem.expectations.below
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374001667
+    m_Key: postmortem.combo.excellent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374001668
+    m_Key: postmortem.combo.good
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374001669
+    m_Key: postmortem.combo.bad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382390272
+    m_Key: postmortem.audience.poor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382390273
+    m_Key: postmortem.bugs.many
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382390274
+    m_Key: postmortem.bugs.few
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382390275
+    m_Key: postmortem.trend.hot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382390276
+    m_Key: postmortem.trend.cold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382390277
+    m_Key: postmortem.hint.weight_high
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382390278
+    m_Key: postmortem.hint.weight_medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382390279
+    m_Key: postmortem.hint.weight_low
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382390280
+    m_Key: postmortem.area.strongest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382390281
+    m_Key: postmortem.area.weakest
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6476484526842052966
+  references:
+    version: 2
+    RefIds:
+    - rid: 6476484526842052966
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1792255608392

@@ -1,0 +1,20 @@
+# Post-mortem lines (GDD 6.6). Columns: key<TAB>en<TAB>cs.
+# Placeholders: {0} and {1} = localized names of the entry's args (genre, theme, area, audience),
+# {2} = the entry's value. See TextKeys.PostMortemArgKeys for which args each key has.
+postmortem.review	Average review: {2:0.0} / 10.	Průměrné hodnocení: {2:0.0} / 10.
+postmortem.expectations.above	The game beat what players expect these days.	Hra překonala to, co dnes hráči očekávají.
+postmortem.expectations.met	The game met what players expect these days.	Hra splnila to, co dnes hráči očekávají.
+postmortem.expectations.below	The game fell short of what players expect these days.	Hra nedosáhla na to, co dnes hráči očekávají.
+postmortem.combo.excellent	{0} and {1} are an excellent match.	{0} a téma {1} k sobě skvěle pasují.
+postmortem.combo.good	{0} and {1} work well together.	{0} a téma {1} k sobě pasují dobře.
+postmortem.combo.bad	{0} and {1} do not fit together.	{0} a téma {1} k sobě nepasují.
+postmortem.audience.poor	{0} did not suit the audience "{1}".	Žánr {0} se pro publikum „{1}“ nehodil.
+postmortem.bugs.many	Players ran into a lot of bugs. More testing would help.	Hráči narazili na spoustu chyb. Pomohlo by delší testování.
+postmortem.bugs.few	The game was nearly bug-free.	Hra byla téměř bez chyb.
+postmortem.trend.hot	{0} is in fashion right now, which helped.	Žánr {0} je teď v módě, a to pomohlo.
+postmortem.trend.cold	{0} is out of fashion right now.	Žánr {0} teď není v módě.
+postmortem.hint.weight_high	{0} players really cared about {1}.	Hráči žánru {0} ocenili oblast {1}.
+postmortem.hint.weight_medium	{0} players cared somewhat about {1}.	U žánru {0} na oblasti {1} docela záleží.
+postmortem.hint.weight_low	{0} players hardly cared about {1}.	Oblast {1} u žánru {0} skoro nikoho nezajímala.
+postmortem.area.strongest	Strongest part of the game: {0}.	Nejsilnější stránka hry: {0}.
+postmortem.area.weakest	Weakest part of the game: {0}.	Nejslabší stránka hry: {0}.

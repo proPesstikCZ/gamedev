@@ -6,7 +6,9 @@
         "UnityEditor.TestRunner",
         "Game.Core",
         "Game.Data",
-        "Game.Editor"
+        "Game.Editor",
+        "Unity.Localization",
+        "Unity.Localization.Editor"
     ],
     "includePlatforms": [
         "Editor"

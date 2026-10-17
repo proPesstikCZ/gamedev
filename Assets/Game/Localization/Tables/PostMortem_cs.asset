@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: PostMortem_cs
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: cs
+  m_SharedData: {fileID: 11400000, guid: 8a00e2325394a8d40a1063d4674a874a, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 6476484526842052968
+  m_TableData:
+  - m_Id: 344641536
+    m_Localized: "Pr\u016Fm\u011Brn\xE9 hodnocen\xED: {2:0.0} / 10."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052968
+  - m_Id: 374001664
+    m_Localized: "Hra p\u0159ekonala to, co dnes hr\xE1\u010Di o\u010Dek\xE1vaj\xED."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374001665
+    m_Localized: "Hra splnila to, co dnes hr\xE1\u010Di o\u010Dek\xE1vaj\xED."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374001666
+    m_Localized: "Hra nedos\xE1hla na to, co dnes hr\xE1\u010Di o\u010Dek\xE1vaj\xED."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374001667
+    m_Localized: "{0} a t\xE9ma {1} k sob\u011B skv\u011Ble pasuj\xED."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052968
+  - m_Id: 374001668
+    m_Localized: "{0} a t\xE9ma {1} k sob\u011B pasuj\xED dob\u0159e."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052968
+  - m_Id: 374001669
+    m_Localized: "{0} a t\xE9ma {1} k sob\u011B nepasuj\xED."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052968
+  - m_Id: 382390272
+    m_Localized: "\u017D\xE1nr {0} se pro publikum \u201E{1}\u201C nehodil."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052968
+  - m_Id: 382390273
+    m_Localized: "Hr\xE1\u010Di narazili na spoustu chyb. Pomohlo by del\u0161\xED testov\xE1n\xED."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382390274
+    m_Localized: "Hra byla t\xE9m\u011B\u0159 bez chyb."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382390275
+    m_Localized: "\u017D\xE1nr {0} je te\u010F v m\xF3d\u011B, a to pomohlo."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052968
+  - m_Id: 382390276
+    m_Localized: "\u017D\xE1nr {0} te\u010F nen\xED v m\xF3d\u011B."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052968
+  - m_Id: 382390277
+    m_Localized: "Hr\xE1\u010Di \u017E\xE1nru {0} ocenili oblast {1}."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052968
+  - m_Id: 382390278
+    m_Localized: "U \u017E\xE1nru {0} na oblasti {1} docela z\xE1le\u017E\xED."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052968
+  - m_Id: 382390279
+    m_Localized: "Oblast {1} u \u017E\xE1nru {0} skoro nikoho nezaj\xEDmala."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052968
+  - m_Id: 382390280
+    m_Localized: "Nejsiln\u011Bj\u0161\xED str\xE1nka hry: {0}."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052968
+  - m_Id: 382390281
+    m_Localized: "Nejslab\u0161\xED str\xE1nka hry: {0}."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052968
+  references:
+    version: 2
+    RefIds:
+    - rid: 6476484526842052968
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 344641536
+        - id: 374001667
+        - id: 374001668
+        - id: 374001669
+        - id: 382390272
+        - id: 382390275
+        - id: 382390276
+        - id: 382390277
+        - id: 382390278
+        - id: 382390279
+        - id: 382390280
+        - id: 382390281

@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: c4665b778f0ea83428507aec06d129de, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 6476484526842052969
+  m_TableData:
+  - m_Id: 1095421952
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141559296
+    m_Localized: "\u010Ce\u0161tina"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141559297
+    m_Localized: Give the game a name.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141559298
+    m_Localized: Pick a genre.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753600
+    m_Localized: This genre does not exist yet.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753601
+    m_Localized: Pick a theme.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753602
+    m_Localized: This theme is not available yet.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753603
+    m_Localized: Pick a platform.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753604
+    m_Localized: This platform is not on the market.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753605
+    m_Localized: This game size is not available yet.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753606
+    m_Localized: Pick an audience.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753607
+    m_Localized: Pick an engine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753608
+    m_Localized: Not enough money for the dev kit and engine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753609
+    m_Localized: A game is already in development.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753610
+    m_Localized: The studio is bankrupt.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753611
+    m_Localized: The platform will be gone before the game is done. Shorten the testing.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753612
+    m_Localized: '{0} will be popular in {1} (+{2} %).'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 1149947904
+    m_Localized: '{0} will fall out of favour in {1} ({2} %).'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  references:
+    version: 2
+    RefIds:
+    - rid: 6476484526842052969
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 1145753612
+        - id: 1149947904

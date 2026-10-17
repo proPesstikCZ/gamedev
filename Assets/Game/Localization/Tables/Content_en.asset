@@ -1,0 +1,235 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Content_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 24ef0f63e6bd4b84ea51dd3d4872489e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 340447232
+    m_Localized: Arcade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195968
+    m_Localized: Action
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195969
+    m_Localized: Puzzle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195970
+    m_Localized: Sports
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195971
+    m_Localized: Adventure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195972
+    m_Localized: Racing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195973
+    m_Localized: Shoot 'em up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195974
+    m_Localized: RPG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195975
+    m_Localized: Simulation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195976
+    m_Localized: Strategy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195977
+    m_Localized: Platformer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195978
+    m_Localized: Roguelike
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195979
+    m_Localized: Fighting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195980
+    m_Localized: FPS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195981
+    m_Localized: Survival horror
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195982
+    m_Localized: Rhythm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195983
+    m_Localized: Sandbox survival
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195984
+    m_Localized: MOBA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195985
+    m_Localized: Battle royale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195986
+    m_Localized: Card / deckbuilder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195987
+    m_Localized: Space
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195988
+    m_Localized: Fantasy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195989
+    m_Localized: Sports
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195990
+    m_Localized: War
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195991
+    m_Localized: Detective
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195992
+    m_Localized: Pirates
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195993
+    m_Localized: "Magnafox Odyss\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195994
+    m_Localized: Astari VCS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195995
+    m_Localized: Pear II
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195996
+    m_Localized: Komodor 64
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195997
+    m_Localized: Gameplay design
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195998
+    m_Localized: Story and world
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378195999
+    m_Localized: Technology
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196000
+    m_Localized: Gameplay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196001
+    m_Localized: Graphics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196002
+    m_Localized: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196003
+    m_Localized: Level design
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196004
+    m_Localized: AI and systems
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196005
+    m_Localized: Dialogue and text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196006
+    m_Localized: Polish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196007
+    m_Localized: Pre-production
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196008
+    m_Localized: Production
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196009
+    m_Localized: Finishing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196010
+    m_Localized: Testing (QA)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196011
+    m_Localized: Ready for release
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196012
+    m_Localized: Kids
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196013
+    m_Localized: Everyone
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196014
+    m_Localized: Adults
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196015
+    m_Localized: Own engine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196016
+    m_Localized: Licensed engine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196017
+    m_Localized: Excellent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196018
+    m_Localized: Good
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378196019
+    m_Localized: Bad
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: PostMortem_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 8a00e2325394a8d40a1063d4674a874a, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 6476484526842052970
+  m_TableData:
+  - m_Id: 344641536
+    m_Localized: 'Average review: {2:0.0} / 10.'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052970
+  - m_Id: 374001664
+    m_Localized: The game beat what players expect these days.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374001665
+    m_Localized: The game met what players expect these days.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374001666
+    m_Localized: The game fell short of what players expect these days.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374001667
+    m_Localized: '{0} and {1} are an excellent match.'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052970
+  - m_Id: 374001668
+    m_Localized: '{0} and {1} work well together.'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052970
+  - m_Id: 374001669
+    m_Localized: '{0} and {1} do not fit together.'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052970
+  - m_Id: 382390272
+    m_Localized: '{0} did not suit the audience "{1}".'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052970
+  - m_Id: 382390273
+    m_Localized: Players ran into a lot of bugs. More testing would help.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382390274
+    m_Localized: The game was nearly bug-free.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382390275
+    m_Localized: '{0} is in fashion right now, which helped.'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052970
+  - m_Id: 382390276
+    m_Localized: '{0} is out of fashion right now.'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052970
+  - m_Id: 382390277
+    m_Localized: '{0} players really cared about {1}.'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052970
+  - m_Id: 382390278
+    m_Localized: '{0} players cared somewhat about {1}.'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052970
+  - m_Id: 382390279
+    m_Localized: '{0} players hardly cared about {1}.'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052970
+  - m_Id: 382390280
+    m_Localized: 'Strongest part of the game: {0}.'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052970
+  - m_Id: 382390281
+    m_Localized: 'Weakest part of the game: {0}.'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052970
+  references:
+    version: 2
+    RefIds:
+    - rid: 6476484526842052970
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 344641536
+        - id: 374001667
+        - id: 374001668
+        - id: 374001669
+        - id: 382390272
+        - id: 382390275
+        - id: 382390276
+        - id: 382390277
+        - id: 382390278
+        - id: 382390279
+        - id: 382390280
+        - id: 382390281

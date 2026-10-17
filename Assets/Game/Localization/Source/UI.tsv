@@ -1,0 +1,26 @@
+# UI texts. Columns: key<TAB>en<TAB>cs. Placeholders {0}, {1}… are explained above each group.
+# Czech is usually longer: keep the UI layout flexible.
+
+# Language switch
+ui.language.en	English	English
+ui.language.cs	Čeština	Čeština
+
+# Why a concept cannot start (ConceptError)
+concept.error.empty_name	Give the game a name.	Zadej název hry.
+concept.error.unknown_genre	Pick a genre.	Vyber žánr.
+concept.error.genre_not_available	This genre does not exist yet.	Tento žánr ještě neexistuje.
+concept.error.unknown_theme	Pick a theme.	Vyber téma.
+concept.error.theme_not_available	This theme is not available yet.	Toto téma ještě není dostupné.
+concept.error.unknown_platform	Pick a platform.	Vyber platformu.
+concept.error.platform_not_available	This platform is not on the market.	Tato platforma není na trhu.
+concept.error.size_not_available	This game size is not available yet.	Tato velikost hry ještě není dostupná.
+concept.error.invalid_audience	Pick an audience.	Vyber publikum.
+concept.error.invalid_engine	Pick an engine.	Vyber engine.
+concept.error.not_enough_money	Not enough money for the dev kit and engine.	Nemáš dost peněz na dev kit a engine.
+concept.error.project_already_running	A game is already in development.	Už vyvíjíš jinou hru.
+concept.error.bankrupt	The studio is bankrupt.	Studio zbankrotovalo.
+concept.error.platform_ends_before_release	The platform will be gone before the game is done. Shorten the testing.	Platforma skončí dřív, než bude hra hotová. Zkrať testování.
+
+# Market news (GDD 9). {0} = genre or theme name, {1} = year, {2} = change in percent
+news.trend.rising	{0} will be popular in {1} (+{2} %).	{0}: v roce {1} poroste zájem (+{2} %).
+news.trend.falling	{0} will fall out of favour in {1} ({2} %).	{0}: v roce {1} zájem opadne ({2} %).

@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_cs
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: cs
+  m_SharedData: {fileID: 11400000, guid: c4665b778f0ea83428507aec06d129de, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 6476484526842052967
+  m_TableData:
+  - m_Id: 1095421952
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141559296
+    m_Localized: "\u010Ce\u0161tina"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141559297
+    m_Localized: "Zadej n\xE1zev hry."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141559298
+    m_Localized: "Vyber \u017E\xE1nr."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753600
+    m_Localized: "Tento \u017E\xE1nr je\u0161t\u011B neexistuje."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753601
+    m_Localized: "Vyber t\xE9ma."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753602
+    m_Localized: "Toto t\xE9ma je\u0161t\u011B nen\xED dostupn\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753603
+    m_Localized: Vyber platformu.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753604
+    m_Localized: "Tato platforma nen\xED na trhu."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753605
+    m_Localized: "Tato velikost hry je\u0161t\u011B nen\xED dostupn\xE1."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753606
+    m_Localized: Vyber publikum.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753607
+    m_Localized: Vyber engine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753608
+    m_Localized: "Nem\xE1\u0161 dost pen\u011Bz na dev kit a engine."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753609
+    m_Localized: "U\u017E vyv\xEDj\xED\u0161 jinou hru."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753610
+    m_Localized: Studio zbankrotovalo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753611
+    m_Localized: "Platforma skon\u010D\xED d\u0159\xEDv, ne\u017E bude hra hotov\xE1. Zkra\u0165 testov\xE1n\xED."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753612
+    m_Localized: "{0}: v roce {1} poroste z\xE1jem (+{2} %)."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 1149947904
+    m_Localized: "{0}: v roce {1} z\xE1jem opadne ({2} %)."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  references:
+    version: 2
+    RefIds:
+    - rid: 6476484526842052967
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 1145753612
+        - id: 1149947904
