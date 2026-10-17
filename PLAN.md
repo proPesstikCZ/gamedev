@@ -177,9 +177,9 @@ Napojení save/load z M1.6 na UI. Jeden slot a automatické uložení na začát
 
 ---
 
-## M4 – Placeholder izometrická garáž 🔍 ČEKÁ NA REVIEW
+## M4 – Placeholder izometrická garáž ✅ HOTOVO
 
-> Hotovo 2026-10-17 na větvi `feature/m4`, čeká na review (Codex). 162 EditMode a 18 PlayMode testů prochází, konzole Unity je bez chyb. Opravy z review (řazení podle pivotu) jsou na větvi.
+> Dokončeno 2026-10-17 na větvi `feature/m4`, prošlo review (Codex), opravy z review jsou v `main`. 162 EditMode a 18 PlayMode testů prochází, konzole Unity je čistá.
 >
 > **Rozhodnutí k revizi:**
 > - `AssetPostprocessor` je v `Assets/Editor/` s vlastním asmdef `Game.ArtImport` (testy na něj potřebují odkaz). Pravidla platí pro `Assets/Art/` i `Assets/Placeholders/`, aby se placeholdery chovaly stejně jako finální grafika.
