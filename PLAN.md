@@ -27,7 +27,7 @@ Assets/Game/UI/          Game.UI.asmdef      – UI Toolkit (UXML, USS, controll
 Assets/Game/World/       izometrická garáž
 Assets/Tests/EditMode/   Game.Tests.EditMode.asmdef
 Assets/Tests/PlayMode/   Game.Tests.PlayMode.asmdef
-Assets/Art/              placeholder grafika podle STYLE.md
+Assets/Art/              grafika podle STYLE.md (zapisuje jen Codex přes Tools/ArtPipeline)
 ```
 
 ---
@@ -155,6 +155,24 @@ Izometrická Tilemap 2:1 s dlaždicemi 128 × 64. Placeholder podlaha a stěny, 
 **4.3 Postava**
 Placeholder postava u stolu. Během vývoje má stav „pracuje“, jinak „odpočívá“. Kamera míří na garáž a UI je přes scénu.
 *Ověření:* v Play mode stav postavy sleduje vývoj hry.
+
+---
+
+## M4b – Grafika garáže (dělá Codex)
+
+> Grafiku dělá **Codex** podle STYLE.md a AGENTS.md. Assety generuje, zpracuje přes `Tools/ArtPipeline` a ukládá jen do `Assets/Art/`. Claude je pak jen napojí do scény z M4.
+
+**4b.1 Assety garáže**
+Dlaždice podlahy a stěn, stůl s počítačem, židle a další vybavení garáže v éře 70s. Velikosti podle STYLE kap. 3, barvy podle kap. 4, pojmenování a složky podle kap. 9.
+*Ověření:* všechny soubory prošly `Tools/ArtPipeline`, mají správné rozměry a názvy a splňují právní pravidla STYLE kap. 6.
+
+**4b.2 Postava**
+Postava vývojáře ve 4 směrech (SV, SZ, JV, JZ) podle STYLE kap. 5.
+*Ověření:* všechny 4 směry jsou v `Assets/Art/Characters/` a mají jednotný styl.
+
+**4b.3 Napojení do scény (Claude)**
+Claude nahradí placeholdery z M4 assety z `Assets/Art/`. Do `Assets/Art/` nic nezapisuje.
+*Ověření:* snímek scény přes Unity MCP, objekty se správně překrývají a konzole je čistá.
 
 ---
 
