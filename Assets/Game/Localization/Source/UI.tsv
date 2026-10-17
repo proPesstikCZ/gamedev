@@ -1,0 +1,146 @@
+# UI texts. Columns: key<TAB>en<TAB>cs. Placeholders {0}, {1}… are explained above each group.
+# Czech is usually longer: keep the UI layout flexible.
+
+# Language switch
+ui.language.en	English	English
+ui.language.cs	Čeština	Čeština
+ui.language.short.en	EN	EN
+ui.language.short.cs	CZ	CZ
+
+# Why a concept cannot start (ConceptError)
+concept.error.empty_name	Give the game a name.	Zadej název hry.
+concept.error.unknown_genre	Pick a genre.	Vyber žánr.
+concept.error.genre_not_available	This genre does not exist yet.	Tento žánr ještě neexistuje.
+concept.error.unknown_theme	Pick a theme.	Vyber téma.
+concept.error.theme_not_available	This theme is not available yet.	Toto téma ještě není dostupné.
+concept.error.unknown_platform	Pick a platform.	Vyber platformu.
+concept.error.platform_not_available	This platform is not on the market.	Tato platforma není na trhu.
+concept.error.size_not_available	This game size is not available yet.	Tato velikost hry ještě není dostupná.
+concept.error.invalid_audience	Pick an audience.	Vyber publikum.
+concept.error.invalid_engine	Pick an engine.	Vyber engine.
+concept.error.not_enough_money	Not enough money for the dev kit and engine.	Nemáš dost peněz na dev kit a engine.
+concept.error.project_already_running	A game is already in development.	Už vyvíjíš jinou hru.
+concept.error.bankrupt	The studio is bankrupt.	Studio zbankrotovalo.
+concept.error.platform_ends_before_release	The platform will be gone before the game is done. Shorten the testing.	Platforma skončí dřív, než bude hra hotová. Zkrať testování.
+
+# Market news (GDD 9). {0} = genre or theme name, {1} = year, {2} = change in percent
+news.trend.rising	{0} will be popular in {1} (+{2} %).	{0}: v roce {1} poroste zájem (+{2} %).
+news.trend.falling	{0} will fall out of favour in {1} ({2} %).	{0}: v roce {1} zájem opadne ({2} %).
+
+# HUD. ui.hud.date: {0} = year, {1} = month name, {2} = week of the year
+ui.hud.date	{1} {0}, week {2}	{1} {0}, týden {2}
+ui.hud.money	${0:N0}	{0:N0} $
+ui.hud.fans	Fans: {0:N0}	Fanoušci: {0:N0}
+ui.hud.new_game	New game	Nová hra
+ui.hud.games	Released games	Vydané hry
+ui.hud.encyclopedia	Encyclopedia	Encyklopedie
+ui.hud.save	Save	Uložit
+ui.hud.load	Load	Načíst
+ui.hud.paused	Paused	Pozastaveno
+ui.month.1	January	leden
+ui.month.2	February	únor
+ui.month.3	March	březen
+ui.month.4	April	duben
+ui.month.5	May	květen
+ui.month.6	June	červen
+ui.month.7	July	červenec
+ui.month.8	August	srpen
+ui.month.9	September	září
+ui.month.10	October	říjen
+ui.month.11	November	listopad
+ui.month.12	December	prosinec
+
+# Messages (toasts)
+ui.msg.saved	Game saved.	Hra uložena.
+ui.msg.save_failed	The game could not be saved.	Hru se nepodařilo uložit.
+ui.msg.loaded	Game loaded.	Hra načtena.
+ui.msg.no_save	There is no saved game yet.	Zatím neexistuje žádná uložená hra.
+ui.msg.load_old_version	This save comes from a different version of the game and cannot be loaded.	Tato uložená hra pochází z jiné verze hry a nejde načíst.
+ui.msg.load_corrupt	The saved game is damaged and cannot be loaded.	Uložená hra je poškozená a nejde načíst.
+ui.msg.autosave_held	Autosave is off so the save is not overwritten. Save or start a new game to turn it back on.	Automatické ukládání je vypnuté, aby se uložená hra nepřepsala. Zapne se, až hru uložíš nebo začneš novou.
+ui.msg.sales_ended	{0} is no longer selling. Total: {1:N0} copies.	{0} se už neprodává. Celkem {1:N0} kusů.
+ui.msg.project_running	Finish the current game first.	Nejdřív dokonči rozpracovanou hru.
+
+# Common buttons
+ui.common.close	Close	Zavřít
+ui.common.cancel	Cancel	Zrušit
+
+# New game dialog (PLAN 3.3). Money values come already formatted.
+ui.newgame.title	New game	Nová hra
+ui.newgame.name	Name	Název
+ui.newgame.genre	Genre	Žánr
+ui.newgame.theme	Theme	Téma
+ui.newgame.platform	Platform	Platforma
+ui.newgame.audience	Audience	Publikum
+ui.newgame.engine	Engine	Engine
+ui.newgame.combo_known	Genre and theme match: {0}	Shoda žánru a tématu: {0}
+ui.newgame.combo_unknown	Genre and theme match: not known yet	Shoda žánru a tématu: zatím neznámá
+ui.newgame.platform_info	Installed base: {0:0.0} million units	Instalovaná základna: {0:0.0} mil. kusů
+ui.newgame.devkit	Dev kit: {0}	Dev kit: {0}
+ui.newgame.devkit_owned	Dev kit: already owned	Dev kit: už ho máš
+ui.newgame.engine_cost	Licensed engine: {0}	Licencovaný engine: {0}
+ui.newgame.paid_now	Paid now: {0}	Zaplatíš hned: {0}
+ui.newgame.license	Platform fee at release: {0}	Poplatek platformě při vydání: {0}
+ui.newgame.duration	Development takes {0} weeks plus testing.	Vývoj trvá {0} týdnů plus testování.
+ui.newgame.start	Start development	Začít vývoj
+
+# Development panel (PLAN 3.4). ui.dev.subtitle: {0} = genre, {1} = theme, {2} = platform
+ui.dev.title	In development	Ve vývoji
+ui.dev.subtitle	{0} · {1} · {2}	{0} · {1} · {2}
+ui.dev.phase	Phase: {0}	Fáze: {0}
+ui.dev.progress	Week {0} of {1}	Týden {0} z {1}
+ui.dev.bugs	Bugs: {0:0}	Chyby: {0:0}
+ui.dev.split	Where to put the work	Kam dát práci
+ui.dev.phase_done	{0} (done)	{0} (hotovo)
+ui.dev.phase_now	{0} (now)	{0} (teď)
+ui.dev.percent	{0} %	{0} %
+ui.dev.weights_hint	●●● = players of this genre care a lot, ? = not known yet.	●●● = hráčům žánru na tom hodně záleží, ? = zatím nevíš.
+ui.dev.qa	Testing: {0} {0:plural:week|weeks}	Testování: {0} {0:plural:týden|týdny|týdnů}
+ui.dev.qa_hint	More testing removes bugs but the game comes out later.	Delší testování odstraní chyby, ale hra vyjde později.
+ui.dev.qa_locked	Testing has started, its length is fixed.	Testování už běží, jeho délku nejde změnit.
+
+# Results and post-mortem (PLAN 3.5). Money values come already formatted.
+ui.results.title	Released!	Vydáno!
+ui.results.released_on	Released: {0}	Vydáno: {0}
+ui.results.review	{0:0.0} / 10	{0:0.0} / 10
+ui.results.why	Why this review	Proč takové hodnocení
+ui.results.quality	Quality {0:0.0} against what players expect today: {1:0.0}	Kvalita {0:0.0} proti tomu, co hráči dnes čekají: {1:0.0}
+ui.results.combo	Genre and theme match: {0} (×{1:0.00})	Shoda žánru a tématu: {0} (×{1:0.00})
+ui.results.audience	Genre fit for the audience: ×{0:0.00}	Vhodnost žánru pro publikum: ×{0:0.00}
+ui.results.bugs	Bugs: {0:0} (×{1:0.00})	Chyby: {0:0} (×{1:0.00})
+ui.results.luck	Luck: {0:+0.0;-0.0;0.0}	Náhoda: {0:+0.0;-0.0;0.0}
+ui.results.sales	Sales	Prodeje
+ui.results.units	Copies sold: {0:N0}	Prodáno kusů: {0:N0}
+ui.results.revenue	Revenue: {0}	Tržby: {0}
+ui.results.cost	Costs: {0}	Náklady: {0}
+ui.results.profit	Profit: {0}	Zisk: {0}
+ui.results.fans	New fans: {0:N0}	Noví fanoušci: {0:N0}
+ui.results.on_sale	On sale for {0} {0:plural:week|weeks} so far.	V prodeji zatím {0} {0:plural:týden|týdny|týdnů}.
+ui.results.sales_ended	Sold for {0} {0:plural:week|weeks}, no longer on sale.	Prodávala se {0} {0:plural:týden|týdny|týdnů}, už se neprodává.
+ui.results.launch	What drove sales at launch	Co ovlivnilo prodeje při vydání
+ui.results.launch_base	Installed base of the platform: {0:0.0} million	Instalovaná základna platformy: {0:0.0} mil.
+ui.results.launch_trend	Popularity of genre ×{0:0.00}, of theme ×{1:0.00}	Popularita žánru ×{0:0.00}, tématu ×{1:0.00}
+ui.results.launch_platform	Genre on this platform ×{0:0.00}, your fans ×{1:0.00}	Žánr na této platformě ×{0:0.00}, tvoji fanoušci ×{1:0.00}
+ui.results.chart	Copies sold per week	Prodané kusy po týdnech
+ui.results.no_sales_yet	Sales start next week.	Prodeje začnou příští týden.
+ui.results.postmortem	Post-mortem	Post-mortem
+
+# Released games list
+ui.games.title	Released games	Vydané hry
+ui.games.empty	No game released yet.	Zatím nemáš žádnou vydanou hru.
+ui.games.row	{0} ({1}): {2:0.0} / 10, {3:N0} copies	{0} ({1}): {2:0.0} / 10, {3:N0} kusů
+ui.games.on_sale	on sale	v prodeji
+
+# Encyclopedia (GDD 8)
+ui.encyclopedia.title	Encyclopedia	Encyklopedie
+ui.encyclopedia.genre	Genre	Žánr
+ui.encyclopedia.weights	What players of this genre care about	Na čem hráčům tohoto žánru záleží
+ui.encyclopedia.weights_count	Known: {0} of {1}	Známo: {0} z {1}
+ui.encyclopedia.combos	Match with themes	Shoda s tématy
+ui.encyclopedia.unknown	not known yet	zatím neznámá
+ui.encyclopedia.hint	You learn more with every released game.	S každou vydanou hrou se dozvíš víc.
+
+# Bankruptcy
+ui.bankrupt.title	Bankrupt	Bankrot
+ui.bankrupt.text	The studio stayed in debt for too long and had to close. Released games: {0}, fans: {1:N0}.	Studio bylo příliš dlouho v mínusu a muselo zavřít. Vydané hry: {0}, fanoušci: {1:N0}.
+ui.bankrupt.restart	Start over	Začít znovu

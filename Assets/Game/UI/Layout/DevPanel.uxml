@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="dev" class="dev-panel panel">
+        <ui:Label text="#ui.dev.title" class="dim small" />
+        <ui:Label name="dev-name" class="modal-title" />
+        <ui:Label name="dev-subtitle" class="dim" />
+        <ui:Label name="dev-phase" class="strong" />
+        <ui:ProgressBar name="dev-progress" low-value="0" high-value="1" class="dev-progress" />
+        <ui:Label name="dev-bugs" />
+        <ui:ScrollView class="dev-scroll">
+            <ui:Label text="#ui.dev.split" class="section-title" />
+            <ui:Label text="#ui.dev.weights_hint" class="dim small" />
+            <ui:VisualElement name="dev-phases" />
+            <ui:Label name="dev-qa-label" class="section-title" />
+            <ui:SliderInt name="dev-qa" low-value="0" high-value="5" />
+            <ui:Label name="dev-qa-hint" class="dim small" />
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

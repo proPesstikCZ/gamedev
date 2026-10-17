@@ -1,0 +1,27 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="new-game" class="modal panel">
+        <ui:Label text="#ui.newgame.title" class="modal-title" />
+        <ui:ScrollView class="modal-scroll">
+            <ui:TextField name="ng-name" label="#ui.newgame.name" max-length="40" class="form-field" />
+            <ui:DropdownField name="ng-genre" label="#ui.newgame.genre" class="form-field" />
+            <ui:DropdownField name="ng-theme" label="#ui.newgame.theme" class="form-field" />
+            <ui:DropdownField name="ng-platform" label="#ui.newgame.platform" class="form-field" />
+            <ui:DropdownField name="ng-audience" label="#ui.newgame.audience" class="form-field" />
+            <ui:DropdownField name="ng-engine" label="#ui.newgame.engine" class="form-field" />
+            <ui:VisualElement class="info-box">
+                <ui:Label name="ng-combo" />
+                <ui:Label name="ng-platform-info" class="dim" />
+                <ui:Label name="ng-duration" class="dim" />
+                <ui:Label name="ng-devkit" />
+                <ui:Label name="ng-engine-cost" />
+                <ui:Label name="ng-paid-now" class="strong" />
+                <ui:Label name="ng-license" class="dim" />
+            </ui:VisualElement>
+            <ui:VisualElement name="ng-errors" class="error-list" />
+        </ui:ScrollView>
+        <ui:VisualElement class="button-row">
+            <ui:Button name="ng-cancel" text="#ui.common.cancel" />
+            <ui:Button name="ng-start" text="#ui.newgame.start" class="accent-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

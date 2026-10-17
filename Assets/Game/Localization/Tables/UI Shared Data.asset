@@ -1,0 +1,508 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: UI
+  m_TableCollectionNameGuidString: c4665b778f0ea83428507aec06d129de
+  m_Entries:
+  - m_Id: 1095421952
+    m_Key: ui.language.en
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141559296
+    m_Key: ui.language.cs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141559297
+    m_Key: concept.error.empty_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141559298
+    m_Key: concept.error.unknown_genre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753600
+    m_Key: concept.error.genre_not_available
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753601
+    m_Key: concept.error.unknown_theme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753602
+    m_Key: concept.error.theme_not_available
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753603
+    m_Key: concept.error.unknown_platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753604
+    m_Key: concept.error.platform_not_available
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753605
+    m_Key: concept.error.size_not_available
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753606
+    m_Key: concept.error.invalid_audience
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753607
+    m_Key: concept.error.invalid_engine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753608
+    m_Key: concept.error.not_enough_money
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753609
+    m_Key: concept.error.project_already_running
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753610
+    m_Key: concept.error.bankrupt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753611
+    m_Key: concept.error.platform_ends_before_release
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753612
+    m_Key: news.trend.rising
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1149947904
+    m_Key: news.trend.falling
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093688213504
+    m_Key: ui.language.short.en
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962240
+    m_Key: ui.language.short.cs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962241
+    m_Key: ui.hud.date
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962242
+    m_Key: ui.hud.money
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962243
+    m_Key: ui.hud.fans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962244
+    m_Key: ui.hud.new_game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962245
+    m_Key: ui.hud.games
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962246
+    m_Key: ui.hud.encyclopedia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962247
+    m_Key: ui.hud.save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962248
+    m_Key: ui.hud.load
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962249
+    m_Key: ui.hud.paused
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962250
+    m_Key: ui.month.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962251
+    m_Key: ui.month.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962252
+    m_Key: ui.month.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962253
+    m_Key: ui.month.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962254
+    m_Key: ui.month.5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962255
+    m_Key: ui.month.6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962256
+    m_Key: ui.month.7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962257
+    m_Key: ui.month.8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962258
+    m_Key: ui.month.9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962259
+    m_Key: ui.month.10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962260
+    m_Key: ui.month.11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962261
+    m_Key: ui.month.12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962262
+    m_Key: ui.msg.saved
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962264
+    m_Key: ui.msg.save_failed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156544
+    m_Key: ui.msg.loaded
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156545
+    m_Key: ui.msg.no_save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156546
+    m_Key: ui.msg.load_old_version
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156547
+    m_Key: ui.msg.load_corrupt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156548
+    m_Key: ui.msg.sales_ended
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156549
+    m_Key: ui.msg.project_running
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156550
+    m_Key: ui.common.close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156551
+    m_Key: ui.common.cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273915027456
+    m_Key: ui.newgame.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970496
+    m_Key: ui.newgame.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970497
+    m_Key: ui.newgame.genre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970498
+    m_Key: ui.newgame.theme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970499
+    m_Key: ui.newgame.platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970500
+    m_Key: ui.newgame.audience
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970501
+    m_Key: ui.newgame.engine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970502
+    m_Key: ui.newgame.combo_known
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970503
+    m_Key: ui.newgame.combo_unknown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970504
+    m_Key: ui.newgame.platform_info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970505
+    m_Key: ui.newgame.devkit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970506
+    m_Key: ui.newgame.devkit_owned
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970507
+    m_Key: ui.newgame.engine_cost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970508
+    m_Key: ui.newgame.paid_now
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970509
+    m_Key: ui.newgame.license
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970510
+    m_Key: ui.newgame.duration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970511
+    m_Key: ui.newgame.start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797032816640
+    m_Key: ui.dev.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797070565376
+    m_Key: ui.dev.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797070565377
+    m_Key: ui.dev.phase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759680
+    m_Key: ui.dev.progress
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759681
+    m_Key: ui.dev.bugs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759682
+    m_Key: ui.dev.split
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759683
+    m_Key: ui.dev.phase_done
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759684
+    m_Key: ui.dev.phase_now
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759685
+    m_Key: ui.dev.percent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759686
+    m_Key: ui.dev.weights_hint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759687
+    m_Key: ui.dev.qa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759688
+    m_Key: ui.dev.qa_hint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759689
+    m_Key: ui.dev.qa_locked
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854190362624
+    m_Key: ui.results.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305664
+    m_Key: ui.results.released_on
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305665
+    m_Key: ui.results.review
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305666
+    m_Key: ui.results.why
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305667
+    m_Key: ui.results.quality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305668
+    m_Key: ui.results.combo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305669
+    m_Key: ui.results.audience
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305670
+    m_Key: ui.results.bugs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305671
+    m_Key: ui.results.luck
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305672
+    m_Key: ui.results.sales
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305673
+    m_Key: ui.results.units
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305674
+    m_Key: ui.results.revenue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305675
+    m_Key: ui.results.cost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305676
+    m_Key: ui.results.profit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305677
+    m_Key: ui.results.fans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305678
+    m_Key: ui.results.on_sale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305679
+    m_Key: ui.results.sales_ended
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305680
+    m_Key: ui.results.launch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305681
+    m_Key: ui.results.launch_base
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305682
+    m_Key: ui.results.launch_trend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305683
+    m_Key: ui.results.launch_platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305684
+    m_Key: ui.results.chart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305685
+    m_Key: ui.results.no_sales_yet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305686
+    m_Key: ui.results.postmortem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305687
+    m_Key: ui.games.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305688
+    m_Key: ui.games.empty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305689
+    m_Key: ui.games.row
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305690
+    m_Key: ui.games.on_sale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305691
+    m_Key: ui.encyclopedia.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305692
+    m_Key: ui.encyclopedia.genre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305693
+    m_Key: ui.encyclopedia.weights
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305694
+    m_Key: ui.encyclopedia.weights_count
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305695
+    m_Key: ui.encyclopedia.combos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305696
+    m_Key: ui.encyclopedia.unknown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305697
+    m_Key: ui.encyclopedia.hint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305698
+    m_Key: ui.bankrupt.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305699
+    m_Key: ui.bankrupt.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305700
+    m_Key: ui.bankrupt.restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50200631234560
+    m_Key: ui.msg.autosave_held
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6476484526842052960
+  references:
+    version: 2
+    RefIds:
+    - rid: 6476484526842052960
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1792255608025

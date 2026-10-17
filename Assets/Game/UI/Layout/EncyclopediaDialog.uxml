@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="encyclopedia" class="modal panel">
+        <ui:Label text="#ui.encyclopedia.title" class="modal-title" />
+        <ui:Label text="#ui.encyclopedia.hint" class="dim small" />
+        <ui:DropdownField name="en-genre" label="#ui.encyclopedia.genre" class="form-field" />
+        <ui:ScrollView class="modal-scroll">
+            <ui:VisualElement class="results-columns">
+                <ui:VisualElement class="results-column">
+                    <ui:Label text="#ui.encyclopedia.weights" class="section-title" />
+                    <ui:Label name="en-weights-count" class="dim small" />
+                    <ui:VisualElement name="en-weights" class="info-box" />
+                </ui:VisualElement>
+                <ui:VisualElement class="results-column">
+                    <ui:Label text="#ui.encyclopedia.combos" class="section-title" />
+                    <ui:VisualElement name="en-combos" class="info-box" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:ScrollView>
+        <ui:VisualElement class="button-row">
+            <ui:Button name="en-close" text="#ui.common.close" class="accent-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

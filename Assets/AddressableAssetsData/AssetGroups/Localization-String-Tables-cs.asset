@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-cs
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Localization-String-Tables-cs
+  m_GUID: 298510647074d694fa4e7d757f86589c
+  m_SerializeEntries:
+  - m_GUID: 726ac855e53c9c14f83b50242c397735
+    m_Address: UI_cs
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-cs
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b1581d47fa836cd4287b2f7dd374658d
+    m_Address: PostMortem_cs
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-cs
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b18fd71cb37eeb2458dd0309a35dc294
+    m_Address: Content_cs
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-cs
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 8698ed299fb3adc4ba988d088b5296e0, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 86195babb9f0309419cdb31b5c331b8d, type: 2}
+    - {fileID: 11400000, guid: 2bffa511c5309f74ea75dc2025c97daf, type: 2}
+    - {fileID: 11400000, guid: 77b02e55380ea0a49b620447fdd55867, type: 2}

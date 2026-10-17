@@ -1,0 +1,52 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <!-- Texts starting with # are localization keys, filled in by UiLocalizer. -->
+    <ui:Template name="NewGameDialog" src="NewGameDialog.uxml" />
+    <ui:Template name="DevPanel" src="DevPanel.uxml" />
+    <ui:Template name="ResultsDialog" src="ResultsDialog.uxml" />
+    <ui:Template name="GamesDialog" src="GamesDialog.uxml" />
+    <ui:Template name="EncyclopediaDialog" src="EncyclopediaDialog.uxml" />
+    <ui:Template name="BankruptDialog" src="BankruptDialog.uxml" />
+    <Style src="GameUI.uss" />
+    <ui:VisualElement name="root" class="root" picking-mode="Ignore">
+        <ui:VisualElement name="hud" class="hud panel">
+            <ui:VisualElement class="hud-group">
+                <ui:Label name="hud-date" class="hud-date" />
+                <ui:Label name="hud-money" class="hud-stat hud-money" />
+                <ui:Label name="hud-fans" class="hud-stat" />
+            </ui:VisualElement>
+            <ui:VisualElement class="hud-group">
+                <ui:Button name="speed-0" text="II" class="speed-button" />
+                <ui:Button name="speed-1" text="&gt;" class="speed-button" />
+                <ui:Button name="speed-2" text="&gt;&gt;" class="speed-button" />
+                <ui:Button name="speed-3" text="&gt;&gt;&gt;" class="speed-button" />
+                <ui:Label name="hud-paused" text="#ui.hud.paused" class="hud-paused" />
+            </ui:VisualElement>
+            <ui:VisualElement class="hud-group hud-actions">
+                <ui:Button name="btn-new-game" text="#ui.hud.new_game" class="accent-button" />
+                <ui:Button name="btn-games" text="#ui.hud.games" />
+                <ui:Button name="btn-encyclopedia" text="#ui.hud.encyclopedia" />
+                <ui:Button name="btn-save" text="#ui.hud.save" />
+                <ui:Button name="btn-load" text="#ui.hud.load" />
+                <ui:Button name="lang-cs" text="#ui.language.short.cs" class="lang-button" />
+                <ui:Button name="lang-en" text="#ui.language.short.en" class="lang-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="body" class="body" picking-mode="Ignore">
+            <ui:VisualElement name="main-area" class="main-area" picking-mode="Ignore">
+                <ui:VisualElement name="toasts" class="toasts" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:VisualElement name="side-area" class="side-area" picking-mode="Ignore">
+                <ui:Instance template="DevPanel" name="dev-panel" class="side-host" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="modal-layer" class="modal-layer hidden" />
+        <!-- Dialogs wait here hidden; GameUI moves the open one into the modal layer. -->
+        <ui:VisualElement name="dialogs" class="hidden">
+            <ui:Instance template="NewGameDialog" name="new-game-dialog" class="modal-host" />
+            <ui:Instance template="ResultsDialog" name="results-dialog" class="modal-host" />
+            <ui:Instance template="GamesDialog" name="games-dialog" class="modal-host" />
+            <ui:Instance template="EncyclopediaDialog" name="encyclopedia-dialog" class="modal-host" />
+            <ui:Instance template="BankruptDialog" name="bankrupt-dialog" class="modal-host" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

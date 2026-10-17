@@ -1,0 +1,55 @@
+# Content names. Columns: key<TAB>en<TAB>cs. Import: menu Game > Localization > Import Tables.
+# Platform names are parodies (GDD 5), never the real brand names.
+genre.arcade.name	Arcade	Arkáda
+genre.action.name	Action	Akce
+genre.puzzle.name	Puzzle	Puzzle
+genre.sport.name	Sports	Sport
+genre.adventure.name	Adventure	Adventura
+genre.racing.name	Racing	Závodní
+genre.shmup.name	Shoot 'em up	Střílečka
+genre.rpg.name	RPG	RPG
+genre.simulation.name	Simulation	Simulace
+genre.strategy.name	Strategy	Strategie
+genre.platformer.name	Platformer	Plošinovka
+genre.roguelike.name	Roguelike	Roguelike
+genre.fighting.name	Fighting	Bojovka
+genre.fps.name	FPS	FPS
+genre.survival_horror.name	Survival horror	Survival horor
+genre.rhythm.name	Rhythm	Rytmická
+genre.sandbox_survival.name	Sandbox survival	Sandbox/survival
+genre.moba.name	MOBA	MOBA
+genre.battle_royale.name	Battle royale	Battle royale
+genre.card.name	Card / deckbuilder	Karetní / deckbuilder
+theme.space.name	Space	Vesmír
+theme.fantasy.name	Fantasy	Fantasy
+theme.sport.name	Sports	Sport
+theme.war.name	War	Válka
+theme.detective.name	Detective	Detektivka
+theme.pirates.name	Pirates	Piráti
+platform.magnafox_odyssey.name	Magnafox Odyssé	Magnafox Odyssé
+platform.astari_vcs.name	Astari VCS	Astari VCS
+platform.pear_ii.name	Pear II	Pear II
+platform.komodor_64.name	Komodor 64	Komodor 64
+area.gameplay_design.name	Gameplay design	Design hratelnosti
+area.story_and_world.name	Story and world	Příběh a svět
+area.technology.name	Technology	Technologie
+area.gameplay.name	Gameplay	Hratelnost
+area.graphics.name	Graphics	Grafika
+area.sound.name	Sound	Zvuk
+area.level_design.name	Level design	Level design
+area.ai_and_systems.name	AI and systems	AI a systémy
+area.dialogue_and_text.name	Dialogue and text	Dialogy a texty
+area.polish.name	Polish	Vyladění
+phase.pre_production.name	Pre-production	Pre-produkce
+phase.production.name	Production	Produkce
+phase.finishing.name	Finishing	Dokončení
+phase.qa.name	Testing (QA)	Testování (QA)
+phase.done.name	Ready for release	Připraveno k vydání
+audience.kids.name	Kids	Děti
+audience.everyone.name	Everyone	Všichni
+audience.adults.name	Adults	Dospělí
+engine.custom.name	Own engine	Vlastní engine
+engine.licensed.name	Licensed engine	Licencovaný engine
+combo.excellent.name	Excellent	Výborná
+combo.good.name	Good	Dobrá
+combo.bad.name	Bad	Špatná

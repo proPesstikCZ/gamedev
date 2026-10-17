@@ -1,0 +1,591 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_cs
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: cs
+  m_SharedData: {fileID: 11400000, guid: c4665b778f0ea83428507aec06d129de, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 6476484526842052967
+  m_TableData:
+  - m_Id: 1095421952
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141559296
+    m_Localized: "\u010Ce\u0161tina"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141559297
+    m_Localized: "Zadej n\xE1zev hry."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141559298
+    m_Localized: "Vyber \u017E\xE1nr."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753600
+    m_Localized: "Tento \u017E\xE1nr je\u0161t\u011B neexistuje."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753601
+    m_Localized: "Vyber t\xE9ma."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753602
+    m_Localized: "Toto t\xE9ma je\u0161t\u011B nen\xED dostupn\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753603
+    m_Localized: Vyber platformu.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753604
+    m_Localized: "Tato platforma nen\xED na trhu."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753605
+    m_Localized: "Tato velikost hry je\u0161t\u011B nen\xED dostupn\xE1."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753606
+    m_Localized: Vyber publikum.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753607
+    m_Localized: Vyber engine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753608
+    m_Localized: "Nem\xE1\u0161 dost pen\u011Bz na dev kit a engine."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753609
+    m_Localized: "U\u017E vyv\xEDj\xED\u0161 jinou hru."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753610
+    m_Localized: Studio zbankrotovalo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753611
+    m_Localized: "Platforma skon\u010D\xED d\u0159\xEDv, ne\u017E bude hra hotov\xE1. Zkra\u0165 testov\xE1n\xED."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1145753612
+    m_Localized: "{0}: v roce {1} poroste z\xE1jem (+{2} %)."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 1149947904
+    m_Localized: "{0}: v roce {1} z\xE1jem opadne ({2} %)."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 2093688213504
+    m_Localized: EN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962240
+    m_Localized: CZ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962241
+    m_Localized: "{1} {0}, t\xFDden {2}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 2093725962242
+    m_Localized: '{0:N0} $'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 2093725962243
+    m_Localized: "Fanou\u0161ci: {0:N0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 2093725962244
+    m_Localized: "Nov\xE1 hra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962245
+    m_Localized: "Vydan\xE9 hry"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962246
+    m_Localized: Encyklopedie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962247
+    m_Localized: "Ulo\u017Eit"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962248
+    m_Localized: "Na\u010D\xEDst"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962249
+    m_Localized: Pozastaveno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962250
+    m_Localized: leden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962251
+    m_Localized: "\xFAnor"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962252
+    m_Localized: "b\u0159ezen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962253
+    m_Localized: duben
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962254
+    m_Localized: "kv\u011Bten"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962255
+    m_Localized: "\u010Derven"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962256
+    m_Localized: "\u010Dervenec"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962257
+    m_Localized: srpen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962258
+    m_Localized: "z\xE1\u0159\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962259
+    m_Localized: "\u0159\xEDjen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962260
+    m_Localized: listopad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962261
+    m_Localized: prosinec
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962262
+    m_Localized: "Hra ulo\u017Eena."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962264
+    m_Localized: "Hru se nepoda\u0159ilo ulo\u017Eit."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156544
+    m_Localized: "Hra na\u010Dtena."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156545
+    m_Localized: "Zat\xEDm neexistuje \u017E\xE1dn\xE1 ulo\u017Een\xE1 hra."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156546
+    m_Localized: "Tato ulo\u017Een\xE1 hra poch\xE1z\xED z jin\xE9 verze hry a nejde na\u010D\xEDst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156547
+    m_Localized: "Ulo\u017Een\xE1 hra je po\u0161kozen\xE1 a nejde na\u010D\xEDst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156548
+    m_Localized: "{0} se u\u017E neprod\xE1v\xE1. Celkem {1:N0} kus\u016F."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 2093730156549
+    m_Localized: "Nejd\u0159\xEDv dokon\u010Di rozpracovanou hru."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156550
+    m_Localized: "Zav\u0159\xEDt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156551
+    m_Localized: "Zru\u0161it"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273915027456
+    m_Localized: "Nov\xE1 hra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970496
+    m_Localized: "N\xE1zev"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970497
+    m_Localized: "\u017D\xE1nr"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970498
+    m_Localized: "T\xE9ma"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970499
+    m_Localized: Platforma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970500
+    m_Localized: Publikum
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970501
+    m_Localized: Engine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970502
+    m_Localized: "Shoda \u017E\xE1nru a t\xE9matu: {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3273956970503
+    m_Localized: "Shoda \u017E\xE1nru a t\xE9matu: zat\xEDm nezn\xE1m\xE1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970504
+    m_Localized: "Instalovan\xE1 z\xE1kladna: {0:0.0} mil. kus\u016F"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3273956970505
+    m_Localized: 'Dev kit: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3273956970506
+    m_Localized: "Dev kit: u\u017E ho m\xE1\u0161"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970507
+    m_Localized: "Licencovan\xFD engine: {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3273956970508
+    m_Localized: "Zaplat\xED\u0161 hned: {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3273956970509
+    m_Localized: "Poplatek platform\u011B p\u0159i vyd\xE1n\xED: {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3273956970510
+    m_Localized: "V\xFDvoj trv\xE1 {0} t\xFDdn\u016F plus testov\xE1n\xED."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3273956970511
+    m_Localized: "Za\u010D\xEDt v\xFDvoj"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797032816640
+    m_Localized: "Ve v\xFDvoji"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797070565376
+    m_Localized: "{0} \xB7 {1} \xB7 {2}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797070565377
+    m_Localized: "F\xE1ze: {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797074759680
+    m_Localized: "T\xFDden {0} z {1}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797074759681
+    m_Localized: 'Chyby: {0:0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797074759682
+    m_Localized: "Kam d\xE1t pr\xE1ci"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759683
+    m_Localized: '{0} (hotovo)'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797074759684
+    m_Localized: "{0} (te\u010F)"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797074759685
+    m_Localized: '{0} %'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797074759686
+    m_Localized: "\u25CF\u25CF\u25CF = hr\xE1\u010D\u016Fm \u017E\xE1nru na tom hodn\u011B z\xE1le\u017E\xED, ? = zat\xEDm nev\xED\u0161."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759687
+    m_Localized: "Testov\xE1n\xED: {0} {0:plural:t\xFDden|t\xFDdny|t\xFDdn\u016F}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797074759688
+    m_Localized: "Del\u0161\xED testov\xE1n\xED odstran\xED chyby, ale hra vyjde pozd\u011Bji."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759689
+    m_Localized: "Testov\xE1n\xED u\u017E b\u011B\u017E\xED, jeho d\xE9lku nejde zm\u011Bnit."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854190362624
+    m_Localized: "Vyd\xE1no!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305664
+    m_Localized: "Vyd\xE1no: {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305665
+    m_Localized: '{0:0.0} / 10'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305666
+    m_Localized: "Pro\u010D takov\xE9 hodnocen\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305667
+    m_Localized: "Kvalita {0:0.0} proti tomu, co hr\xE1\u010Di dnes \u010Dekaj\xED: {1:0.0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305668
+    m_Localized: "Shoda \u017E\xE1nru a t\xE9matu: {0} (\xD7{1:0.00})"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305669
+    m_Localized: "Vhodnost \u017E\xE1nru pro publikum: \xD7{0:0.00}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305670
+    m_Localized: "Chyby: {0:0} (\xD7{1:0.00})"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305671
+    m_Localized: "N\xE1hoda: {0:+0.0;-0.0;0.0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305672
+    m_Localized: Prodeje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305673
+    m_Localized: "Prod\xE1no kus\u016F: {0:N0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305674
+    m_Localized: "Tr\u017Eby: {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305675
+    m_Localized: "N\xE1klady: {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305676
+    m_Localized: 'Zisk: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305677
+    m_Localized: "Nov\xED fanou\u0161ci: {0:N0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305678
+    m_Localized: "V prodeji zat\xEDm {0} {0:plural:t\xFDden|t\xFDdny|t\xFDdn\u016F}."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305679
+    m_Localized: "Prod\xE1vala se {0} {0:plural:t\xFDden|t\xFDdny|t\xFDdn\u016F}, u\u017E se neprod\xE1v\xE1."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305680
+    m_Localized: "Co ovlivnilo prodeje p\u0159i vyd\xE1n\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305681
+    m_Localized: "Instalovan\xE1 z\xE1kladna platformy: {0:0.0} mil."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305682
+    m_Localized: "Popularita \u017E\xE1nru \xD7{0:0.00}, t\xE9matu \xD7{1:0.00}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305683
+    m_Localized: "\u017D\xE1nr na t\xE9to platform\u011B \xD7{0:0.00}, tvoji fanou\u0161ci \xD7{1:0.00}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305684
+    m_Localized: "Prodan\xE9 kusy po t\xFDdnech"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305685
+    m_Localized: "Prodeje za\u010Dnou p\u0159\xED\u0161t\xED t\xFDden."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305686
+    m_Localized: Post-mortem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305687
+    m_Localized: "Vydan\xE9 hry"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305688
+    m_Localized: "Zat\xEDm nem\xE1\u0161 \u017E\xE1dnou vydanou hru."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305689
+    m_Localized: "{0} ({1}): {2:0.0} / 10, {3:N0} kus\u016F"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305690
+    m_Localized: v prodeji
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305691
+    m_Localized: Encyklopedie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305692
+    m_Localized: "\u017D\xE1nr"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305693
+    m_Localized: "Na \u010Dem hr\xE1\u010D\u016Fm tohoto \u017E\xE1nru z\xE1le\u017E\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305694
+    m_Localized: "Zn\xE1mo: {0} z {1}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305695
+    m_Localized: "Shoda s t\xE9maty"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305696
+    m_Localized: "zat\xEDm nezn\xE1m\xE1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305697
+    m_Localized: "S ka\u017Edou vydanou hrou se dozv\xED\u0161 v\xEDc."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305698
+    m_Localized: Bankrot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305699
+    m_Localized: "Studio bylo p\u0159\xEDli\u0161 dlouho v m\xEDnusu a muselo zav\u0159\xEDt. Vydan\xE9 hry: {0}, fanou\u0161ci: {1:N0}."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 4854232305700
+    m_Localized: "Za\u010D\xEDt znovu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50200631234560
+    m_Localized: "Automatick\xE9 ukl\xE1d\xE1n\xED je vypnut\xE9, aby se ulo\u017Een\xE1 hra nep\u0159epsala. Zapne se, a\u017E hru ulo\u017E\xED\u0161 nebo za\u010Dne\u0161 novou."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 6476484526842052967
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 1145753612
+        - id: 1149947904
+        - id: 2093725962241
+        - id: 2093725962242
+        - id: 2093725962243
+        - id: 2093730156548
+        - id: 3273956970502
+        - id: 3273956970504
+        - id: 3273956970505
+        - id: 3273956970507
+        - id: 3273956970508
+        - id: 3273956970509
+        - id: 3273956970510
+        - id: 3797070565376
+        - id: 3797070565377
+        - id: 3797074759680
+        - id: 3797074759681
+        - id: 3797074759683
+        - id: 3797074759684
+        - id: 3797074759685
+        - id: 3797074759687
+        - id: 4854232305664
+        - id: 4854232305665
+        - id: 4854232305667
+        - id: 4854232305668
+        - id: 4854232305669
+        - id: 4854232305670
+        - id: 4854232305671
+        - id: 4854232305673
+        - id: 4854232305674
+        - id: 4854232305675
+        - id: 4854232305676
+        - id: 4854232305677
+        - id: 4854232305678
+        - id: 4854232305679
+        - id: 4854232305681
+        - id: 4854232305682
+        - id: 4854232305683
+        - id: 4854232305689
+        - id: 4854232305694
+        - id: 4854232305699

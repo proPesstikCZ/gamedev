@@ -1,0 +1,35 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="results" class="modal panel">
+        <ui:Label text="#ui.results.title" class="dim small" />
+        <ui:VisualElement class="results-header">
+            <ui:VisualElement class="results-heading">
+                <ui:Label name="rs-name" class="modal-title" />
+                <ui:Label name="rs-subtitle" class="dim" />
+                <ui:Label name="rs-date" class="dim" />
+            </ui:VisualElement>
+            <ui:Label name="rs-review" class="results-review" />
+        </ui:VisualElement>
+        <ui:ScrollView class="modal-scroll">
+            <ui:VisualElement class="results-columns">
+                <ui:VisualElement class="results-column">
+                    <ui:Label text="#ui.results.postmortem" class="section-title" />
+                    <ui:VisualElement name="rs-postmortem" class="postmortem" />
+                    <ui:Label text="#ui.results.why" class="section-title" />
+                    <ui:VisualElement name="rs-why" class="info-box" />
+                </ui:VisualElement>
+                <ui:VisualElement class="results-column">
+                    <ui:Label text="#ui.results.sales" class="section-title" />
+                    <ui:VisualElement name="rs-sales" class="info-box" />
+                    <ui:Label text="#ui.results.chart" class="section-title" />
+                    <ui:VisualElement name="rs-chart" class="chart" />
+                    <ui:Label name="rs-chart-empty" text="#ui.results.no_sales_yet" class="dim small" />
+                    <ui:Label text="#ui.results.launch" class="section-title" />
+                    <ui:VisualElement name="rs-launch" class="info-box" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:ScrollView>
+        <ui:VisualElement class="button-row">
+            <ui:Button name="rs-close" text="#ui.common.close" class="accent-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

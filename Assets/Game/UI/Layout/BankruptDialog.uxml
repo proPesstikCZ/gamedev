@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="bankrupt" class="modal panel bankrupt">
+        <ui:Label text="#ui.bankrupt.title" class="modal-title bad" />
+        <ui:Label name="bk-text" />
+        <ui:VisualElement class="button-row">
+            <ui:Button name="bk-load" text="#ui.hud.load" />
+            <ui:Button name="bk-restart" text="#ui.bankrupt.restart" class="accent-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
