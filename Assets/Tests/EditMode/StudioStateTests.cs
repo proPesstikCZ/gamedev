@@ -60,6 +60,31 @@ namespace Game.Tests
         }
 
         [Test]
+        public void RepayingDebtDuringMonth_ResetsDebtPeriodEvenIfSpentAgain()
+        {
+            var studio = new StudioState(0);
+            for (int i = 0; i < 3; i++) studio.ApplyMonthEnd(100, 3);
+            Assert.That(studio.MonthsInDebt, Is.EqualTo(3));
+
+            studio.AddMoney(300);   // balance back to 0 -> debt repaid
+            Assert.That(studio.MonthsInDebt, Is.EqualTo(0));
+            studio.Spend(500);      // in debt again during the same month
+
+            studio.ApplyMonthEnd(100, 3);
+            Assert.That(studio.IsBankrupt, Is.False, "A new debt period must start after repayment");
+            Assert.That(studio.MonthsInDebt, Is.EqualTo(1));
+        }
+
+        [Test]
+        public void PartialRepayment_KeepsDebtPeriod()
+        {
+            var studio = new StudioState(0);
+            for (int i = 0; i < 2; i++) studio.ApplyMonthEnd(100, 3);
+            studio.AddMoney(50);    // still -150
+            Assert.That(studio.MonthsInDebt, Is.EqualTo(2));
+        }
+
+        [Test]
         public void Fans_NeverGoBelowZero()
         {
             var studio = new StudioState(0, fans: 10);

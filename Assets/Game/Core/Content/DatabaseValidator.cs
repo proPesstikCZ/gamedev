@@ -9,6 +9,11 @@ namespace Game.Core
 
         private static readonly Audience[] AllAudiences = { Audience.Kids, Audience.Everyone, Audience.Adults };
 
+        private static bool IsFinite(float value) => !float.IsNaN(value) && !float.IsInfinity(value);
+
+        /// <summary>True only for finite values within [min, max]; NaN never passes.</summary>
+        private static bool InRange(float value, float min, float max) => IsFinite(value) && value >= min && value <= max;
+
         public static IReadOnlyList<string> Validate(GameDatabaseData db)
         {
             var errors = new List<string>();
@@ -36,13 +41,14 @@ namespace Game.Core
                 for (int i = 0; i < DevAreas.Count; i++)
                 {
                     float w = g.Weights[(DevArea)i];
-                    if (w < 0f || w > 1f) errors.Add($"Genre '{g.Id}': weight {(DevArea)i} = {w} is outside 0..1.");
+                    if (!InRange(w, 0f, 1f)) errors.Add($"Genre '{g.Id}': weight {(DevArea)i} = {w} is outside 0..1.");
                 }
-                if (g.Weights.Sum() <= 0f) errors.Add($"Genre '{g.Id}': all weights are zero.");
+                float sum = g.Weights.Sum();
+                if (IsFinite(sum) && sum <= 0f) errors.Add($"Genre '{g.Id}': all weights are zero.");
                 foreach (var a in AllAudiences)
                 {
                     float fit = g.AudienceFit[a];
-                    if (fit < 0f || fit > 1f) errors.Add($"Genre '{g.Id}': audience fit {a} = {fit} is outside 0..1.");
+                    if (!InRange(fit, 0f, 1f)) errors.Add($"Genre '{g.Id}': audience fit {a} = {fit} is outside 0..1.");
                 }
             }
             return ids;
@@ -82,13 +88,14 @@ namespace Game.Core
                 if (p.EndYear < p.ReleaseYear) errors.Add($"Platform '{p.Id}': EndYear is before ReleaseYear.");
                 if (p.LicenseFee < 0) errors.Add($"Platform '{p.Id}': LicenseFee is negative.");
                 if (p.DevKitCost < 0) errors.Add($"Platform '{p.Id}': DevKitCost is negative.");
-                if (p.TechCeiling <= 0f || p.TechCeiling > 1f) errors.Add($"Platform '{p.Id}': TechCeiling must be in (0, 1].");
+                if (!InRange(p.TechCeiling, 0f, 1f) || p.TechCeiling <= 0f) errors.Add($"Platform '{p.Id}': TechCeiling must be in (0, 1].");
 
                 var points = p.InstallBaseMillions.Points;
                 if (points.Count == 0) errors.Add($"Platform '{p.Id}': installed base curve is empty.");
                 for (int i = 0; i < points.Count; i++)
                 {
-                    if (points[i].Value < 0f) errors.Add($"Platform '{p.Id}': installed base in {points[i].Year} is negative.");
+                    if (!IsFinite(points[i].Value) || points[i].Value < 0f)
+                        errors.Add($"Platform '{p.Id}': installed base in {points[i].Year} = {points[i].Value} must be a finite, non-negative number.");
                     if (i > 0 && points[i].Year == points[i - 1].Year) errors.Add($"Platform '{p.Id}': installed base has two points for {points[i].Year}.");
                 }
                 if (points.Count > 0 && points[0].Year < p.ReleaseYear)
@@ -101,7 +108,7 @@ namespace Game.Core
                         errors.Add($"Platform '{p.Id}': popularity references unknown genre '{pop.GenreId}'.");
                     else if (!seen.Add(pop.GenreId))
                         errors.Add($"Platform '{p.Id}': duplicate popularity for genre '{pop.GenreId}'.");
-                    if (pop.Multiplier < 0f || pop.Multiplier > MaxPopularityMultiplier)
+                    if (!InRange(pop.Multiplier, 0f, MaxPopularityMultiplier))
                         errors.Add($"Platform '{p.Id}': popularity of '{pop.GenreId}' = {pop.Multiplier} is outside 0..{MaxPopularityMultiplier}.");
                 }
             }

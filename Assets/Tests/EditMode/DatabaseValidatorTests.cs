@@ -52,6 +52,57 @@ namespace Game.Tests
             AssertHasError(errors, "weight Graphics");
         }
 
+        [TestCase(float.NaN)]
+        [TestCase(float.PositiveInfinity)]
+        [TestCase(float.NegativeInfinity)]
+        public void NonFiniteWeight_IsReported(float value)
+        {
+            var weights = TestData.Weights();
+            weights.Gameplay = value;
+            var genres = new[] { TestData.Genre("arcade", weights: weights) };
+            var errors = Validate(genres, new[] { TestData.Theme("space", genres) }, new[] { TestData.Platform("p") });
+            AssertHasError(errors, "weight Gameplay");
+        }
+
+        [Test]
+        public void NaNAudienceFit_IsReported()
+        {
+            var genre = new GenreData("arcade", "genre.arcade.name", 1972, TestData.Weights(), new AudienceFit(1f, float.NaN, 1f));
+            var genres = new[] { genre };
+            var errors = Validate(genres, new[] { TestData.Theme("space", genres) }, new[] { TestData.Platform("p") });
+            AssertHasError(errors, "audience fit Everyone");
+        }
+
+        [Test]
+        public void NaNTechCeiling_IsReported()
+        {
+            var genres = new[] { TestData.Genre("arcade") };
+            var platform = new PlatformData("p", "platform.p.name", 1972, 1980, 0, 0, float.NaN,
+                new YearCurve(new[] { new YearPoint(1972, 1f) }), null);
+            var errors = Validate(genres, new[] { TestData.Theme("space", genres) }, new[] { platform });
+            AssertHasError(errors, "TechCeiling must be in (0, 1]");
+        }
+
+        [TestCase(float.NaN)]
+        [TestCase(float.PositiveInfinity)]
+        public void NonFiniteInstallBase_IsReported(float value)
+        {
+            var genres = new[] { TestData.Genre("arcade") };
+            var platform = new PlatformData("p", "platform.p.name", 1972, 1980, 0, 0, 0.2f,
+                new YearCurve(new[] { new YearPoint(1972, 0.1f), new YearPoint(1975, value) }), null);
+            var errors = Validate(genres, new[] { TestData.Theme("space", genres) }, new[] { platform });
+            AssertHasError(errors, "installed base in 1975");
+        }
+
+        [Test]
+        public void NaNPopularity_IsReported()
+        {
+            var genres = new[] { TestData.Genre("arcade") };
+            var platform = TestData.Platform("p", popularity: new[] { new GenrePopularity("arcade", float.NaN) });
+            var errors = Validate(genres, new[] { TestData.Theme("space", genres) }, new[] { platform });
+            AssertHasError(errors, "popularity of 'arcade'");
+        }
+
         [Test]
         public void AllWeightsZero_IsReported()
         {

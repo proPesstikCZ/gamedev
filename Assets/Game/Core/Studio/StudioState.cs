@@ -27,6 +27,8 @@ namespace Game.Core
         {
             if (amount < 0) throw new ArgumentOutOfRangeException(nameof(amount), amount, "Use Spend for costs.");
             Money += amount;
+            // Paying off the debt ends the debt period, even if the money is spent again before month end (GDD 14).
+            if (Money >= 0) MonthsInDebt = 0;
         }
 
         /// <summary>Spending may push the balance below zero; bankruptcy is checked at month end.</summary>
