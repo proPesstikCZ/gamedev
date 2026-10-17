@@ -81,9 +81,9 @@ Stav hry se serializuje do JSON a zpět, včetně stavu `SeededRandom`.
 
 ---
 
-## M2 – Logika vývoje hry a hodnocení (bez grafiky) 🔍 ČEKÁ NA REVIEW
+## M2 – Logika vývoje hry a hodnocení (bez grafiky) ✅ HOTOVO
 
-> Implementováno 2026-10-17 na větvi `feature/m2-dev-logic`. 115 EditMode testů prochází, konzole Unity je čistá. Čeká na review (Codex).
+> Dokončeno 2026-10-17 na větvi `feature/m2-dev-logic`, prošlo review (Codex), opravy z review jsou v `main`.
 >
 > **Rozhodnutí a odhady k revizi:**
 > - Délka malé hry: pre-produkce 3 + produkce 5 + dokončení 3 týdny + QA 0–5 týdnů = 11–16 týdnů. Validátor hlídá rozsah 8–16.
@@ -134,7 +134,21 @@ EditMode test odehraje 10 let s jednoduchým botem.
 
 ---
 
-## M3 – UI a lokalizace (UI Toolkit + Unity Localization CZ/EN)
+## M3 – UI a lokalizace (UI Toolkit + Unity Localization CZ/EN) 🔍 ČEKÁ NA REVIEW
+
+> Implementováno 2026-10-17 na větvi `feature/m3-ui-localization`. 138 EditMode a 8 PlayMode testů prochází, konzole Unity je čistá. Čeká na review (Codex).
+>
+> **Rozhodnutí k revizi:**
+> - Texty se píšou do `Assets/Game/Localization/Source/*.tsv` (klíč, EN, CZ). Příkaz **Game → Localization → Import Tables** z nich vytvoří String Tables. Zdroj pravdy jsou TSV, test hlídá, že tabulky jsou aktuální.
+> - Statické texty v UXML se píšou jako `text="#klíč"`, `UiLocalizer` je přeloží a při přepnutí jazyka obnoví. Test hlídá, že každý `#klíč` existuje v obou jazycích.
+> - `TextKeys` (Core) zná všechny klíče, které vrací logika a data, a tabulku každého klíče. Post-mortem: `{0}` a `{1}` jsou názvy (žánr, téma, oblast, publikum), `{2}` je hodnota.
+> - Texty s `{` jsou Smart Strings, čeština tak má správné tvary (1 týden / 2 týdny / 5 týdnů).
+> - Jazyk: uložená volba → jazyk systému → angličtina. Volba se ukládá do PlayerPrefs při každém přepnutí.
+> - Jeden slot `save.json` v `persistentDataPath`, ruční uložení i autosave na začátku měsíce (až po dosimulování týdne). Úspěšný autosave nehlásí nic, jen chybu. Zápis přes dočasný soubor, takže pád při zápisu save nepoškodí.
+> - Otevřený dialog pozastaví hru, po zavření se vrátí předchozí rychlost. Po vydání se samy otevřou výsledky, po bankrotu obrazovka bankrotu.
+> - Výsledky ukazují i rozpad hodnocení (kvalita proti očekávání, shoda, publikum, chyby, náhoda) a faktory prodeje při vydání, aby hráč věděl, proč hra dopadla, jak dopadla.
+> - Postřeh z testování: první hra na Magnafox Odyssé v roce 1972 skončí ve ztrátě (malá instalovaná základna). Patří to k vyvážení, ne k M3.
+
 
 **3.1 Lokalizace**
 Balíček `com.unity.localization`, jazyky cs a en, String Tables `UI`, `Content` (žánry, témata, platformy) a `PostMortem`. Jazyk jde přepnout za běhu.
