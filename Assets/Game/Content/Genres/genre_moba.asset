@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d4789c64c287843a8994a1d1043171, type: 3}
+  m_Name: genre_moba
+  m_EditorClassIdentifier: Game.Data::Game.Data.GenreDefinition
+  id: moba
+  nameKey: genre.moba.name
+  firstYear: 2009
+  weights:
+    GameplayDesign: 0.9
+    StoryAndWorld: 0.3
+    Technology: 0.8
+    Gameplay: 1
+    Graphics: 0.7
+    Sound: 0.5
+    LevelDesign: 0.8
+    AiAndSystems: 0.4
+    DialogueAndText: 0.2
+    Polish: 0.8
+  audienceFit:
+    Kids: 0.3
+    Everyone: 0.9
+    Adults: 1

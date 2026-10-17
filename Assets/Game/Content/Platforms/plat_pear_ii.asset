@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e1bf495f55e1d4b9ee71a5714b6e00, type: 3}
+  m_Name: plat_pear_ii
+  m_EditorClassIdentifier: Game.Data::Game.Data.PlatformDefinition
+  id: pear_ii
+  nameKey: platform.pear_ii.name
+  releaseYear: 1977
+  endYear: 1993
+  licenseFee: 0
+  devKitCost: 1500
+  techCeiling: 0.2
+  installBaseMillions:
+  - Year: 1977
+    Value: 0.0025
+  - Year: 1978
+    Value: 0.01
+  - Year: 1979
+    Value: 0.045
+  - Year: 1980
+    Value: 0.12
+  - Year: 1981
+    Value: 0.33
+  - Year: 1982
+    Value: 0.65
+  - Year: 1983
+    Value: 1.6
+  - Year: 1984
+    Value: 2.1
+  - Year: 1985
+    Value: 2.6
+  - Year: 1993
+    Value: 5.5
+  genrePopularity:
+  - Genre: {fileID: 11400000, guid: c6d26e9dcaa19cc42beb53fb1b32aea3, type: 2}
+    Multiplier: 1.5
+  - Genre: {fileID: 11400000, guid: c4b76172ddb539d4cae0c5e8b1014be8, type: 2}
+    Multiplier: 1.6
+  - Genre: {fileID: 11400000, guid: c0878a48d4db7b64ea60dcdbc36bff15, type: 2}
+    Multiplier: 1.5
+  - Genre: {fileID: 11400000, guid: fde87092e98a4a444a719f595e84bf7e, type: 2}
+    Multiplier: 1.3
+  - Genre: {fileID: 11400000, guid: cb155cfbde3151c48a9607350eed90ec, type: 2}
+    Multiplier: 1.4
+  - Genre: {fileID: 11400000, guid: 3e0b5139cee52d743bdc81cfa6c82de9, type: 2}
+    Multiplier: 0.8
+  - Genre: {fileID: 11400000, guid: 1e3a39eda92b597498eb75f034a8170d, type: 2}
+    Multiplier: 0.8
+  - Genre: {fileID: 11400000, guid: fbd21e122dcf04f489b28fcb2595f999, type: 2}
+    Multiplier: 0.6

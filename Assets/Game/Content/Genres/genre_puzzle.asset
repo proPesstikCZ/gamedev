@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d4789c64c287843a8994a1d1043171, type: 3}
+  m_Name: genre_puzzle
+  m_EditorClassIdentifier: Game.Data::Game.Data.GenreDefinition
+  id: puzzle
+  nameKey: genre.puzzle.name
+  firstYear: 1972
+  weights:
+    GameplayDesign: 1
+    StoryAndWorld: 0.1
+    Technology: 0.2
+    Gameplay: 0.9
+    Graphics: 0.3
+    Sound: 0.3
+    LevelDesign: 0.9
+    AiAndSystems: 0.2
+    DialogueAndText: 0.1
+    Polish: 0.7
+  audienceFit:
+    Kids: 0.9
+    Everyone: 1
+    Adults: 0.7

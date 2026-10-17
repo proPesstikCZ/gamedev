@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d4789c64c287843a8994a1d1043171, type: 3}
+  m_Name: genre_rpg
+  m_EditorClassIdentifier: Game.Data::Game.Data.GenreDefinition
+  id: rpg
+  nameKey: genre.rpg.name
+  firstYear: 1979
+  weights:
+    GameplayDesign: 0.7
+    StoryAndWorld: 1
+    Technology: 0.4
+    Gameplay: 0.5
+    Graphics: 0.5
+    Sound: 0.5
+    LevelDesign: 0.5
+    AiAndSystems: 0.5
+    DialogueAndText: 0.8
+    Polish: 0.5
+  audienceFit:
+    Kids: 0.4
+    Everyone: 0.8
+    Adults: 1

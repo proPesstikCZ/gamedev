@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d4789c64c287843a8994a1d1043171, type: 3}
+  m_Name: genre_adventure
+  m_EditorClassIdentifier: Game.Data::Game.Data.GenreDefinition
+  id: adventure
+  nameKey: genre.adventure.name
+  firstYear: 1976
+  weights:
+    GameplayDesign: 0.5
+    StoryAndWorld: 1
+    Technology: 0.3
+    Gameplay: 0.3
+    Graphics: 0.5
+    Sound: 0.4
+    LevelDesign: 0.8
+    AiAndSystems: 0.2
+    DialogueAndText: 0.9
+    Polish: 0.5
+  audienceFit:
+    Kids: 0.5
+    Everyone: 0.9
+    Adults: 1
