@@ -77,21 +77,69 @@ namespace Game.Tests
         public void Objects_LowerOnScreenCoverHigherOnes()
         {
             var objects = GameObject.Find("Garage/Objects").transform;
-            var chair = objects.Find("furn_chair_70s");
-            var developer = _developer.transform;
-            var desk = objects.Find("furn_desk_computer_70s");
-            Assert.That(chair, Is.Not.Null);
-            Assert.That(desk, Is.Not.Null);
-            Assert.That(desk.GetComponent<SortingGroup>(), Is.Not.Null, "The desk sorts as one group.");
+            var chair = objects.Find("furn_chair_70s").GetComponent<SpriteRenderer>();
+            var developer = _developer.GetComponent<SpriteRenderer>();
+            var desk = objects.Find("furn_desk_computer_70s").GetComponentInChildren<SpriteRenderer>();
+            Assert.That(desk.GetComponentInParent<SortingGroup>(), Is.Not.Null, "The desk sorts as one group.");
 
             // Same layer and order for all objects, so only the Y axis decides (custom axis 0,1,0).
             var renderers = objects.GetComponentsInChildren<SpriteRenderer>();
             Assert.That(renderers.Select(r => r.sortingLayerID).Distinct().Count(), Is.EqualTo(1));
             Assert.That(renderers.Select(r => r.sortingOrder).Distinct().Count(), Is.EqualTo(1));
-            Assert.That(desk.GetComponent<SortingGroup>().sortingOrder, Is.EqualTo(renderers[0].sortingOrder));
+            Assert.That(desk.GetComponentInParent<SortingGroup>().sortingOrder, Is.EqualTo(renderers[0].sortingOrder));
+            foreach (var r in renderers)
+                Assert.That(r.spriteSortPoint, Is.EqualTo(SpriteSortPoint.Pivot), $"{r.name} must sort by its floor point.");
 
-            Assert.That(chair.position.y, Is.LessThan(developer.position.y), "The chair is in front of the developer.");
-            Assert.That(developer.position.y, Is.LessThan(desk.position.y), "The developer is in front of the desk.");
+            // The sprites really overlap on screen, so their order is visible.
+            Assert.That(Overlap(chair, developer), Is.True, "Chair and developer do not overlap.");
+            Assert.That(Overlap(developer, desk), Is.True, "Developer and desk do not overlap.");
+
+            // Lower sort point = drawn later = in front.
+            Assert.That(SortY(chair), Is.LessThan(SortY(developer)), "The chair is in front of the developer.");
+            Assert.That(SortY(developer), Is.LessThan(SortY(desk)), "The developer is in front of the desk.");
+        }
+
+        [Test]
+        public void SortOrder_DoesNotChangeWithSpriteHeight()
+        {
+            var objects = GameObject.Find("Garage/Objects").transform;
+            var chair = objects.Find("furn_chair_70s").GetComponent<SpriteRenderer>();
+            var developer = _developer.GetComponent<SpriteRenderer>();
+            var desk = objects.Find("furn_desk_computer_70s").GetComponentInChildren<SpriteRenderer>();
+            float chairY = SortY(chair), developerY = SortY(developer), deskY = SortY(desk);
+
+            // Every sprite of the scene in every renderer: small chair, tall desk, all poses.
+            var sprites = renderers().Select(r => r.sprite).Where(sp => sp != null).Distinct().ToArray();
+            Assert.That(sprites.Length, Is.GreaterThanOrEqualTo(3));
+            Assert.That(sprites.Select(sp => sp.bounds.size.y).Distinct().Count(), Is.GreaterThan(1), "Sprites need different heights.");
+            foreach (var sprite in sprites)
+            {
+                foreach (var r in new[] { chair, developer, desk }) r.sprite = sprite;
+                Assert.That(SortY(chair), Is.EqualTo(chairY).Within(1e-5), sprite.name);
+                Assert.That(SortY(developer), Is.EqualTo(developerY).Within(1e-5), sprite.name);
+                Assert.That(SortY(desk), Is.EqualTo(deskY).Within(1e-5), sprite.name);
+            }
+
+            SpriteRenderer[] renderers() => objects.GetComponentsInChildren<SpriteRenderer>();
+        }
+
+        /// <summary>
+        /// Y used for sorting along the custom axis (0,1,0): the transform of the outermost Sorting
+        /// Group, otherwise the sprite pivot or the sprite centre, as set by Sprite Sort Point.
+        /// </summary>
+        private static float SortY(SpriteRenderer renderer)
+        {
+            SortingGroup outer = null;
+            for (var t = renderer.transform; t != null; t = t.parent)
+                if (t.TryGetComponent<SortingGroup>(out var group) && group.enabled) outer = group;
+            if (outer != null) return outer.transform.position.y;
+            return renderer.spriteSortPoint == SpriteSortPoint.Pivot ? renderer.transform.position.y : renderer.bounds.center.y;
+        }
+
+        private static bool Overlap(Renderer a, Renderer b)
+        {
+            Bounds x = a.bounds, y = b.bounds;
+            return x.min.x < y.max.x && y.min.x < x.max.x && x.min.y < y.max.y && y.min.y < x.max.y;
         }
 
         [UnityTest]

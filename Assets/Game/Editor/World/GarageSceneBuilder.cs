@@ -14,8 +14,9 @@ namespace Game.Editor.World
     /// camera. Running it again replaces the previous garage.
     ///
     /// Sorting: floor and walls are behind everything (walls stand only on the back edges). Objects
-    /// share one order and are sorted along the Y axis (Renderer2D custom axis 0,1,0), so objects
-    /// lower on screen cover those higher up.
+    /// share one order and are sorted along the Y axis (Renderer2D custom axis 0,1,0) by the point
+    /// where they stand on the floor (Sprite Sort Point = Pivot), so objects lower on screen cover
+    /// those higher up.
     /// </summary>
     public static class GarageSceneBuilder
     {
@@ -100,6 +101,9 @@ namespace Game.Editor.World
             var renderer = sprite.AddComponent<SpriteRenderer>();
             renderer.sprite = AssetDatabase.LoadAssetAtPath<Sprite>(PlaceholderArtGenerator.Desk);
             renderer.sortingOrder = ObjectOrder;
+            // Sort by the floor point (pivot), not by the sprite centre, so the order does not
+            // change when a sprite of another height replaces it.
+            renderer.spriteSortPoint = SpriteSortPoint.Pivot;
             return renderer;
         }
 
@@ -179,6 +183,9 @@ namespace Game.Editor.World
             var renderer = go.AddComponent<SpriteRenderer>();
             renderer.sprite = AssetDatabase.LoadAssetAtPath<Sprite>(spritePath);
             renderer.sortingOrder = ObjectOrder;
+            // Sort by the floor point (pivot), not by the sprite centre, so the order does not
+            // change when a sprite of another height replaces it.
+            renderer.spriteSortPoint = SpriteSortPoint.Pivot;
             return renderer;
         }
 

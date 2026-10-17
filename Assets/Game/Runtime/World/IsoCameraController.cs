@@ -61,6 +61,8 @@ namespace Game.Runtime
             Vector2 pointer = mouse.position.ReadValue();
             bool overUi = PointerBlocked?.Invoke(pointer) ?? false;
 
+            // A drag may only start outside the UI, but once started it continues over panels:
+            // right and middle buttons do nothing in the UI, and stopping halfway feels like a glitch.
             bool dragButton = mouse.rightButton.isPressed || mouse.middleButton.isPressed;
             if (!dragButton) _dragging = false;
             else if (!_dragging && !overUi) _dragging = true;
