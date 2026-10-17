@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 
@@ -8,7 +9,8 @@ namespace Game.Core
     [Serializable]
     public sealed class SaveData
     {
-        public const int CurrentVersion = 1;
+        // 2: development, releases, knowledge and trends (M2).
+        public const int CurrentVersion = 2;
 
         public int Version = CurrentVersion;
         public int StartYear;
@@ -19,6 +21,16 @@ namespace Game.Core
         public bool IsBankrupt;
         /// <summary>RNG state as hex; JSON numbers cannot hold a full 64-bit value safely.</summary>
         public string RandomState;
+        /// <summary>Seed of generated trend changes, hex.</summary>
+        public string TrendSeed;
+        public float Skill = 1f;
+        public List<string> OwnedDevKits = new List<string>();
+        /// <summary>JsonUtility cannot store null objects, so this flag tells whether ActiveProject is set.</summary>
+        public bool HasActiveProject;
+        public DevelopmentProject ActiveProject;
+        public long ActiveProjectCost;
+        public List<ReleasedGame> ReleasedGames = new List<ReleasedGame>();
+        public MarketKnowledge Knowledge = new MarketKnowledge();
     }
 
     public static class SaveSerializer
@@ -39,6 +51,15 @@ namespace Game.Core
             if (data.TotalWeeks < 0 || data.Fans < 0 || data.MonthsInDebt < 0)
                 throw new FormatException("Save contains negative counters.");
             ParseRandomState(data.RandomState);
+            ParseRandomState(data.TrendSeed);
+            if (float.IsNaN(data.Skill) || float.IsInfinity(data.Skill) || data.Skill <= 0f)
+                throw new FormatException("Save has an invalid skill.");
+            if (data.HasActiveProject && (data.ActiveProject == null || !data.ActiveProject.IsStructurallyValid()))
+                throw new FormatException("Save has a broken project in development.");
+            if (data.ReleasedGames == null || data.ReleasedGames.Exists(g => g == null || !g.IsStructurallyValid()))
+                throw new FormatException("Save has a broken released game.");
+            if (data.Knowledge == null || !data.Knowledge.IsStructurallyValid())
+                throw new FormatException("Save has broken market knowledge.");
             return data;
         }
 

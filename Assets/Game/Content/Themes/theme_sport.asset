@@ -56,3 +56,10 @@ MonoBehaviour:
     Rating: 1
   - Genre: {fileID: 11400000, guid: b8b5f346bce986b4da8654bd96e81933, type: 2}
     Rating: 1
+  trend:
+  - Year: 1972
+    Value: 1.2
+  - Year: 1977
+    Value: 1.0
+  - Year: 1985
+    Value: 1.0

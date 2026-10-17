@@ -81,7 +81,23 @@ Stav hry se serializuje do JSON a zpět, včetně stavu `SeededRandom`.
 
 ---
 
-## M2 – Logika vývoje hry a hodnocení (bez grafiky)
+## M2 – Logika vývoje hry a hodnocení (bez grafiky) 🔍 ČEKÁ NA REVIEW
+
+> Implementováno 2026-10-17 na větvi `feature/m2-dev-logic`. 115 EditMode testů prochází, konzole Unity je čistá. Čeká na review (Codex).
+>
+> **Rozhodnutí a odhady k revizi:**
+> - Délka malé hry: pre-produkce 3 + produkce 5 + dokončení 3 týdny + QA 0–5 týdnů = 11–16 týdnů. Validátor hlídá rozsah 8–16.
+> - Skóre oblasti = body^0,5 (klesající výnos). Díky tomu se vyplatí rozdělit body podle vah žánru, nejlepší je podíl úměrný váze². Bez toho by bylo optimální dát vše do jedné oblasti.
+> - Technologie = engine (vlastní 1,0 / licencovaný 1,2 za 1500) × (1 + 2 × technický strop platformy). Dovednost hráče roste o 0,1 za vydanou hru (max 3).
+> - Recenze = 1 + 9 × (1 − e^(−kvalita/očekávání)) + šum. Šum je ořezaný na ±0,5 v kódu, i kdyby balanc chtěl víc. Očekávání trhu roste o 4 % ročně.
+> - Prodeje: faktor fanoušků má strop (max ×2), jinak se prodeje a fanoušci navzájem nafukovali do miliard. Týden prodá nejvýš 2 % instalované základny.
+> - Trendy (GDD 9) jsou nad rámec původního plánu slice (kap. 18 je měla mimo rozsah), přidány na přání. Historická křivka v datech žánru/tématu × generovaný výkyv ±10 % za rok podle vlastního seedu (nespotřebovává RNG simulace). Zprávy z trhu ohlašují změnu o ≥ 15 % rok dopředu.
+> - Post-mortem po každé hře odhalí kombinaci žánr + téma, nejdůležitější a nejméně důležitou dosud skrytou váhu žánru (●●● / ●○○). Všech 10 vah je známých po 5 hrách stejného žánru.
+> - Dev kit se platí jednou za platformu, licenční poplatek platformy při každém vydání.
+> - Save má verzi 2, saves z M1 se nenačtou.
+> - Odhad recenze s rozptylem (kap. 7) zatím není, je mimo rozsah slice.
+> - Kalibrace (10 let, 5 seedů): bot podle vah má průměrnou recenzi ~8,3 a ~40 mil. peněz, náhodný bot ~6,7 a 4–7 mil. Ekonomika je štědrá, žádný bot nezbankrotuje. Doladit při playtestu v M3.
+> - Debug příkaz: menu **Game → Debug → Simulate One Game** (bot podle vah / náhodný bot / náhodný seed) vypíše do konzole koncept, rozdělení bodů, rozpad recenze, post-mortem a prodeje po týdnech.
 
 **2.1 Koncept**
 `GameConcept` obsahuje název, žánr, téma, platformu, velikost (ve slice jen Malá), publikum a engine. Validace hlídá, že žánr a platforma jsou v daném roce dostupné, a stahuje cenu dev kitu.

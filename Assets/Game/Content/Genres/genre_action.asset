@@ -30,3 +30,12 @@ MonoBehaviour:
     Kids: 0.6
     Everyone: 1
     Adults: 0.9
+  trend:
+  - Year: 1972
+    Value: 0.9
+  - Year: 1980
+    Value: 1.1
+  - Year: 1985
+    Value: 1.2
+  - Year: 1990
+    Value: 1.3

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Game.Core;
 using UnityEngine;
 
@@ -15,9 +16,11 @@ namespace Game.Data
         [SerializeField] private AreaWeights weights;
         [Tooltip("How well the genre fits each audience, 0..1.")]
         [SerializeField] private AudienceFit audienceFit = new AudienceFit(1f, 1f, 1f);
+        [Tooltip("Popularity multiplier over years, 1 = neutral (GDD 9). Empty = always 1.")]
+        [SerializeField] private List<YearPoint> trend = new List<YearPoint>();
 
         public string Id => id;
 
-        public GenreData ToCore() => new GenreData(id, nameKey, firstYear, weights, audienceFit);
+        public GenreData ToCore() => new GenreData(id, nameKey, firstYear, weights, audienceFit, new YearCurve(trend));
     }
 }

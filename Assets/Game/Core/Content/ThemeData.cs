@@ -22,9 +22,12 @@ namespace Game.Core
         public string NameKey { get; }
         public int FirstYear { get; }
         public IReadOnlyList<GenreCombo> Combos { get; }
+        /// <summary>Popularity multiplier over years (GDD 9). Empty = always 1.</summary>
+        public YearCurve Trend { get; }
 
-        public ThemeData(string id, string nameKey, int firstYear, IReadOnlyList<GenreCombo> combos)
+        public ThemeData(string id, string nameKey, int firstYear, IReadOnlyList<GenreCombo> combos, YearCurve trend = null)
         {
+            Trend = trend ?? new YearCurve(null);
             Id = id;
             NameKey = nameKey;
             FirstYear = firstYear;
