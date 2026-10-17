@@ -32,7 +32,9 @@ Assets/Art/              placeholder grafika podle STYLE.md
 
 ---
 
-## M1 – Datová kostra, čas a peníze
+## M1 – Datová kostra, čas a peníze ✅ HOTOVO
+
+> Dokončeno 2026-10-17 na větvi `feature/m1-data-core`, prošlo review (Codex). 62 EditMode testů prochází, konzole Unity je čistá.
 
 **1.1 Projekt a testy**
 Asmdefy podle struktury, jeden prázdný EditMode test.
