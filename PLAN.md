@@ -134,9 +134,9 @@ EditMode test odehraje 10 let s jednoduchým botem.
 
 ---
 
-## M3 – UI a lokalizace (UI Toolkit + Unity Localization CZ/EN) 🔍 ČEKÁ NA REVIEW
+## M3 – UI a lokalizace (UI Toolkit + Unity Localization CZ/EN) ✅ HOTOVO
 
-> Implementováno 2026-10-17 na větvi `feature/m3-ui-localization`. 138 EditMode a 8 PlayMode testů prochází, konzole Unity je čistá. Čeká na review (Codex).
+> Dokončeno 2026-10-17 na větvi `feature/m3-ui-localization`, prošlo review (Codex), opravy z review jsou v `main`. 144 EditMode a 12 PlayMode testů prochází, konzole Unity je čistá.
 >
 > **Rozhodnutí k revizi:**
 > - Texty se píšou do `Assets/Game/Localization/Source/*.tsv` (klíč, EN, CZ). Příkaz **Game → Localization → Import Tables** z nich vytvoří String Tables. Zdroj pravdy jsou TSV, test hlídá, že tabulky jsou aktuální.
@@ -145,6 +145,7 @@ EditMode test odehraje 10 let s jednoduchým botem.
 > - Texty s `{` jsou Smart Strings, čeština tak má správné tvary (1 týden / 2 týdny / 5 týdnů).
 > - Jazyk: uložená volba → jazyk systému → angličtina. Volba se ukládá do PlayerPrefs při každém přepnutí.
 > - Jeden slot `save.json` v `persistentDataPath`, ruční uložení i autosave na začátku měsíce (až po dosimulování týdne). Úspěšný autosave nehlásí nic, jen chybu. Zápis přes dočasný soubor, takže pád při zápisu save nepoškodí.
+> - Po spuštění hra sama pokračuje v uloženém savu. Když save nejde načíst, začne nová hra, ale autosave čeká, dokud hráč sám neuloží, nenačte nebo nezačne novou hru, takže nenačitatelný save se nepřepíše. Před načtením se kontroluje, že save odkazuje jen na existující obsah (žánry, témata, platformy).
 > - Otevřený dialog pozastaví hru, po zavření se vrátí předchozí rychlost. Po vydání se samy otevřou výsledky, po bankrotu obrazovka bankrotu.
 > - Výsledky ukazují i rozpad hodnocení (kvalita proti očekávání, shoda, publikum, chyby, náhoda) a faktory prodeje při vydání, aby hráč věděl, proč hra dopadla, jak dopadla.
 > - Postřeh z testování: první hra na Magnafox Odyssé v roce 1972 skončí ve ztrátě (malá instalovaná základna). Patří to k vyvážení, ne k M3.
