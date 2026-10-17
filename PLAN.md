@@ -177,7 +177,20 @@ Napojení save/load z M1.6 na UI. Jeden slot a automatické uložení na začát
 
 ---
 
-## M4 – Placeholder izometrická garáž
+## M4 – Placeholder izometrická garáž ✅ HOTOVO
+
+> Dokončeno 2026-10-17 na větvi `feature/m4`, prošlo review (Codex), opravy z review jsou v `main`. 162 EditMode a 18 PlayMode testů prochází, konzole Unity je čistá.
+>
+> **Rozhodnutí k revizi:**
+> - `AssetPostprocessor` je v `Assets/Editor/` s vlastním asmdef `Game.ArtImport` (testy na něj potřebují odkaz). Pravidla platí pro `Assets/Art/` i `Assets/Placeholders/`, aby se placeholdery chovaly stejně jako finální grafika.
+> - Pivot podle STYLE kap. 3: objekty mají střed spodní hrany, dlaždice (`/Tiles/`) střed. Spritesheety, které mají Sprite Mode Multiple, si ho nechají. Ostatní hodnoty (PPU, filtr, mipmapy) se nastaví i u nich.
+> - Postprocessor hned přenastavil testovací židli od Codexe `furn_chair_test_70s` (PPU 100 → 128). Do `Assets/Art/` se ručně nezapisovalo.
+> - Stěny jsou dlaždice 128 × 192 px a buňka je ve spodních 64 px. Tile asset je posouvá o 0,5 jednotky nahoru. Stejný formát by měly mít i stěny od Codexe v M4b.
+> - Řazení: podlaha (−20) a stěny (−10) jsou vždy za objekty, protože stěny stojí jen na zadních hranách. Objekty mají stejné pořadí a řadí se podle osy Y bodu, kde stojí na podlaze: Sprite Sort Point = Pivot (výchozí Center by řadil podle středu spritu a pořadí by se měnilo s jeho výškou). Stůl zabírá 2 × 1 buňky a má Sorting Group ve středu půdorysu, jinak by se kvůli pivotu v předním rohu kreslil před postavou. Test kontroluje skutečné řadicí body a to, že výměna spritu za jinak vysoký pořadí nezmění.
+> - Rozběhnuté tažení kamery pokračuje i nad UI. Začít nad UI nejde, ale přerušit ho uprostřed by působilo jako chyba a pravé ani prostřední tlačítko v UI nic nedělá (rozhodnutí po review).
+> - Placeholdery kreslí příkaz **Game → World → Generate Placeholder Art**, garáž staví **Game → World → Build Garage In Open Scene** (dá se spustit znovu, nahradí předchozí garáž). Garáž má 6 × 5 buněk.
+> - Postava je zatím jen jeden směr (SZ, zezadu u stolu). Při práci střídá 2 snímky psaní a monitor svítí, při odpočinku má ruce za hlavou. V pauze animace stojí.
+> - Kamera: WASD nebo šipky, tažení pravým nebo prostředním tlačítkem, kolečko zoomuje ke kurzoru (1,2–4). Nad UI, v otevřeném dialogu a při psaní do textového pole kamera nereaguje.
 
 **4.1 Import grafiky**
 `AssetPostprocessor` pro `Assets/Art/` podle STYLE kap. 8: Sprite, Bilinear, PPU 128, bez mipmap. URP 2D Renderer s Transparency Sort Mode = Custom Axis (0, 1, 0).
@@ -206,7 +219,7 @@ Postava vývojáře ve 4 směrech (SV, SZ, JV, JZ) podle STYLE kap. 5.
 *Ověření:* všechny 4 směry jsou v `Assets/Art/Characters/` a mají jednotný styl.
 
 **4b.3 Napojení do scény (Claude)**
-Claude nahradí placeholdery z M4 assety z `Assets/Art/`. Do `Assets/Art/` nic nezapisuje.
+Claude nahradí placeholdery z M4 assety z `Assets/Art/`. Do `Assets/Art/` nic nezapisuje. Kromě `SpriteRenderer.sprite` je potřeba vyměnit i `DeveloperView.workFrames`, `restSprite` a oba stavy monitoru (`deskScreenOff`, `deskScreenOn`), jinak je runtime přepíše. Stěny musí mít formát 128 × 192 px s buňkou ve spodních 64 px (posun tile je pevně 0,5 jednotky). Nejjednodušší je upravit cesty v `GarageSceneBuilder` / `PlaceholderArtGenerator` a garáž znovu postavit.
 *Ověření:* snímek scény přes Unity MCP, objekty se správně překrývají a konzole je čistá.
 
 ---

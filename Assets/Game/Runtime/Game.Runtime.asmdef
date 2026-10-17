@@ -3,7 +3,8 @@
     "rootNamespace": "Game.Runtime",
     "references": [
         "Game.Core",
-        "Game.Data"
+        "Game.Data",
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

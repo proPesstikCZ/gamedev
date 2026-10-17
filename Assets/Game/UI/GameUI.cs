@@ -14,6 +14,8 @@ namespace Game.UI
     public sealed class GameUI : MonoBehaviour
     {
         [SerializeField] private GameRunner runner;
+        [Tooltip("Optional. Gets told when the pointer or keyboard belongs to the UI.")]
+        [SerializeField] private IsoCameraController cameraController;
         [SerializeField, Min(0.5f)] private float toastSeconds = 4f;
         [SerializeField, Min(1)] private int maxToasts = 4;
 
@@ -25,6 +27,7 @@ namespace Game.UI
         private GameRunner.Speed _speedBeforeModal;
 
         public GameRunner Runner => runner;
+        public IsoCameraController CameraController => cameraController;
         public GameSimulation Simulation => runner != null ? runner.Simulation : null;
         public GameDatabaseData Data => runner != null ? runner.Data : null;
         public VisualElement Root { get; private set; }
@@ -61,6 +64,7 @@ namespace Game.UI
             Loc.Initialize();
             if (Hud == null) Build();
             Bind(true);
+            BindCamera(true);
             IsReady = true;
             RefreshAll();
             if (Simulation != null && Simulation.IsGameOver) Bankrupt.Open();
@@ -79,7 +83,33 @@ namespace Game.UI
         {
             if (!IsReady) return;
             Bind(false);
+            BindCamera(false);
             IsReady = false;
+        }
+
+        private void BindCamera(bool on)
+        {
+            if (cameraController == null) return;
+            cameraController.PointerBlocked = on ? IsPointerOverUi : (System.Func<Vector2, bool>)null;
+            cameraController.KeyboardBlocked = on ? IsKeyboardUsedByUi : (System.Func<bool>)null;
+        }
+
+        /// <summary>True when a visible UI element lies under the screen point (origin bottom left).</summary>
+        public bool IsPointerOverUi(Vector2 screenPoint)
+        {
+            var panel = Root?.panel;
+            if (panel == null) return false;
+            var panelPoint = RuntimePanelUtils.ScreenToPanel(panel, new Vector2(screenPoint.x, Screen.height - screenPoint.y));
+            return panel.Pick(panelPoint) != null;
+        }
+
+        /// <summary>Dialogs and text fields own the keyboard, so typing a name never moves the camera.</summary>
+        public bool IsKeyboardUsedByUi()
+        {
+            if (IsModalOpen) return true;
+            // Focus sits on the inner text input, so look for the TextField above it.
+            var focused = Root?.focusController?.focusedElement as VisualElement;
+            return focused != null && (focused is TextField || focused.GetFirstAncestorOfType<TextField>() != null);
         }
 
         private void Build()

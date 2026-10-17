@@ -4,6 +4,8 @@
     "references": [
         "Game.Core",
         "Game.Data",
+        "Game.Runtime",
+        "Game.UI",
         "Unity.Localization",
         "Unity.Localization.Editor"
     ],
