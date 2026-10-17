@@ -22,6 +22,7 @@
 Assets/Game/Core/        Game.Core.asmdef    – simulace (čas, peníze, vývoj, hodnocení, prodeje)
 Assets/Game/Data/        Game.Data.asmdef    – ScriptableObject definice + převod do Core
 Assets/Game/Content/     .asset soubory žánrů, témat, platforem, balancu
+Assets/Game/Runtime/     Game.Runtime.asmdef – MonoBehaviour vrstva (GameRunner)
 Assets/Game/UI/          Game.UI.asmdef      – UI Toolkit (UXML, USS, controllery)
 Assets/Game/World/       izometrická garáž
 Assets/Tests/EditMode/   Game.Tests.EditMode.asmdef
@@ -52,6 +53,13 @@ ScriptableObjects `GenreDefinition`, `ThemeDefinition`, `PlatformDefinition` a `
 - **Platformy (4):** Magnafox Odyssé, Astari VCS, Pear II, Komodor 64. Data je potřeba ověřit podle skutečné historie (GDD kap. 5).
 
 *Ověření:* validátor projde. Test „v roce 1972 jsou dostupné jen žánry a platformy s rokem ≤ 1972“ projde a stejně tak test pro rok 1985.
+
+> **Stav po M1 (rozhodnutí a odhady k revizi):**
+> - Instalovaná základna je seznam bodů (rok → miliony prodaných kusů kumulativně), ne `AnimationCurve`. Lépe se čte v review.
+> - Roční prodeje platforem jsou **odhad**. Zdroje se rozcházejí, ověřené jsou jen celkové počty: Odyssey ~350 tis., VCS ~30 mil., Apple II 5–6 mil., C64 12,5–17 mil.
+> - Magnafox Odyssé je dostupná do roku 1977 jako celá řada Odyssey (originál skončil 1975). Jinak by v roce 1976 nebyla žádná platforma.
+> - Adventura má rok vzniku 1976 (Colossal Cave Adventure), ne 1972. GDD 6.1 ji uvádí mezi startovními žánry, rozhodnout, co platí.
+> - Licenční poplatky, ceny dev kitů, technický strop, váhy žánrů a shody témat jsou herní návrh, ne historická data. Doladí se v M2.6.
 
 **1.4 Čas**
 `GameClock` počítá týdny od 1. týdne roku 1972 a vysílá události nového týdne, měsíce a roku. Pauzu a 3 rychlosti řeší až runner v Unity, Core má jen `AdvanceWeek()`.
