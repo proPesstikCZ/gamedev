@@ -100,7 +100,7 @@ namespace Game.Core
     public sealed class SalesBalance
     {
         [Tooltip("Share of the installed base buying in the first week with review 10 and all factors 1.")]
-        public float BaseWeeklyPurchaseRate = 0.004f;
+        public float BaseWeeklyPurchaseRate = 0.003f;
         [Tooltip("Review factor = (review / 10) ^ this.")]
         public float ReviewExponent = 2f;
         [Tooltip("Sales of each week = previous week x this.")]
@@ -122,8 +122,13 @@ namespace Game.Core
         public float Hype = 1f;
         [Tooltip("Constant in the slice (GDD 18).")]
         public float Marketing = 1f;
-        [Tooltip("Fan factor = 1 + fans / this.")]
-        public float FansForDoubleSales = 5000f;
+        [Tooltip("Fan factor = 1 + MaxFanBonus x fans / (fans + FansForHalfBonus). Saturates, so fans cannot grow sales without limit.")]
+        public float MaxFanBonus = 1f;
+        [Tooltip("Fans needed for half of MaxFanBonus.")]
+        public float FansForHalfBonus = 20000f;
+        [Tooltip("Most of the installed base one game can sell to in a week.")]
+        [Range(0f, 1f)]
+        public float MaxWeeklyShareOfBase = 0.02f;
         [Tooltip("New fans per sold unit for a review of 10.")]
         public float FansPerUnit = 0.05f;
         [Tooltip("Games below this review gain no fans.")]

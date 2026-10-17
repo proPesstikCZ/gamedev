@@ -26,7 +26,8 @@ namespace Game.Core
     {
         /// <summary>
         /// Units sold in one week: base rate x installed base x review x genre trend x theme trend
-        /// x platform popularity x hype x marketing x fans x price x decay.
+        /// x platform popularity x hype x marketing x fans x price x decay,
+        /// capped at MaxWeeklyShareOfBase of the installed base.
         /// </summary>
         public static SalesFactors WeeklyFactors(GameDatabaseData db, MarketTrends trends, GameConcept concept,
             float review, GameDate date, int fans, int weeksOnSale)
@@ -47,13 +48,20 @@ namespace Game.Core
                 PlatformPopularity = platform != null ? platform.GetGenrePopularity(concept.GenreId) : 1f,
                 Hype = balance.Hype,
                 Marketing = balance.Marketing,
-                FanFactor = 1f + Math.Max(0, fans) / Math.Max(1f, balance.FansForDoubleSales),
+                FanFactor = FanFactor(balance, fans),
                 PriceFactor = balance.Price > 0f ? Mathf.Pow(balance.ReferencePrice / balance.Price, balance.PriceElasticity) : 0f,
                 Decay = Mathf.Pow(Mathf.Clamp01(balance.WeeklyDecay), Math.Max(0, weeksOnSale)),
             };
             f.ExpectedUnits = balance.BaseWeeklyPurchaseRate * f.InstallBase * f.ReviewFactor * f.GenreTrend * f.ThemeTrend
                               * f.PlatformPopularity * f.Hype * f.Marketing * f.FanFactor * f.PriceFactor * f.Decay;
+            f.ExpectedUnits = Math.Min(f.ExpectedUnits, f.InstallBase * Mathf.Clamp01(balance.MaxWeeklyShareOfBase));
             return f;
+        }
+
+        public static float FanFactor(SalesBalance balance, int fans)
+        {
+            float f = Math.Max(0, fans);
+            return 1f + balance.MaxFanBonus * f / (f + Math.Max(1f, balance.FansForHalfBonus));
         }
 
         public static long Revenue(SalesBalance balance, long units)

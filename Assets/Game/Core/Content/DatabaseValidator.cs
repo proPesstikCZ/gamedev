@@ -171,7 +171,9 @@ namespace Game.Core
             if (!InRange(s.RevenueShare, 0f, 1f)) errors.Add("Balance: Sales.RevenueShare must be 0..1.");
             NonNegative("Sales.Hype", s.Hype, errors);
             NonNegative("Sales.Marketing", s.Marketing, errors);
-            Positive("Sales.FansForDoubleSales", s.FansForDoubleSales, errors);
+            NonNegative("Sales.MaxFanBonus", s.MaxFanBonus, errors);
+            Positive("Sales.FansForHalfBonus", s.FansForHalfBonus, errors);
+            if (!InRange(s.MaxWeeklyShareOfBase, 0f, 1f)) errors.Add("Balance: Sales.MaxWeeklyShareOfBase must be 0..1.");
             NonNegative("Sales.FansPerUnit", s.FansPerUnit, errors);
             if (!InRange(s.FanReviewThreshold, 1f, 9.99f)) errors.Add("Balance: Sales.FanReviewThreshold must be 1..9.99.");
             if (!InRange(s.FlopReviewThreshold, 1f, 10f)) errors.Add("Balance: Sales.FlopReviewThreshold must be 1..10.");

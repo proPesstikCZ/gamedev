@@ -16,3 +16,65 @@ MonoBehaviour:
   startMoney: 10000
   monthlyGarageCost: 300
   monthsInDebtBeforeBankruptcy: 3
+  development:
+    PreProductionWeeks: 3
+    ProductionWeeks: 5
+    FinishingWeeks: 3
+    MaxQaWeeks: 5
+    PointsPerWeek: 10
+    StartSkill: 1
+    SkillGainPerGame: 0.1
+    MaxSkill: 3
+    CustomEngineTech: 1
+    LicensedEngineTech: 1.2
+    LicensedEngineCost: 1500
+    PlatformTechWeight: 2
+    BugsPerWeek: 2
+    QaBugReductionPerWeek: 0.35
+  review:
+    AreaExponent: 0.5
+    ExcellentComboFactor: 1.2
+    GoodComboFactor: 1
+    BadComboFactor: 0.7
+    MinAudienceFactor: 0.6
+    BugPenaltyPerBug: 0.03
+    ExpectationAtStart: 3.5
+    ExpectationGrowthPerYear: 0.04
+    CurveSteepness: 1
+    MaxNoise: 0.5
+  sales:
+    BaseWeeklyPurchaseRate: 0.003
+    ReviewExponent: 2
+    WeeklyDecay: 0.85
+    MinWeeklyUnits: 5
+    MaxSalesWeeks: 104
+    Price: 20
+    ReferencePrice: 20
+    PriceElasticity: 1
+    RevenueShare: 0.35
+    Hype: 1
+    Marketing: 1
+    MaxFanBonus: 1
+    FansForHalfBonus: 20000
+    MaxWeeklyShareOfBase: 0.02
+    FansPerUnit: 0.05
+    FanReviewThreshold: 6
+    FlopReviewThreshold: 4
+    FanLossOnFlop: 0.1
+  trends:
+    NoiseAmplitude: 0.1
+    AnnounceYearsAhead: 1
+    AnnounceThreshold: 0.15
+    MinTrend: 0.2
+  postMortem:
+    HighWeightRevealsPerGame: 1
+    LowWeightRevealsPerGame: 1
+    LowWeightBelow: 0.34
+    HighWeightFrom: 0.67
+    AboveExpectationRatio: 1.2
+    BelowExpectationRatio: 0.8
+    PoorAudienceFactor: 0.9
+    ManyBugsFactor: 0.85
+    FewBugsFactor: 0.97
+    HotTrend: 1.2
+    ColdTrend: 0.85
