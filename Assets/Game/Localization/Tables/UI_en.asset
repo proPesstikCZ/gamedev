@@ -93,6 +93,146 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 6476484526842052969
+  - m_Id: 2093688213504
+    m_Localized: EN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962240
+    m_Localized: CZ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962241
+    m_Localized: '{1} {0}, week {2}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 2093725962242
+    m_Localized: ${0:N0}
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 2093725962243
+    m_Localized: 'Fans: {0:N0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 2093725962244
+    m_Localized: New game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962245
+    m_Localized: Released games
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962246
+    m_Localized: Encyclopedia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962247
+    m_Localized: Save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962248
+    m_Localized: Load
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962249
+    m_Localized: Paused
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962250
+    m_Localized: January
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962251
+    m_Localized: February
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962252
+    m_Localized: March
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962253
+    m_Localized: April
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962254
+    m_Localized: May
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962255
+    m_Localized: June
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962256
+    m_Localized: July
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962257
+    m_Localized: August
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962258
+    m_Localized: September
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962259
+    m_Localized: October
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962260
+    m_Localized: November
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962261
+    m_Localized: December
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962262
+    m_Localized: Game saved.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962263
+    m_Localized: Autosaved.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962264
+    m_Localized: The game could not be saved.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156544
+    m_Localized: Game loaded.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156545
+    m_Localized: There is no saved game yet.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156546
+    m_Localized: This save comes from a different version of the game and cannot be loaded.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156547
+    m_Localized: The saved game is damaged and cannot be loaded.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156548
+    m_Localized: '{0} is no longer selling. Total: {1:N0} copies.'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 2093730156549
+    m_Localized: Finish the current game first.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156550
+    m_Localized: Close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156551
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
@@ -103,3 +243,7 @@ MonoBehaviour:
         m_SharedEntries:
         - id: 1145753612
         - id: 1149947904
+        - id: 2093725962241
+        - id: 2093725962242
+        - id: 2093725962243
+        - id: 2093730156548

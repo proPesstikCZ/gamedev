@@ -93,6 +93,146 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 6476484526842052967
+  - m_Id: 2093688213504
+    m_Localized: EN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962240
+    m_Localized: CZ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962241
+    m_Localized: "{1} {0}, t\xFDden {2}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 2093725962242
+    m_Localized: '{0:N0} $'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 2093725962243
+    m_Localized: "Fanou\u0161ci: {0:N0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 2093725962244
+    m_Localized: "Nov\xE1 hra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962245
+    m_Localized: "Vydan\xE9 hry"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962246
+    m_Localized: Encyklopedie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962247
+    m_Localized: "Ulo\u017Eit"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962248
+    m_Localized: "Na\u010D\xEDst"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962249
+    m_Localized: Pozastaveno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962250
+    m_Localized: leden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962251
+    m_Localized: "\xFAnor"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962252
+    m_Localized: "b\u0159ezen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962253
+    m_Localized: duben
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962254
+    m_Localized: "kv\u011Bten"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962255
+    m_Localized: "\u010Derven"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962256
+    m_Localized: "\u010Dervenec"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962257
+    m_Localized: srpen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962258
+    m_Localized: "z\xE1\u0159\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962259
+    m_Localized: "\u0159\xEDjen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962260
+    m_Localized: listopad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962261
+    m_Localized: prosinec
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962262
+    m_Localized: "Hra ulo\u017Eena."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962263
+    m_Localized: "Automaticky ulo\u017Eeno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962264
+    m_Localized: "Hru se nepoda\u0159ilo ulo\u017Eit."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156544
+    m_Localized: "Hra na\u010Dtena."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156545
+    m_Localized: "Zat\xEDm neexistuje \u017E\xE1dn\xE1 ulo\u017Een\xE1 hra."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156546
+    m_Localized: "Tato ulo\u017Een\xE1 hra poch\xE1z\xED z jin\xE9 verze hry a nejde na\u010D\xEDst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156547
+    m_Localized: "Ulo\u017Een\xE1 hra je po\u0161kozen\xE1 a nejde na\u010D\xEDst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156548
+    m_Localized: "{0} se u\u017E neprod\xE1v\xE1. Celkem {1:N0} kus\u016F."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 2093730156549
+    m_Localized: "Nejd\u0159\xEDv dokon\u010Di rozpracovanou hru."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156550
+    m_Localized: "Zav\u0159\xEDt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156551
+    m_Localized: "Zru\u0161it"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
@@ -103,3 +243,7 @@ MonoBehaviour:
         m_SharedEntries:
         - id: 1145753612
         - id: 1149947904
+        - id: 2093725962241
+        - id: 2093725962242
+        - id: 2093725962243
+        - id: 2093730156548

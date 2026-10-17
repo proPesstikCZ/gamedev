@@ -87,6 +87,142 @@ MonoBehaviour:
     m_Key: news.trend.falling
     m_Metadata:
       m_Items: []
+  - m_Id: 2093688213504
+    m_Key: ui.language.short.en
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962240
+    m_Key: ui.language.short.cs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962241
+    m_Key: ui.hud.date
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962242
+    m_Key: ui.hud.money
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962243
+    m_Key: ui.hud.fans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962244
+    m_Key: ui.hud.new_game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962245
+    m_Key: ui.hud.games
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962246
+    m_Key: ui.hud.encyclopedia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962247
+    m_Key: ui.hud.save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962248
+    m_Key: ui.hud.load
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962249
+    m_Key: ui.hud.paused
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962250
+    m_Key: ui.month.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962251
+    m_Key: ui.month.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962252
+    m_Key: ui.month.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962253
+    m_Key: ui.month.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962254
+    m_Key: ui.month.5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962255
+    m_Key: ui.month.6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962256
+    m_Key: ui.month.7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962257
+    m_Key: ui.month.8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962258
+    m_Key: ui.month.9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962259
+    m_Key: ui.month.10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962260
+    m_Key: ui.month.11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962261
+    m_Key: ui.month.12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962262
+    m_Key: ui.msg.saved
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962263
+    m_Key: ui.msg.autosaved
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093725962264
+    m_Key: ui.msg.save_failed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156544
+    m_Key: ui.msg.loaded
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156545
+    m_Key: ui.msg.no_save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156546
+    m_Key: ui.msg.load_old_version
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156547
+    m_Key: ui.msg.load_corrupt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156548
+    m_Key: ui.msg.sales_ended
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156549
+    m_Key: ui.msg.project_running
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156550
+    m_Key: ui.common.close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093730156551
+    m_Key: ui.common.cancel
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

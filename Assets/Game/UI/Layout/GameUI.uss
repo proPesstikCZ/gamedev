@@ -1,0 +1,194 @@
+/* One look across all eras (STYLE 4): neutral dark panels and one accent colour. */
+:root {
+    --bg-panel: rgba(28, 30, 34, 0.94);
+    --bg-raised: rgb(44, 47, 54);
+    --bg-hover: rgb(58, 62, 71);
+    --text: rgb(232, 230, 225);
+    --text-dim: rgb(160, 160, 155);
+    --accent: rgb(224, 160, 48);
+    --accent-dark: rgb(150, 104, 24);
+    --good: rgb(120, 190, 110);
+    --bad: rgb(220, 95, 85);
+}
+
+.hidden {
+    display: none;
+}
+
+.root {
+    flex-grow: 1;
+    color: var(--text);
+    font-size: 15px;
+}
+
+.panel {
+    background-color: var(--bg-panel);
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+Label {
+    white-space: normal;
+    color: var(--text);
+}
+
+Button {
+    background-color: var(--bg-raised);
+    color: var(--text);
+    border-width: 0;
+    border-radius: 4px;
+    padding: 4px 10px;
+    margin: 2px 3px;
+    -unity-font-style: bold;
+}
+
+Button:hover {
+    background-color: var(--bg-hover);
+}
+
+Button:disabled {
+    opacity: 0.4;
+}
+
+.accent-button {
+    background-color: var(--accent);
+    color: rgb(30, 24, 12);
+}
+
+.accent-button:hover {
+    background-color: var(--accent-dark);
+}
+
+.selected {
+    background-color: var(--accent);
+    color: rgb(30, 24, 12);
+}
+
+.dim {
+    color: var(--text-dim);
+}
+
+.good {
+    color: var(--good);
+}
+
+.bad {
+    color: var(--bad);
+}
+
+/* HUD */
+.hud {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px;
+    border-radius: 6px;
+}
+
+.hud-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 2px 8px;
+}
+
+.hud-date {
+    -unity-font-style: bold;
+    min-width: 220px;
+    margin-right: 12px;
+}
+
+.hud-stat {
+    margin-right: 16px;
+}
+
+.hud-money {
+    color: var(--accent);
+    -unity-font-style: bold;
+}
+
+.speed-button {
+    min-width: 40px;
+}
+
+.hud-paused {
+    color: var(--accent);
+    margin-left: 6px;
+}
+
+.lang-button {
+    min-width: 36px;
+}
+
+/* Body: free space for the studio scene, side panel on the right. */
+.body {
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.main-area {
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.side-area {
+    width: 380px;
+    max-width: 45%;
+    margin: 0 8px 8px 0;
+}
+
+.toasts {
+    align-items: flex-start;
+    margin: 8px;
+}
+
+.toast {
+    background-color: var(--bg-panel);
+    border-left-width: 4px;
+    border-left-color: var(--accent);
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-top: 4px;
+    max-width: 520px;
+}
+
+/* Dialogs */
+.modal-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    width: 70%;
+    max-width: 900px;
+    max-height: 90%;
+    padding: 16px 20px;
+}
+
+.modal-title {
+    font-size: 22px;
+    -unity-font-style: bold;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 17px;
+    -unity-font-style: bold;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.button-row {
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}

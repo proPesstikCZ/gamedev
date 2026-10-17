@@ -92,5 +92,57 @@ namespace Game.Core
         }
 
         public static int[] EvenSplit(DevPhase phase) => ToPercents(new float[AreasOf(phase).Count]);
+
+        /// <summary>
+        /// Sets one slider and spreads the rest over the others in their current ratio,
+        /// so the result always sums to 100 (PLAN 3.4). Others at zero share the rest evenly.
+        /// </summary>
+        public static int[] Rebalance(IReadOnlyList<int> percents, int index, int value)
+        {
+            if (percents == null || percents.Count == 0) throw new ArgumentException("No percents.", nameof(percents));
+            if (index < 0 || index >= percents.Count) throw new ArgumentOutOfRangeException(nameof(index));
+            int n = percents.Count;
+            var result = new int[n];
+            if (n == 1)
+            {
+                result[0] = 100;
+                return result;
+            }
+
+            value = Math.Max(0, Math.Min(100, value));
+            var shares = new float[n - 1];
+            for (int i = 0, j = 0; i < n; i++)
+                if (i != index) shares[j++] = Math.Max(0, percents[i]);
+
+            int[] parts = Split(shares, 100 - value);
+            for (int i = 0, j = 0; i < n; i++) result[i] = i == index ? value : parts[j++];
+            return result;
+        }
+
+        /// <summary>Largest remainder split of <paramref name="total"/> by the given shares; all zero = even.</summary>
+        private static int[] Split(float[] shares, int total)
+        {
+            int n = shares.Length;
+            double sum = 0;
+            foreach (float x in shares) sum += x;
+            var result = new int[n];
+            var remainders = new double[n];
+            int used = 0;
+            for (int i = 0; i < n; i++)
+            {
+                double exact = sum > 0 ? shares[i] / sum * total : (double)total / n;
+                result[i] = (int)Math.Floor(exact);
+                remainders[i] = exact - result[i];
+                used += result[i];
+            }
+            for (int left = total - used; left > 0; left--)
+            {
+                int best = 0;
+                for (int i = 1; i < n; i++) if (remainders[i] > remainders[best]) best = i;
+                result[best]++;
+                remainders[best] = -1;
+            }
+            return result;
+        }
     }
 }

@@ -96,6 +96,27 @@ namespace Game.Tests
         }
 
         [Test]
+        public void EveryKeyInUxml_ExistsInBothLanguages()
+        {
+            var keyInUxml = new Regex("text=\"#([^\"]+)\"");
+            var missing = new List<string>();
+            int found = 0;
+            foreach (var path in System.IO.Directory.GetFiles("Assets/Game/UI", "*.uxml", System.IO.SearchOption.AllDirectories))
+            {
+                foreach (Match m in keyInUxml.Matches(System.IO.File.ReadAllText(path)))
+                {
+                    found++;
+                    string key = m.Groups[1].Value;
+                    foreach (var code in LocalizationTableImporter.LocaleCodes)
+                        if (string.IsNullOrWhiteSpace(GetTable(TextKeys.TableFor(key), code).GetEntry(key)?.Value))
+                            missing.Add($"{System.IO.Path.GetFileName(path)}: {code}/{key}");
+                }
+            }
+            Assert.That(found, Is.GreaterThan(0), "No #keys found in UXML.");
+            Assert.That(missing, Is.Empty, string.Join("\n", missing));
+        }
+
+        [Test]
         public void Parser_ReportsBrokenLines()
         {
             var errors = new List<string>();

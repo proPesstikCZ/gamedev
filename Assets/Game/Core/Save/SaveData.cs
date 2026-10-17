@@ -33,8 +33,60 @@ namespace Game.Core
         public MarketKnowledge Knowledge = new MarketKnowledge();
     }
 
+    /// <summary>Why a save could not be loaded. UI maps it to a localized message.</summary>
+    public enum SaveLoadError
+    {
+        None = 0,
+        /// <summary>The save was made by an older (or newer) version of the game.</summary>
+        UnsupportedVersion = 1,
+        /// <summary>The file is empty, broken or has invalid values.</summary>
+        Corrupt = 2,
+    }
+
     public static class SaveSerializer
     {
+        [Serializable]
+        private sealed class VersionOnly
+        {
+            public int Version = -1;
+        }
+
+        /// <summary>Like <see cref="FromJson"/>, but never throws: returns the reason instead.</summary>
+        public static SaveData TryFromJson(string json, out SaveLoadError error)
+        {
+            error = SaveLoadError.None;
+            int version;
+            try
+            {
+                var header = string.IsNullOrWhiteSpace(json) ? null : JsonUtility.FromJson<VersionOnly>(json);
+                version = header?.Version ?? -1;
+            }
+            catch (ArgumentException)
+            {
+                error = SaveLoadError.Corrupt;
+                return null;
+            }
+            if (version < 0)
+            {
+                error = SaveLoadError.Corrupt;
+                return null;
+            }
+            if (version != SaveData.CurrentVersion)
+            {
+                error = SaveLoadError.UnsupportedVersion;
+                return null;
+            }
+            try
+            {
+                return FromJson(json);
+            }
+            catch (Exception e) when (e is FormatException || e is ArgumentException)
+            {
+                error = SaveLoadError.Corrupt;
+                return null;
+            }
+        }
+
         public static string ToJson(SaveData data)
         {
             if (data == null) throw new ArgumentNullException(nameof(data));

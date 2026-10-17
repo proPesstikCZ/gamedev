@@ -4,6 +4,8 @@
 # Language switch
 ui.language.en	English	English
 ui.language.cs	Čeština	Čeština
+ui.language.short.en	EN	EN
+ui.language.short.cs	CZ	CZ
 
 # Why a concept cannot start (ConceptError)
 concept.error.empty_name	Give the game a name.	Zadej název hry.
@@ -24,3 +26,41 @@ concept.error.platform_ends_before_release	The platform will be gone before the 
 # Market news (GDD 9). {0} = genre or theme name, {1} = year, {2} = change in percent
 news.trend.rising	{0} will be popular in {1} (+{2} %).	{0}: v roce {1} poroste zájem (+{2} %).
 news.trend.falling	{0} will fall out of favour in {1} ({2} %).	{0}: v roce {1} zájem opadne ({2} %).
+
+# HUD. ui.hud.date: {0} = year, {1} = month name, {2} = week of the year
+ui.hud.date	{1} {0}, week {2}	{1} {0}, týden {2}
+ui.hud.money	${0:N0}	{0:N0} $
+ui.hud.fans	Fans: {0:N0}	Fanoušci: {0:N0}
+ui.hud.new_game	New game	Nová hra
+ui.hud.games	Released games	Vydané hry
+ui.hud.encyclopedia	Encyclopedia	Encyklopedie
+ui.hud.save	Save	Uložit
+ui.hud.load	Load	Načíst
+ui.hud.paused	Paused	Pozastaveno
+ui.month.1	January	leden
+ui.month.2	February	únor
+ui.month.3	March	březen
+ui.month.4	April	duben
+ui.month.5	May	květen
+ui.month.6	June	červen
+ui.month.7	July	červenec
+ui.month.8	August	srpen
+ui.month.9	September	září
+ui.month.10	October	říjen
+ui.month.11	November	listopad
+ui.month.12	December	prosinec
+
+# Messages (toasts)
+ui.msg.saved	Game saved.	Hra uložena.
+ui.msg.autosaved	Autosaved.	Automaticky uloženo.
+ui.msg.save_failed	The game could not be saved.	Hru se nepodařilo uložit.
+ui.msg.loaded	Game loaded.	Hra načtena.
+ui.msg.no_save	There is no saved game yet.	Zatím neexistuje žádná uložená hra.
+ui.msg.load_old_version	This save comes from a different version of the game and cannot be loaded.	Tato uložená hra pochází z jiné verze hry a nejde načíst.
+ui.msg.load_corrupt	The saved game is damaged and cannot be loaded.	Uložená hra je poškozená a nejde načíst.
+ui.msg.sales_ended	{0} is no longer selling. Total: {1:N0} copies.	{0} se už neprodává. Celkem {1:N0} kusů.
+ui.msg.project_running	Finish the current game first.	Nejdřív dokonči rozpracovanou hru.
+
+# Common buttons
+ui.common.close	Close	Zavřít
+ui.common.cancel	Cancel	Zrušit
