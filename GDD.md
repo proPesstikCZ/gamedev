@@ -101,7 +101,7 @@ Události trhu: **krach 1983** (prodeje konzolí prudce klesnou na ~2 roky), ná
 ### 6.1 Koncept
 Hráč zvolí:
 - **Název**
-- **Žánr** (na začátku: Arkáda, Akce, Puzzle, Sport, Adventura; další odemyká výzkum)
+- **Žánr** (na začátku: Arkáda, Akce, Puzzle, Sport, Adventura; další odemyká výzkum). Hra obsahuje **katalog všech velkých žánrů, které dnes existují** (RPG, strategie, simulace, plošinovka, FPS, bojovka, závodní, MOBA, battle royale…). Každý žánr má **rok vzniku** podle skutečné historie a dřív ho odemknout nejde. Ve vertical slice (bez výzkumu) se žánr odemkne sám, když nastane jeho rok.
 - **Téma** (vesmír, středověk, sport, zombie… odemykají se postupně)
 - **Platformu**
 - **Velikost** (Malá → Střední → Velká → AAA → MMO, viz 6.5)
@@ -271,7 +271,7 @@ Události se ohlašují předem, kde dává smysl (např. veletrh).
 ## 18. První verze (vertical slice)
 Cíl: ověřit, že jádro je zábavné. **Jen tohle:**
 - Éra 1972–1985, pouze **garáž**, hráč sám
-- 4 žánry, 6 témat, 4 platformy
+- Celý katalog žánrů v datech (viz 6.1); hratelné jsou ty s rokem vzniku ≤ 1985, odemykají se podle roku. 6 témat, 4 platformy
 - Celý vývojový cyklus malé hry (koncept → fáze → QA → vydání → post-mortem)
 - Hodnocení a prodeje podle kap. 6.4, odhalování vah
 - Peníze, fanoušci, bankrot
