@@ -177,7 +177,19 @@ Napojení save/load z M1.6 na UI. Jeden slot a automatické uložení na začát
 
 ---
 
-## M4 – Placeholder izometrická garáž
+## M4 – Placeholder izometrická garáž 🔍 ČEKÁ NA REVIEW
+
+> Hotovo 2026-10-17 na větvi `feature/m4`, čeká na review (Codex). 162 EditMode a 17 PlayMode testů prochází, konzole Unity je bez chyb.
+>
+> **Rozhodnutí k revizi:**
+> - `AssetPostprocessor` je v `Assets/Editor/` s vlastním asmdef `Game.ArtImport` (testy na něj potřebují odkaz). Pravidla platí pro `Assets/Art/` i `Assets/Placeholders/`, aby se placeholdery chovaly stejně jako finální grafika.
+> - Pivot podle STYLE kap. 3: objekty mají střed spodní hrany, dlaždice (`/Tiles/`) střed. Spritesheety, které mají Sprite Mode Multiple, si ho nechají. Ostatní hodnoty (PPU, filtr, mipmapy) se nastaví i u nich.
+> - Postprocessor hned přenastavil testovací židli od Codexe `furn_chair_test_70s` (PPU 100 → 128). Do `Assets/Art/` se ručně nezapisovalo.
+> - Stěny jsou dlaždice 128 × 192 px a buňka je ve spodních 64 px. Tile asset je posouvá o 0,5 jednotky nahoru. Stejný formát by měly mít i stěny od Codexe v M4b.
+> - Řazení: podlaha (−20) a stěny (−10) jsou vždy za objekty, protože stěny stojí jen na zadních hranách. Objekty mají stejné pořadí a řadí se podle osy Y. Stůl zabírá 2 × 1 buňky a má Sorting Group ve středu půdorysu, jinak by se kvůli pivotu v předním rohu kreslil před postavou.
+> - Placeholdery kreslí příkaz **Game → World → Generate Placeholder Art**, garáž staví **Game → World → Build Garage In Open Scene** (dá se spustit znovu, nahradí předchozí garáž). Garáž má 6 × 5 buněk.
+> - Postava je zatím jen jeden směr (SZ, zezadu u stolu). Při práci střídá 2 snímky psaní a monitor svítí, při odpočinku má ruce za hlavou. V pauze animace stojí.
+> - Kamera: WASD nebo šipky, tažení pravým nebo prostředním tlačítkem, kolečko zoomuje ke kurzoru (1,2–4). Nad UI, v otevřeném dialogu a při psaní do textového pole kamera nereaguje.
 
 **4.1 Import grafiky**
 `AssetPostprocessor` pro `Assets/Art/` podle STYLE kap. 8: Sprite, Bilinear, PPU 128, bez mipmap. URP 2D Renderer s Transparency Sort Mode = Custom Axis (0, 1, 0).
