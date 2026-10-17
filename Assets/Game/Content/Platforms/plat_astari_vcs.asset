@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e1bf495f55e1d4b9ee71a5714b6e00, type: 3}
+  m_Name: plat_astari_vcs
+  m_EditorClassIdentifier: Game.Data::Game.Data.PlatformDefinition
+  id: astari_vcs
+  nameKey: platform.astari_vcs.name
+  releaseYear: 1977
+  endYear: 1992
+  licenseFee: 5000
+  devKitCost: 3000
+  techCeiling: 0.15
+  installBaseMillions:
+  - Year: 1977
+    Value: 0.25
+  - Year: 1978
+    Value: 0.8
+  - Year: 1979
+    Value: 1.6
+  - Year: 1980
+    Value: 3.6
+  - Year: 1981
+    Value: 7
+  - Year: 1982
+    Value: 15
+  - Year: 1983
+    Value: 22
+  - Year: 1984
+    Value: 24
+  - Year: 1985
+    Value: 25
+  - Year: 1992
+    Value: 30
+  genrePopularity:
+  - Genre: {fileID: 11400000, guid: 3e0b5139cee52d743bdc81cfa6c82de9, type: 2}
+    Multiplier: 1.5
+  - Genre: {fileID: 11400000, guid: ff50c35ff513d6a499ab4fc481c1637a, type: 2}
+    Multiplier: 1.3
+  - Genre: {fileID: 11400000, guid: 3f079134b70f36542b235f03d0ae0821, type: 2}
+    Multiplier: 1.5
+  - Genre: {fileID: 11400000, guid: 1e3a39eda92b597498eb75f034a8170d, type: 2}
+    Multiplier: 1.2
+  - Genre: {fileID: 11400000, guid: 95fb80aa29a0190438b9388043e6eea6, type: 2}
+    Multiplier: 1.2
+  - Genre: {fileID: 11400000, guid: 6608e13ce4a5f8d48b1e28b5f0fc06ed, type: 2}
+    Multiplier: 1.3
+  - Genre: {fileID: 11400000, guid: c6d26e9dcaa19cc42beb53fb1b32aea3, type: 2}
+    Multiplier: 0.6
+  - Genre: {fileID: 11400000, guid: c4b76172ddb539d4cae0c5e8b1014be8, type: 2}
+    Multiplier: 0.4
+  - Genre: {fileID: 11400000, guid: c0878a48d4db7b64ea60dcdbc36bff15, type: 2}
+    Multiplier: 0.5
+  - Genre: {fileID: 11400000, guid: fde87092e98a4a444a719f595e84bf7e, type: 2}
+    Multiplier: 0.6
+  - Genre: {fileID: 11400000, guid: cb155cfbde3151c48a9607350eed90ec, type: 2}
+    Multiplier: 0.3

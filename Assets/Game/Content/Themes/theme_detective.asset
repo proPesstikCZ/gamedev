@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060d0192a6cb2494b893942a718264dc, type: 3}
+  m_Name: theme_detective
+  m_EditorClassIdentifier: Game.Data::Game.Data.ThemeDefinition
+  id: detective
+  nameKey: theme.detective.name
+  firstYear: 1972
+  combos:
+  - Genre: {fileID: 11400000, guid: 3e0b5139cee52d743bdc81cfa6c82de9, type: 2}
+    Rating: 1
+  - Genre: {fileID: 11400000, guid: ff50c35ff513d6a499ab4fc481c1637a, type: 2}
+    Rating: 1
+  - Genre: {fileID: 11400000, guid: 98caac22fbdbe7549ad3d4aa860cc899, type: 2}
+    Rating: 2
+  - Genre: {fileID: 11400000, guid: 1e3a39eda92b597498eb75f034a8170d, type: 2}
+    Rating: 0
+  - Genre: {fileID: 11400000, guid: 95fb80aa29a0190438b9388043e6eea6, type: 2}
+    Rating: 0
+  - Genre: {fileID: 11400000, guid: c6d26e9dcaa19cc42beb53fb1b32aea3, type: 2}
+    Rating: 2
+  - Genre: {fileID: 11400000, guid: 3f079134b70f36542b235f03d0ae0821, type: 2}
+    Rating: 0
+  - Genre: {fileID: 11400000, guid: c4b76172ddb539d4cae0c5e8b1014be8, type: 2}
+    Rating: 1
+  - Genre: {fileID: 11400000, guid: fde87092e98a4a444a719f595e84bf7e, type: 2}
+    Rating: 1
+  - Genre: {fileID: 11400000, guid: c0878a48d4db7b64ea60dcdbc36bff15, type: 2}
+    Rating: 1
+  - Genre: {fileID: 11400000, guid: cb155cfbde3151c48a9607350eed90ec, type: 2}
+    Rating: 1
+  - Genre: {fileID: 11400000, guid: 6608e13ce4a5f8d48b1e28b5f0fc06ed, type: 2}
+    Rating: 0
+  - Genre: {fileID: 11400000, guid: fbd21e122dcf04f489b28fcb2595f999, type: 2}
+    Rating: 0
+  - Genre: {fileID: 11400000, guid: 793e200e82d9a2b4b95c690f54fd7f51, type: 2}
+    Rating: 1
+  - Genre: {fileID: 11400000, guid: 3d395ec10b591024794b39b83526ad69, type: 2}
+    Rating: 1
+  - Genre: {fileID: 11400000, guid: 0917036ac3580a243a37506856571700, type: 2}
+    Rating: 0
+  - Genre: {fileID: 11400000, guid: af77472dc0e0be24b9f041ccc421dc82, type: 2}
+    Rating: 1
+  - Genre: {fileID: 11400000, guid: 7a66c1482207f644b8b040ac21cd307f, type: 2}
+    Rating: 0
+  - Genre: {fileID: 11400000, guid: 76e624830aa166447b824f0fe30788e2, type: 2}
+    Rating: 1
+  - Genre: {fileID: 11400000, guid: b8b5f346bce986b4da8654bd96e81933, type: 2}
+    Rating: 0
