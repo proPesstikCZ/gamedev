@@ -141,7 +141,7 @@ Balíček `com.unity.localization`, jazyky cs a en, String Tables `UI`, `Content
 *Ověření:* přepnutí jazyka v Play mode změní všechny texty. Editor test, že každý lokalizační klíč z dat existuje v obou jazycích.
 
 **3.2 HUD**
-Datum, peníze, fanoušci, pauza, 3 rychlosti a tlačítko Nová hra.
+Datum, peníze, fanoušci, pauza, 3 rychlosti, tlačítka Nová hra, Uložit a Načíst a přepínač jazyka CZ/EN.
 *Ověření:* ruční test v Play mode, hodnoty sedí s logikou.
 
 **3.3 Dialog nové hry**
@@ -155,6 +155,10 @@ Aktuální fáze, posuvníky se součtem 100 %, průběh vývoje a volba počtu 
 **3.5 Výsledky a post-mortem**
 Recenze, prodeje v čase, post-mortem s nápovědami, encyklopedie odhalených vah a kombinací a obrazovka bankrotu. UI musí zvládnout delší české texty.
 *Ověření:* celý cyklus koncept → vývoj → vydání → post-mortem projde v obou jazycích. Layout vydrží nejdelší text.
+
+**3.6 Ukládání a nastavení**
+Napojení save/load z M1.6 na UI. Jeden slot a automatické uložení na začátku každého měsíce, soubory v `Application.persistentDataPath`. Při pokusu načíst save ze starší verze se zobrazí lokalizovaná hláška a hra nespadne. Zvolený jazyk si hra pamatuje mezi spuštěními.
+*Ověření:* PlayMode test, že po uložení, restartu a načtení sedí datum, peníze, fanoušci a rozpracovaná hra. Ruční test, že jazyk zůstane i po restartu.
 
 ---
 
@@ -193,4 +197,4 @@ Claude nahradí placeholdery z M4 assety z `Assets/Art/`. Do `Assets/Art/` nic n
 ---
 
 ## Mimo rozsah slice
-Odhad hodnocení s rozptylem (kap. 7), trendy (kap. 9), konkurence (kap. 12), náhodné události (kap. 13), zaměstnanci, kanceláře, výzkum, další éry a finální grafika. Přidávají se až po ověření, že slice baví.
+Odhad hodnocení s rozptylem (kap. 7), konkurence (kap. 12), náhodné události (kap. 13), zaměstnanci, kanceláře, výzkum, další éry a finální grafika. Přidávají se až po ověření, že slice baví.
