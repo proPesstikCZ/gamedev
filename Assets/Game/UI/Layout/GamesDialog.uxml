@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="games" class="modal panel">
+        <ui:Label text="#ui.games.title" class="modal-title" />
+        <ui:Label name="gm-empty" text="#ui.games.empty" class="dim" />
+        <ui:ScrollView name="gm-list" class="modal-scroll" />
+        <ui:VisualElement class="button-row">
+            <ui:Button name="gm-close" text="#ui.common.close" class="accent-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

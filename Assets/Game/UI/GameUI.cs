@@ -31,7 +31,15 @@ namespace Game.UI
         public HudController Hud { get; private set; }
         public NewGameDialog NewGame { get; private set; }
         public DevPanel Dev { get; private set; }
+        public ResultsDialog Results { get; private set; }
+        public GamesDialog Games { get; private set; }
+        public EncyclopediaDialog Encyclopedia { get; private set; }
+        public BankruptDialog Bankrupt { get; private set; }
         public bool IsModalOpen => _openModal != null;
+        public bool IsOpen(IUiPanel panel) => panel != null && _openModal == panel;
+
+        /// <summary>True once localization is loaded and the panels are built.</summary>
+        public bool IsReady { get; private set; }
 
         private void OnEnable()
         {
@@ -41,50 +49,77 @@ namespace Game.UI
                 enabled = false;
                 return;
             }
-            Loc.Initialize();
+            // Wait for the tables without blocking, then build the UI once.
+            var init = UnityEngine.Localization.Settings.LocalizationSettings.InitializationOperation;
+            if (init.IsDone) OnLocalizationReady();
+            else init.Completed += _ => OnLocalizationReady();
+        }
 
+        private void OnLocalizationReady()
+        {
+            if (!isActiveAndEnabled || IsReady) return;
+            Loc.Initialize();
+            if (Hud == null) Build();
+            Bind(true);
+            IsReady = true;
+            RefreshAll();
+            if (Simulation != null && Simulation.IsGameOver) Bankrupt.Open();
+        }
+
+        private void OnDisable()
+        {
+            if (!IsReady) return;
+            Bind(false);
+            IsReady = false;
+        }
+
+        private void Build()
+        {
             Root = GetComponent<UIDocument>().rootVisualElement;
             _modalLayer = Root.Q("modal-layer");
             _toasts = Root.Q("toasts");
 
             Hud = new HudController(this, Root.Q("hud"));
-            _panels.Add(Hud);
             NewGame = new NewGameDialog(this, Root.Q("new-game-dialog"));
-            _panels.Add(NewGame);
-            Hud.NewGameClicked += NewGame.Open;
             Dev = new DevPanel(this, Root.Q("dev-panel"));
-            _panels.Add(Dev);
+            Results = new ResultsDialog(this, Root.Q("results-dialog"));
+            Games = new GamesDialog(this, Root.Q("games-dialog"));
+            Encyclopedia = new EncyclopediaDialog(this, Root.Q("encyclopedia-dialog"));
+            Bankrupt = new BankruptDialog(this, Root.Q("bankrupt-dialog"));
+            _panels.AddRange(new IUiPanel[] { Hud, NewGame, Dev, Results, Games, Encyclopedia, Bankrupt });
+            Hud.NewGameClicked += NewGame.Open;
+            Hud.GamesClicked += Games.Open;
+            Hud.EncyclopediaClicked += Encyclopedia.Open;
             // Dialogs are still in the tree here, so one pass localizes them too.
             _localizer.Register(Root);
-
-            Loc.LanguageChanged += OnLanguageChanged;
-            runner.SimulationStarted += OnSimulationStarted;
-            runner.WeekAdvanced += OnWeekAdvanced;
-            runner.SpeedChanged += OnSpeedChanged;
-            runner.Autosaved += OnAutosaved;
-            runner.SalesEnded += OnSalesEnded;
-            runner.TrendNewsAnnounced += OnTrendNews;
-            RefreshAll();
         }
 
-        private void OnDisable()
+        private void Bind(bool on)
         {
-            Loc.LanguageChanged -= OnLanguageChanged;
-            if (runner == null) return;
-            runner.SimulationStarted -= OnSimulationStarted;
-            runner.WeekAdvanced -= OnWeekAdvanced;
-            runner.SpeedChanged -= OnSpeedChanged;
-            runner.Autosaved -= OnAutosaved;
-            runner.SalesEnded -= OnSalesEnded;
-            runner.TrendNewsAnnounced -= OnTrendNews;
-        }
-
-        /// <summary>Adds a panel so it gets refreshed on weekly ticks and language changes.</summary>
-        public void AddPanel(IUiPanel panel)
-        {
-            _panels.Add(panel);
-            _localizer.Register(panel.Element);
-            panel.Refresh();
+            if (on)
+            {
+                Loc.LanguageChanged += OnLanguageChanged;
+                runner.SimulationStarted += OnSimulationStarted;
+                runner.WeekAdvanced += OnWeekAdvanced;
+                runner.SpeedChanged += OnSpeedChanged;
+                runner.Autosaved += OnAutosaved;
+                runner.SalesEnded += OnSalesEnded;
+                runner.TrendNewsAnnounced += OnTrendNews;
+                runner.GameReleased += OnGameReleased;
+                runner.Bankrupted += OnBankrupted;
+            }
+            else
+            {
+                Loc.LanguageChanged -= OnLanguageChanged;
+                runner.SimulationStarted -= OnSimulationStarted;
+                runner.WeekAdvanced -= OnWeekAdvanced;
+                runner.SpeedChanged -= OnSpeedChanged;
+                runner.Autosaved -= OnAutosaved;
+                runner.SalesEnded -= OnSalesEnded;
+                runner.TrendNewsAnnounced -= OnTrendNews;
+                runner.GameReleased -= OnGameReleased;
+                runner.Bankrupted -= OnBankrupted;
+            }
         }
 
         /// <summary>Shows a dialog over the game and pauses time until it is closed.</summary>
@@ -136,11 +171,19 @@ namespace Game.UI
         {
             CloseModal();
             RefreshAll();
+            if (simulation.IsGameOver) Bankrupt.Open();
         }
+
+        private void OnGameReleased(ReleasedGame game) => Results.Open(game);
+        private void OnBankrupted() => Bankrupt.Open();
 
         private void OnWeekAdvanced() => RefreshAll();
         private void OnSpeedChanged(GameRunner.Speed speed) => Hud.Refresh();
-        private void OnAutosaved(bool ok) => Toast(Loc.Get(ok ? "ui.msg.autosaved" : "ui.msg.save_failed"));
+        // Autosave runs every month, so only a failure is worth a message.
+        private void OnAutosaved(bool ok)
+        {
+            if (!ok) Toast(Loc.Get("ui.msg.save_failed"));
+        }
 
         private void OnSalesEnded(ReleasedGame game) =>
             Toast(Loc.Get("ui.msg.sales_ended", game.Concept.Name, game.UnitsSold));

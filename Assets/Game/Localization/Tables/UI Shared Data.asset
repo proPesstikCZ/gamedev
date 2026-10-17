@@ -183,10 +183,6 @@ MonoBehaviour:
     m_Key: ui.msg.saved
     m_Metadata:
       m_Items: []
-  - m_Id: 2093725962263
-    m_Key: ui.msg.autosaved
-    m_Metadata:
-      m_Items: []
   - m_Id: 2093725962264
     m_Key: ui.msg.save_failed
     m_Metadata:
@@ -341,6 +337,158 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3797074759689
     m_Key: ui.dev.qa_locked
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854190362624
+    m_Key: ui.results.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305664
+    m_Key: ui.results.released_on
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305665
+    m_Key: ui.results.review
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305666
+    m_Key: ui.results.why
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305667
+    m_Key: ui.results.quality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305668
+    m_Key: ui.results.combo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305669
+    m_Key: ui.results.audience
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305670
+    m_Key: ui.results.bugs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305671
+    m_Key: ui.results.luck
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305672
+    m_Key: ui.results.sales
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305673
+    m_Key: ui.results.units
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305674
+    m_Key: ui.results.revenue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305675
+    m_Key: ui.results.cost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305676
+    m_Key: ui.results.profit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305677
+    m_Key: ui.results.fans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305678
+    m_Key: ui.results.on_sale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305679
+    m_Key: ui.results.sales_ended
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305680
+    m_Key: ui.results.launch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305681
+    m_Key: ui.results.launch_base
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305682
+    m_Key: ui.results.launch_trend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305683
+    m_Key: ui.results.launch_platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305684
+    m_Key: ui.results.chart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305685
+    m_Key: ui.results.no_sales_yet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305686
+    m_Key: ui.results.postmortem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305687
+    m_Key: ui.games.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305688
+    m_Key: ui.games.empty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305689
+    m_Key: ui.games.row
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305690
+    m_Key: ui.games.on_sale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305691
+    m_Key: ui.encyclopedia.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305692
+    m_Key: ui.encyclopedia.genre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305693
+    m_Key: ui.encyclopedia.weights
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305694
+    m_Key: ui.encyclopedia.weights_count
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305695
+    m_Key: ui.encyclopedia.combos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305696
+    m_Key: ui.encyclopedia.unknown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305697
+    m_Key: ui.encyclopedia.hint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305698
+    m_Key: ui.bankrupt.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305699
+    m_Key: ui.bankrupt.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305700
+    m_Key: ui.bankrupt.restart
     m_Metadata:
       m_Items: []
   m_Metadata:

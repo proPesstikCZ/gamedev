@@ -192,10 +192,6 @@ MonoBehaviour:
     m_Localized: Game saved.
     m_Metadata:
       m_Items: []
-  - m_Id: 2093725962263
-    m_Localized: Autosaved.
-    m_Metadata:
-      m_Items: []
   - m_Id: 2093725962264
     m_Localized: The game could not be saved.
     m_Metadata:
@@ -368,6 +364,178 @@ MonoBehaviour:
     m_Localized: Testing has started, its length is fixed.
     m_Metadata:
       m_Items: []
+  - m_Id: 4854190362624
+    m_Localized: Released!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305664
+    m_Localized: 'Released: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305665
+    m_Localized: '{0:0.0} / 10'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305666
+    m_Localized: Why this review
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305667
+    m_Localized: 'Quality {0:0.0} against what players expect today: {1:0.0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305668
+    m_Localized: "Genre and theme match: {0} (\xD7{1:0.00})"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305669
+    m_Localized: "Genre fit for the audience: \xD7{0:0.00}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305670
+    m_Localized: "Bugs: {0:0} (\xD7{1:0.00})"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305671
+    m_Localized: 'Luck: {0:+0.0;-0.0;0.0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305672
+    m_Localized: Sales
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305673
+    m_Localized: 'Copies sold: {0:N0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305674
+    m_Localized: 'Revenue: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305675
+    m_Localized: 'Costs: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305676
+    m_Localized: 'Profit: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305677
+    m_Localized: 'New fans: {0:N0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305678
+    m_Localized: On sale for {0} {0:plural:week|weeks} so far.
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305679
+    m_Localized: Sold for {0} {0:plural:week|weeks}, no longer on sale.
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305680
+    m_Localized: What drove sales at launch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305681
+    m_Localized: 'Installed base of the platform: {0:0.0} million'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305682
+    m_Localized: "Popularity of genre \xD7{0:0.00}, of theme \xD7{1:0.00}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305683
+    m_Localized: "Genre on this platform \xD7{0:0.00}, your fans \xD7{1:0.00}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305684
+    m_Localized: Copies sold per week
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305685
+    m_Localized: Sales start next week.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305686
+    m_Localized: Post-mortem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305687
+    m_Localized: Released games
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305688
+    m_Localized: No game released yet.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305689
+    m_Localized: '{0} ({1}): {2:0.0} / 10, {3:N0} copies'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305690
+    m_Localized: on sale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305691
+    m_Localized: Encyclopedia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305692
+    m_Localized: Genre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305693
+    m_Localized: What players of this genre care about
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305694
+    m_Localized: 'Known: {0} of {1}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305695
+    m_Localized: Match with themes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305696
+    m_Localized: not known yet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305697
+    m_Localized: You learn more with every released game.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305698
+    m_Localized: Bankrupt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4854232305699
+    m_Localized: 'The studio stayed in debt for too long and had to close. Released games: {0}, fans: {1:N0}.'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 4854232305700
+    m_Localized: Start over
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
@@ -397,3 +565,23 @@ MonoBehaviour:
         - id: 3797074759684
         - id: 3797074759685
         - id: 3797074759687
+        - id: 4854232305664
+        - id: 4854232305665
+        - id: 4854232305667
+        - id: 4854232305668
+        - id: 4854232305669
+        - id: 4854232305670
+        - id: 4854232305671
+        - id: 4854232305673
+        - id: 4854232305674
+        - id: 4854232305675
+        - id: 4854232305676
+        - id: 4854232305677
+        - id: 4854232305678
+        - id: 4854232305679
+        - id: 4854232305681
+        - id: 4854232305682
+        - id: 4854232305683
+        - id: 4854232305689
+        - id: 4854232305694
+        - id: 4854232305699

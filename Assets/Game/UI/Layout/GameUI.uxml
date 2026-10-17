@@ -2,6 +2,10 @@
     <!-- Texts starting with # are localization keys, filled in by UiLocalizer. -->
     <ui:Template name="NewGameDialog" src="NewGameDialog.uxml" />
     <ui:Template name="DevPanel" src="DevPanel.uxml" />
+    <ui:Template name="ResultsDialog" src="ResultsDialog.uxml" />
+    <ui:Template name="GamesDialog" src="GamesDialog.uxml" />
+    <ui:Template name="EncyclopediaDialog" src="EncyclopediaDialog.uxml" />
+    <ui:Template name="BankruptDialog" src="BankruptDialog.uxml" />
     <Style src="GameUI.uss" />
     <ui:VisualElement name="root" class="root" picking-mode="Ignore">
         <ui:VisualElement name="hud" class="hud panel">
@@ -39,6 +43,10 @@
         <!-- Dialogs wait here hidden; GameUI moves the open one into the modal layer. -->
         <ui:VisualElement name="dialogs" class="hidden">
             <ui:Instance template="NewGameDialog" name="new-game-dialog" class="modal-host" />
+            <ui:Instance template="ResultsDialog" name="results-dialog" class="modal-host" />
+            <ui:Instance template="GamesDialog" name="games-dialog" class="modal-host" />
+            <ui:Instance template="EncyclopediaDialog" name="encyclopedia-dialog" class="modal-host" />
+            <ui:Instance template="BankruptDialog" name="bankrupt-dialog" class="modal-host" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

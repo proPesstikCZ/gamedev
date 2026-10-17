@@ -22,10 +22,9 @@ namespace Game.UI
 
         private static bool _hooked;
 
-        /// <summary>Blocks until localization is loaded. Call once before the first text is read.</summary>
+        /// <summary>Hooks the language switch. Call once localization is loaded, before the first text is read.</summary>
         public static void Initialize()
         {
-            LocalizationSettings.InitializationOperation.WaitForCompletion();
             if (_hooked) return;
             _hooked = true;
             LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;

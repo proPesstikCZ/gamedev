@@ -52,7 +52,6 @@ ui.month.12	December	prosinec
 
 # Messages (toasts)
 ui.msg.saved	Game saved.	Hra uložena.
-ui.msg.autosaved	Autosaved.	Automaticky uloženo.
 ui.msg.save_failed	The game could not be saved.	Hru se nepodařilo uložit.
 ui.msg.loaded	Game loaded.	Hra načtena.
 ui.msg.no_save	There is no saved game yet.	Zatím neexistuje žádná uložená hra.
@@ -98,3 +97,49 @@ ui.dev.weights_hint	●●● = players of this genre care a lot, ? = not known 
 ui.dev.qa	Testing: {0} {0:plural:week|weeks}	Testování: {0} {0:plural:týden|týdny|týdnů}
 ui.dev.qa_hint	More testing removes bugs but the game comes out later.	Delší testování odstraní chyby, ale hra vyjde později.
 ui.dev.qa_locked	Testing has started, its length is fixed.	Testování už běží, jeho délku nejde změnit.
+
+# Results and post-mortem (PLAN 3.5). Money values come already formatted.
+ui.results.title	Released!	Vydáno!
+ui.results.released_on	Released: {0}	Vydáno: {0}
+ui.results.review	{0:0.0} / 10	{0:0.0} / 10
+ui.results.why	Why this review	Proč takové hodnocení
+ui.results.quality	Quality {0:0.0} against what players expect today: {1:0.0}	Kvalita {0:0.0} proti tomu, co hráči dnes čekají: {1:0.0}
+ui.results.combo	Genre and theme match: {0} (×{1:0.00})	Shoda žánru a tématu: {0} (×{1:0.00})
+ui.results.audience	Genre fit for the audience: ×{0:0.00}	Vhodnost žánru pro publikum: ×{0:0.00}
+ui.results.bugs	Bugs: {0:0} (×{1:0.00})	Chyby: {0:0} (×{1:0.00})
+ui.results.luck	Luck: {0:+0.0;-0.0;0.0}	Náhoda: {0:+0.0;-0.0;0.0}
+ui.results.sales	Sales	Prodeje
+ui.results.units	Copies sold: {0:N0}	Prodáno kusů: {0:N0}
+ui.results.revenue	Revenue: {0}	Tržby: {0}
+ui.results.cost	Costs: {0}	Náklady: {0}
+ui.results.profit	Profit: {0}	Zisk: {0}
+ui.results.fans	New fans: {0:N0}	Noví fanoušci: {0:N0}
+ui.results.on_sale	On sale for {0} {0:plural:week|weeks} so far.	V prodeji zatím {0} {0:plural:týden|týdny|týdnů}.
+ui.results.sales_ended	Sold for {0} {0:plural:week|weeks}, no longer on sale.	Prodávala se {0} {0:plural:týden|týdny|týdnů}, už se neprodává.
+ui.results.launch	What drove sales at launch	Co ovlivnilo prodeje při vydání
+ui.results.launch_base	Installed base of the platform: {0:0.0} million	Instalovaná základna platformy: {0:0.0} mil.
+ui.results.launch_trend	Popularity of genre ×{0:0.00}, of theme ×{1:0.00}	Popularita žánru ×{0:0.00}, tématu ×{1:0.00}
+ui.results.launch_platform	Genre on this platform ×{0:0.00}, your fans ×{1:0.00}	Žánr na této platformě ×{0:0.00}, tvoji fanoušci ×{1:0.00}
+ui.results.chart	Copies sold per week	Prodané kusy po týdnech
+ui.results.no_sales_yet	Sales start next week.	Prodeje začnou příští týden.
+ui.results.postmortem	Post-mortem	Post-mortem
+
+# Released games list
+ui.games.title	Released games	Vydané hry
+ui.games.empty	No game released yet.	Zatím nemáš žádnou vydanou hru.
+ui.games.row	{0} ({1}): {2:0.0} / 10, {3:N0} copies	{0} ({1}): {2:0.0} / 10, {3:N0} kusů
+ui.games.on_sale	on sale	v prodeji
+
+# Encyclopedia (GDD 8)
+ui.encyclopedia.title	Encyclopedia	Encyklopedie
+ui.encyclopedia.genre	Genre	Žánr
+ui.encyclopedia.weights	What players of this genre care about	Na čem hráčům tohoto žánru záleží
+ui.encyclopedia.weights_count	Known: {0} of {1}	Známo: {0} z {1}
+ui.encyclopedia.combos	Match with themes	Shoda s tématy
+ui.encyclopedia.unknown	not known yet	zatím neznámá
+ui.encyclopedia.hint	You learn more with every released game.	S každou vydanou hrou se dozvíš víc.
+
+# Bankruptcy
+ui.bankrupt.title	Bankrupt	Bankrot
+ui.bankrupt.text	The studio stayed in debt for too long and had to close. Released games: {0}, fans: {1:N0}.	Studio bylo příliš dlouho v mínusu a muselo zavřít. Vydané hry: {0}, fanoušci: {1:N0}.
+ui.bankrupt.restart	Start over	Začít znovu

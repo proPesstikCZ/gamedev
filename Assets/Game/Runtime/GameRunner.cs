@@ -47,6 +47,13 @@ namespace Game.Runtime
         public string SavePath => Path.Combine(Application.persistentDataPath, saveFileName);
         public bool HasSave => File.Exists(SavePath);
 
+        /// <summary>File name of the save slot in persistentDataPath. Tests use their own file.</summary>
+        public string SaveFileName
+        {
+            get => saveFileName;
+            set => saveFileName = string.IsNullOrWhiteSpace(value) ? "save.json" : value;
+        }
+
         /// <summary>A new or loaded game replaced the previous simulation.</summary>
         public event Action<GameSimulation> SimulationStarted;
         /// <summary>Raised after every simulated week.</summary>

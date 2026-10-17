@@ -328,3 +328,88 @@ Button:disabled {
 .small {
     font-size: 12px;
 }
+
+/* Results, games list, encyclopedia */
+.results-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.results-heading {
+    flex-shrink: 1;
+}
+
+.results-review {
+    font-size: 40px;
+    -unity-font-style: bold;
+    color: var(--accent);
+    margin-left: 16px;
+}
+
+.results-columns {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.results-column {
+    flex-grow: 1;
+    flex-basis: 300px;
+    margin-right: 12px;
+}
+
+.postmortem > Label {
+    margin-bottom: 4px;
+    padding-left: 8px;
+    border-left-width: 2px;
+    border-left-color: var(--accent-dark);
+}
+
+.chart {
+    flex-direction: row;
+    align-items: flex-end;
+    height: 110px;
+    background-color: var(--bg-raised);
+    border-radius: 4px;
+    padding: 6px;
+}
+
+.chart-bar {
+    flex-grow: 1;
+    margin: 0 1px;
+    background-color: var(--accent);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.game-row {
+    -unity-text-align: middle-left;
+    white-space: normal;
+    padding: 6px 10px;
+    margin: 2px 0;
+}
+
+.row-line {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1px 0;
+}
+
+.row-line > Label {
+    flex-shrink: 1;
+}
+
+.bankrupt {
+    max-width: 560px;
+}
+
+.accent-text {
+    color: var(--accent);
+    margin-left: 8px;
+}
+
+/* Red wins over the accent colour of titles and money. */
+.modal-title.bad,
+.hud-money.bad {
+    color: var(--bad);
+}

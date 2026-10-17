@@ -48,7 +48,7 @@ namespace Game.UI
             _save = element.Q<Button>("btn-save");
             _save.clicked += OnSave;
             _load = element.Q<Button>("btn-load");
-            _load.clicked += OnLoad;
+            _load.clicked += LoadFromSlot;
             _langCs = element.Q<Button>("lang-cs");
             _langCs.clicked += () => Loc.SetLanguage("cs");
             _langEn = element.Q<Button>("lang-en");
@@ -87,7 +87,8 @@ namespace Game.UI
             Refresh();
         }
 
-        private void OnLoad()
+        /// <summary>Loads the save slot and tells the player how it went (PLAN 3.6).</summary>
+        public void LoadFromSlot()
         {
             if (!_ui.Runner.HasSave)
             {
