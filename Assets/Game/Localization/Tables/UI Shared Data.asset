@@ -223,6 +223,126 @@ MonoBehaviour:
     m_Key: ui.common.cancel
     m_Metadata:
       m_Items: []
+  - m_Id: 3273915027456
+    m_Key: ui.newgame.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970496
+    m_Key: ui.newgame.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970497
+    m_Key: ui.newgame.genre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970498
+    m_Key: ui.newgame.theme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970499
+    m_Key: ui.newgame.platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970500
+    m_Key: ui.newgame.audience
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970501
+    m_Key: ui.newgame.engine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970502
+    m_Key: ui.newgame.combo_known
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970503
+    m_Key: ui.newgame.combo_unknown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970504
+    m_Key: ui.newgame.platform_info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970505
+    m_Key: ui.newgame.devkit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970506
+    m_Key: ui.newgame.devkit_owned
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970507
+    m_Key: ui.newgame.engine_cost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970508
+    m_Key: ui.newgame.paid_now
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970509
+    m_Key: ui.newgame.license
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970510
+    m_Key: ui.newgame.duration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970511
+    m_Key: ui.newgame.start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797032816640
+    m_Key: ui.dev.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797070565376
+    m_Key: ui.dev.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797070565377
+    m_Key: ui.dev.phase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759680
+    m_Key: ui.dev.progress
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759681
+    m_Key: ui.dev.bugs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759682
+    m_Key: ui.dev.split
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759683
+    m_Key: ui.dev.phase_done
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759684
+    m_Key: ui.dev.phase_now
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759685
+    m_Key: ui.dev.percent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759686
+    m_Key: ui.dev.weights_hint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759687
+    m_Key: ui.dev.qa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759688
+    m_Key: ui.dev.qa_hint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759689
+    m_Key: ui.dev.qa_locked
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

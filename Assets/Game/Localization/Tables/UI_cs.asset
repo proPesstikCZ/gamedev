@@ -233,6 +233,141 @@ MonoBehaviour:
     m_Localized: "Zru\u0161it"
     m_Metadata:
       m_Items: []
+  - m_Id: 3273915027456
+    m_Localized: "Nov\xE1 hra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970496
+    m_Localized: "N\xE1zev"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970497
+    m_Localized: "\u017D\xE1nr"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970498
+    m_Localized: "T\xE9ma"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970499
+    m_Localized: Platforma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970500
+    m_Localized: Publikum
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970501
+    m_Localized: Engine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970502
+    m_Localized: "Shoda \u017E\xE1nru a t\xE9matu: {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3273956970503
+    m_Localized: "Shoda \u017E\xE1nru a t\xE9matu: zat\xEDm nezn\xE1m\xE1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970504
+    m_Localized: "Instalovan\xE1 z\xE1kladna: {0:0.0} mil. kus\u016F"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3273956970505
+    m_Localized: 'Dev kit: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3273956970506
+    m_Localized: "Dev kit: u\u017E ho m\xE1\u0161"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970507
+    m_Localized: "Licencovan\xFD engine: {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3273956970508
+    m_Localized: "Zaplat\xED\u0161 hned: {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3273956970509
+    m_Localized: "Poplatek platform\u011B p\u0159i vyd\xE1n\xED: {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3273956970510
+    m_Localized: "V\xFDvoj trv\xE1 {0} t\xFDdn\u016F plus testov\xE1n\xED."
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3273956970511
+    m_Localized: "Za\u010D\xEDt v\xFDvoj"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797032816640
+    m_Localized: "Ve v\xFDvoji"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797070565376
+    m_Localized: "{0} \xB7 {1} \xB7 {2}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797070565377
+    m_Localized: "F\xE1ze: {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797074759680
+    m_Localized: "T\xFDden {0} z {1}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797074759681
+    m_Localized: 'Chyby: {0:0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797074759682
+    m_Localized: "Kam d\xE1t pr\xE1ci"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759683
+    m_Localized: '{0} (hotovo)'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797074759684
+    m_Localized: "{0} (te\u010F)"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797074759685
+    m_Localized: '{0} %'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797074759686
+    m_Localized: "\u25CF\u25CF\u25CF = hr\xE1\u010D\u016Fm \u017E\xE1nru na tom hodn\u011B z\xE1le\u017E\xED, ? = zat\xEDm nev\xED\u0161."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759687
+    m_Localized: "Testov\xE1n\xED: {0} {0:plural:t\xFDden|t\xFDdny|t\xFDdn\u016F}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052967
+  - m_Id: 3797074759688
+    m_Localized: "Del\u0161\xED testov\xE1n\xED odstran\xED chyby, ale hra vyjde pozd\u011Bji."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759689
+    m_Localized: "Testov\xE1n\xED u\u017E b\u011B\u017E\xED, jeho d\xE9lku nejde zm\u011Bnit."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
@@ -247,3 +382,18 @@ MonoBehaviour:
         - id: 2093725962242
         - id: 2093725962243
         - id: 2093730156548
+        - id: 3273956970502
+        - id: 3273956970504
+        - id: 3273956970505
+        - id: 3273956970507
+        - id: 3273956970508
+        - id: 3273956970509
+        - id: 3273956970510
+        - id: 3797070565376
+        - id: 3797070565377
+        - id: 3797074759680
+        - id: 3797074759681
+        - id: 3797074759683
+        - id: 3797074759684
+        - id: 3797074759685
+        - id: 3797074759687

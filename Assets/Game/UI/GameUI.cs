@@ -29,6 +29,8 @@ namespace Game.UI
         public GameDatabaseData Data => runner != null ? runner.Data : null;
         public VisualElement Root { get; private set; }
         public HudController Hud { get; private set; }
+        public NewGameDialog NewGame { get; private set; }
+        public DevPanel Dev { get; private set; }
         public bool IsModalOpen => _openModal != null;
 
         private void OnEnable()
@@ -47,6 +49,12 @@ namespace Game.UI
 
             Hud = new HudController(this, Root.Q("hud"));
             _panels.Add(Hud);
+            NewGame = new NewGameDialog(this, Root.Q("new-game-dialog"));
+            _panels.Add(NewGame);
+            Hud.NewGameClicked += NewGame.Open;
+            Dev = new DevPanel(this, Root.Q("dev-panel"));
+            _panels.Add(Dev);
+            // Dialogs are still in the tree here, so one pass localizes them too.
             _localizer.Register(Root);
 
             Loc.LanguageChanged += OnLanguageChanged;

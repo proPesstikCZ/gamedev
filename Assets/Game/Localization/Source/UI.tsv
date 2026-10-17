@@ -64,3 +64,37 @@ ui.msg.project_running	Finish the current game first.	Nejdřív dokonči rozprac
 # Common buttons
 ui.common.close	Close	Zavřít
 ui.common.cancel	Cancel	Zrušit
+
+# New game dialog (PLAN 3.3). Money values come already formatted.
+ui.newgame.title	New game	Nová hra
+ui.newgame.name	Name	Název
+ui.newgame.genre	Genre	Žánr
+ui.newgame.theme	Theme	Téma
+ui.newgame.platform	Platform	Platforma
+ui.newgame.audience	Audience	Publikum
+ui.newgame.engine	Engine	Engine
+ui.newgame.combo_known	Genre and theme match: {0}	Shoda žánru a tématu: {0}
+ui.newgame.combo_unknown	Genre and theme match: not known yet	Shoda žánru a tématu: zatím neznámá
+ui.newgame.platform_info	Installed base: {0:0.0} million units	Instalovaná základna: {0:0.0} mil. kusů
+ui.newgame.devkit	Dev kit: {0}	Dev kit: {0}
+ui.newgame.devkit_owned	Dev kit: already owned	Dev kit: už ho máš
+ui.newgame.engine_cost	Licensed engine: {0}	Licencovaný engine: {0}
+ui.newgame.paid_now	Paid now: {0}	Zaplatíš hned: {0}
+ui.newgame.license	Platform fee at release: {0}	Poplatek platformě při vydání: {0}
+ui.newgame.duration	Development takes {0} weeks plus testing.	Vývoj trvá {0} týdnů plus testování.
+ui.newgame.start	Start development	Začít vývoj
+
+# Development panel (PLAN 3.4). ui.dev.subtitle: {0} = genre, {1} = theme, {2} = platform
+ui.dev.title	In development	Ve vývoji
+ui.dev.subtitle	{0} · {1} · {2}	{0} · {1} · {2}
+ui.dev.phase	Phase: {0}	Fáze: {0}
+ui.dev.progress	Week {0} of {1}	Týden {0} z {1}
+ui.dev.bugs	Bugs: {0:0}	Chyby: {0:0}
+ui.dev.split	Where to put the work	Kam dát práci
+ui.dev.phase_done	{0} (done)	{0} (hotovo)
+ui.dev.phase_now	{0} (now)	{0} (teď)
+ui.dev.percent	{0} %	{0} %
+ui.dev.weights_hint	●●● = players of this genre care a lot, ? = not known yet.	●●● = hráčům žánru na tom hodně záleží, ? = zatím nevíš.
+ui.dev.qa	Testing: {0} {0:plural:week|weeks}	Testování: {0} {0:plural:týden|týdny|týdnů}
+ui.dev.qa_hint	More testing removes bugs but the game comes out later.	Delší testování odstraní chyby, ale hra vyjde později.
+ui.dev.qa_locked	Testing has started, its length is fixed.	Testování už běží, jeho délku nejde změnit.

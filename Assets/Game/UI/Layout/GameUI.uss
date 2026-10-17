@@ -192,3 +192,139 @@ Button:disabled {
     flex-wrap: wrap;
     margin-top: 12px;
 }
+
+.modal-host {
+    flex-grow: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-scroll {
+    flex-shrink: 1;
+}
+
+.form-field {
+    margin: 3px 0;
+}
+
+.form-field > Label {
+    min-width: 140px;
+    color: var(--text-dim);
+}
+
+.info-box {
+    background-color: var(--bg-raised);
+    border-radius: 4px;
+    padding: 8px 10px;
+    margin-top: 8px;
+}
+
+.strong {
+    -unity-font-style: bold;
+}
+
+.error-list > Label {
+    color: var(--bad);
+    margin-top: 4px;
+}
+
+/* Input fields in the dark look. */
+.unity-base-field__input {
+    background-color: var(--bg-raised);
+    border-color: var(--bg-hover);
+    color: var(--text);
+}
+
+.unity-base-field__input:hover {
+    background-color: var(--bg-hover);
+}
+
+.unity-base-field__input > Label,
+.unity-base-field__input TextElement {
+    color: var(--text);
+}
+
+.unity-base-popup-field__arrow {
+    -unity-background-image-tint-color: var(--text);
+}
+
+.unity-base-slider__tracker {
+    background-color: var(--bg-hover);
+    border-color: var(--bg-hover);
+}
+
+.unity-base-slider__dragger {
+    background-color: var(--accent);
+    border-color: var(--accent-dark);
+}
+
+/* Development panel */
+.side-host {
+    flex-grow: 1;
+}
+
+.dev-panel {
+    flex-grow: 1;
+}
+
+.dev-scroll {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.dev-progress {
+    margin: 6px 0;
+}
+
+.dev-progress .unity-progress-bar__progress {
+    background-color: var(--accent);
+}
+
+.dev-progress .unity-progress-bar__background {
+    background-color: var(--bg-raised);
+}
+
+.dev-phase {
+    background-color: var(--bg-raised);
+    border-radius: 4px;
+    padding: 6px 8px;
+    margin-top: 6px;
+    border-left-width: 3px;
+    border-left-color: var(--bg-raised);
+}
+
+.dev-phase.current {
+    border-left-color: var(--accent);
+}
+
+.dev-area {
+    flex-direction: row;
+    align-items: center;
+}
+
+.dev-area-name {
+    width: 38%;
+    font-size: 13px;
+}
+
+.dev-area-weight {
+    width: 34px;
+    font-size: 11px;
+    color: var(--accent);
+}
+
+.dev-area-slider {
+    flex-grow: 1;
+    margin: 0 4px;
+}
+
+.dev-area-value {
+    width: 40px;
+    -unity-text-align: middle-right;
+    font-size: 13px;
+}
+
+.small {
+    font-size: 12px;
+}

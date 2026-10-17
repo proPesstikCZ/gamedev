@@ -233,6 +233,141 @@ MonoBehaviour:
     m_Localized: Cancel
     m_Metadata:
       m_Items: []
+  - m_Id: 3273915027456
+    m_Localized: New game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970496
+    m_Localized: Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970497
+    m_Localized: Genre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970498
+    m_Localized: Theme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970499
+    m_Localized: Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970500
+    m_Localized: Audience
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970501
+    m_Localized: Engine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970502
+    m_Localized: 'Genre and theme match: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 3273956970503
+    m_Localized: 'Genre and theme match: not known yet'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970504
+    m_Localized: 'Installed base: {0:0.0} million units'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 3273956970505
+    m_Localized: 'Dev kit: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 3273956970506
+    m_Localized: 'Dev kit: already owned'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3273956970507
+    m_Localized: 'Licensed engine: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 3273956970508
+    m_Localized: 'Paid now: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 3273956970509
+    m_Localized: 'Platform fee at release: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 3273956970510
+    m_Localized: Development takes {0} weeks plus testing.
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 3273956970511
+    m_Localized: Start development
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797032816640
+    m_Localized: In development
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797070565376
+    m_Localized: "{0} \xB7 {1} \xB7 {2}"
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 3797070565377
+    m_Localized: 'Phase: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 3797074759680
+    m_Localized: Week {0} of {1}
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 3797074759681
+    m_Localized: 'Bugs: {0:0}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 3797074759682
+    m_Localized: Where to put the work
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759683
+    m_Localized: '{0} (done)'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 3797074759684
+    m_Localized: '{0} (now)'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 3797074759685
+    m_Localized: '{0} %'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 3797074759686
+    m_Localized: "\u25CF\u25CF\u25CF = players of this genre care a lot, ? = not known yet."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759687
+    m_Localized: 'Testing: {0} {0:plural:week|weeks}'
+    m_Metadata:
+      m_Items:
+      - rid: 6476484526842052969
+  - m_Id: 3797074759688
+    m_Localized: More testing removes bugs but the game comes out later.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3797074759689
+    m_Localized: Testing has started, its length is fixed.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
@@ -247,3 +382,18 @@ MonoBehaviour:
         - id: 2093725962242
         - id: 2093725962243
         - id: 2093730156548
+        - id: 3273956970502
+        - id: 3273956970504
+        - id: 3273956970505
+        - id: 3273956970507
+        - id: 3273956970508
+        - id: 3273956970509
+        - id: 3273956970510
+        - id: 3797070565376
+        - id: 3797070565377
+        - id: 3797074759680
+        - id: 3797074759681
+        - id: 3797074759683
+        - id: 3797074759684
+        - id: 3797074759685
+        - id: 3797074759687
