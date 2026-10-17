@@ -536,6 +536,10 @@ MonoBehaviour:
     m_Localized: "Za\u010D\xEDt znovu"
     m_Metadata:
       m_Items: []
+  - m_Id: 50200631234560
+    m_Localized: "Automatick\xE9 ukl\xE1d\xE1n\xED je vypnut\xE9, aby se ulo\u017Een\xE1 hra nep\u0159epsala. Zapne se, a\u017E hru ulo\u017E\xED\u0161 nebo za\u010Dne\u0161 novou."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

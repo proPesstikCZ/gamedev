@@ -40,12 +40,25 @@ namespace Game.Runtime
 
         private float _elapsed;
         private GameDatabaseData _data;
+        // False while the slot holds a save the player has not chosen to replace (it failed to load
+        // at startup). Autosave must not overwrite it until the player starts, loads or saves a game.
+        private bool _autosaveAllowed = true;
+
+        /// <summary>
+        /// Save file used by runners created from now on, before their Awake reads the slot.
+        /// Tests set it so they never read or overwrite the player's save. Null = inspector value.
+        /// </summary>
+        public static string SaveFileNameOverride { get; set; }
 
         public GameSimulation Simulation { get; private set; }
         public Speed CurrentSpeed => speed;
         public GameDatabaseData Data => _data;
         public string SavePath => Path.Combine(Application.persistentDataPath, saveFileName);
         public bool HasSave => File.Exists(SavePath);
+        /// <summary>Result of loading the slot at startup; null when there was no save.</summary>
+        public SaveLoadError? StartupLoadResult { get; private set; }
+        /// <summary>False when autosave is held back to protect a save that could not be loaded.</summary>
+        public bool AutosaveAllowed => _autosaveAllowed;
 
         /// <summary>File name of the save slot in persistentDataPath. Tests use their own file.</summary>
         public string SaveFileName
@@ -84,7 +97,17 @@ namespace Game.Runtime
                 return;
             }
 
+            if (!string.IsNullOrWhiteSpace(SaveFileNameOverride)) saveFileName = SaveFileNameOverride;
+            // Continue the saved game, so the first autosave never replaces it with a fresh one.
+            if (HasSave)
+            {
+                var result = Load();
+                StartupLoadResult = result;
+                if (result == SaveLoadError.None) return;
+            }
             StartSimulation(GameSimulation.NewGame(_data, unchecked((ulong)seed)));
+            // A save that exists but did not load stays untouched until the player decides.
+            _autosaveAllowed = StartupLoadResult == null;
         }
 
         private void Update()
@@ -112,7 +135,7 @@ namespace Game.Runtime
             if (logWeeks) Debug.Log($"[GameRunner] {Simulation.Date} money {Simulation.Studio.Money}", this);
             WeekAdvanced?.Invoke();
             // Saved after the whole week is done, so the save never holds a half-simulated week.
-            if (autosave && !Simulation.IsGameOver && Simulation.Date.Month != month)
+            if (autosave && _autosaveAllowed && !Simulation.IsGameOver && Simulation.Date.Month != month)
                 Autosaved?.Invoke(Save());
         }
 
@@ -130,6 +153,7 @@ namespace Game.Runtime
             if (_data == null) return;
             ulong s = newSeed ?? (useFixedSeed ? unchecked((ulong)seed) : (ulong)DateTime.UtcNow.Ticks);
             StartSimulation(GameSimulation.NewGame(_data, s));
+            _autosaveAllowed = true;
         }
 
         /// <summary>Writes the current game to the save slot. Returns false when writing failed.</summary>
@@ -145,6 +169,8 @@ namespace Game.Runtime
                 // Replace in one step, so a crash while writing never leaves a half-written save.
                 if (File.Exists(path)) File.Replace(temp, path, null);
                 else File.Move(temp, path);
+                // The player chose to overwrite the slot, so autosave may keep it up to date.
+                _autosaveAllowed = true;
                 return true;
             }
             catch (Exception e) when (e is IOException || e is UnauthorizedAccessException)
@@ -154,7 +180,10 @@ namespace Game.Runtime
             }
         }
 
-        /// <summary>Loads the save slot. On any error the running game stays as it was.</summary>
+        /// <summary>
+        /// Loads the save slot. On any error the running game stays as it was: the save is fully
+        /// checked (format, version and references to content) before it replaces the game.
+        /// </summary>
         public SaveLoadError Load()
         {
             if (_data == null) return SaveLoadError.Corrupt;
@@ -182,6 +211,7 @@ namespace Game.Runtime
                 return SaveLoadError.Corrupt;
             }
             StartSimulation(loaded);
+            _autosaveAllowed = true;
             return SaveLoadError.None;
         }
 

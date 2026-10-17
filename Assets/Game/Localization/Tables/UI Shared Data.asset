@@ -491,6 +491,10 @@ MonoBehaviour:
     m_Key: ui.bankrupt.restart
     m_Metadata:
       m_Items: []
+  - m_Id: 50200631234560
+    m_Key: ui.msg.autosave_held
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

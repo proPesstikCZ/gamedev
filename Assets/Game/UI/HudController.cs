@@ -83,7 +83,8 @@ namespace Game.UI
 
         private void OnSave()
         {
-            _ui.Toast(Loc.Get(_ui.Runner.Save() ? "ui.msg.saved" : "ui.msg.save_failed"));
+            string key = _ui.Runner.Save() ? "ui.msg.saved" : "ui.msg.save_failed";
+            _ui.Toast(() => Loc.Get(key));
             Refresh();
         }
 
@@ -92,14 +93,21 @@ namespace Game.UI
         {
             if (!_ui.Runner.HasSave)
             {
-                _ui.Toast(Loc.Get("ui.msg.no_save"));
+                _ui.Toast(() => Loc.Get("ui.msg.no_save"));
                 return;
             }
-            switch (_ui.Runner.Load())
+            string key = LoadMessageKey(_ui.Runner.Load());
+            _ui.Toast(() => Loc.Get(key));
+        }
+
+        /// <summary>Text key that tells the player how loading went.</summary>
+        public static string LoadMessageKey(SaveLoadError result)
+        {
+            switch (result)
             {
-                case SaveLoadError.None: _ui.Toast(Loc.Get("ui.msg.loaded")); break;
-                case SaveLoadError.UnsupportedVersion: _ui.Toast(Loc.Get("ui.msg.load_old_version")); break;
-                default: _ui.Toast(Loc.Get("ui.msg.load_corrupt")); break;
+                case SaveLoadError.None: return "ui.msg.loaded";
+                case SaveLoadError.UnsupportedVersion: return "ui.msg.load_old_version";
+                default: return "ui.msg.load_corrupt";
             }
         }
     }

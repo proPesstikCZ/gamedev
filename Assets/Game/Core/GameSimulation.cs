@@ -70,6 +70,9 @@ namespace Game.Core
         public static GameSimulation FromSave(GameDatabaseData database, SaveData save)
         {
             if (save == null) throw new ArgumentNullException(nameof(save));
+            var contentErrors = FindContentErrors(database, save);
+            if (contentErrors.Count > 0)
+                throw new FormatException("Save does not fit the game content: " + string.Join("; ", contentErrors));
             return new GameSimulation(database,
                 new GameClock(save.StartYear, save.TotalWeeks),
                 new StudioState(save.Money, save.Fans, save.MonthsInDebt, save.IsBankrupt, save.Skill, save.OwnedDevKits),
@@ -79,6 +82,46 @@ namespace Game.Core
                 save.HasActiveProject ? save.ActiveProject : null,
                 save.ActiveProjectCost,
                 save.ReleasedGames != null ? new List<ReleasedGame>(save.ReleasedGames) : null);
+        }
+
+        /// <summary>
+        /// Checks that a structurally valid save only points to content that exists in this database
+        /// (genres, themes, platforms, enum values). A save made with other content would otherwise
+        /// load fine and break later, e.g. at release. Empty = fits.
+        /// </summary>
+        public static List<string> FindContentErrors(GameDatabaseData database, SaveData save)
+        {
+            if (database == null) throw new ArgumentNullException(nameof(database));
+            var errors = new List<string>();
+            if (save == null)
+            {
+                errors.Add("Save is missing.");
+                return errors;
+            }
+            if (save.OwnedDevKits != null)
+                foreach (var id in save.OwnedDevKits)
+                    if (database.GetPlatform(id) == null) errors.Add($"Unknown dev kit platform '{id}'.");
+            if (save.HasActiveProject && save.ActiveProject != null)
+                CheckConcept(database, save.ActiveProject.Concept, "project in development", errors);
+            if (save.ReleasedGames != null)
+                for (int i = 0; i < save.ReleasedGames.Count; i++)
+                    CheckConcept(database, save.ReleasedGames[i]?.Concept, $"released game {i}", errors);
+            return errors;
+        }
+
+        private static void CheckConcept(GameDatabaseData db, GameConcept concept, string owner, List<string> errors)
+        {
+            if (concept == null)
+            {
+                errors.Add($"The {owner} has no concept.");
+                return;
+            }
+            if (db.GetGenre(concept.GenreId) == null) errors.Add($"The {owner} has unknown genre '{concept.GenreId}'.");
+            if (db.GetTheme(concept.ThemeId) == null) errors.Add($"The {owner} has unknown theme '{concept.ThemeId}'.");
+            if (db.GetPlatform(concept.PlatformId) == null) errors.Add($"The {owner} has unknown platform '{concept.PlatformId}'.");
+            if (!Enum.IsDefined(typeof(GameSize), concept.Size)) errors.Add($"The {owner} has invalid size {(int)concept.Size}.");
+            if (!Enum.IsDefined(typeof(Audience), concept.Audience)) errors.Add($"The {owner} has invalid audience {(int)concept.Audience}.");
+            if (!Enum.IsDefined(typeof(EngineChoice), concept.Engine)) errors.Add($"The {owner} has invalid engine {(int)concept.Engine}.");
         }
 
         /// <summary>Errors that would stop this concept from starting now. Empty = can start.</summary>

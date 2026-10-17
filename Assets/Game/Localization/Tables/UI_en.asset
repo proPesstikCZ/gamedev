@@ -536,6 +536,10 @@ MonoBehaviour:
     m_Localized: Start over
     m_Metadata:
       m_Items: []
+  - m_Id: 50200631234560
+    m_Localized: Autosave is off so the save is not overwritten. Save or start a new game to turn it back on.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

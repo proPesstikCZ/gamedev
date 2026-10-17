@@ -57,6 +57,7 @@ ui.msg.loaded	Game loaded.	Hra načtena.
 ui.msg.no_save	There is no saved game yet.	Zatím neexistuje žádná uložená hra.
 ui.msg.load_old_version	This save comes from a different version of the game and cannot be loaded.	Tato uložená hra pochází z jiné verze hry a nejde načíst.
 ui.msg.load_corrupt	The saved game is damaged and cannot be loaded.	Uložená hra je poškozená a nejde načíst.
+ui.msg.autosave_held	Autosave is off so the save is not overwritten. Save or start a new game to turn it back on.	Automatické ukládání je vypnuté, aby se uložená hra nepřepsala. Zapne se, až hru uložíš nebo začneš novou.
 ui.msg.sales_ended	{0} is no longer selling. Total: {1:N0} copies.	{0} se už neprodává. Celkem {1:N0} kusů.
 ui.msg.project_running	Finish the current game first.	Nejdřív dokonči rozpracovanou hru.
 

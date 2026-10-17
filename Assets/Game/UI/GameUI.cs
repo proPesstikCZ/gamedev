@@ -64,6 +64,15 @@ namespace Game.UI
             IsReady = true;
             RefreshAll();
             if (Simulation != null && Simulation.IsGameOver) Bankrupt.Open();
+            ReportStartupLoad();
+        }
+
+        /// <summary>Tells the player when the save could not be continued at startup.</summary>
+        private void ReportStartupLoad()
+        {
+            if (!(runner.StartupLoadResult is SaveLoadError result) || result == SaveLoadError.None) return;
+            Toast(() => Loc.Get(HudController.LoadMessageKey(result)));
+            if (!runner.AutosaveAllowed) Toast(() => Loc.Get("ui.msg.autosave_held"));
         }
 
         private void OnDisable()
@@ -147,9 +156,11 @@ namespace Game.UI
         }
 
         /// <summary>Shows a short message in the corner for a few seconds.</summary>
-        public void Toast(string text)
+        /// <param name="text">Builds the localized text; called again when the language changes.</param>
+        public void Toast(System.Func<string> text)
         {
-            var label = new Label(text);
+            var label = new Label(text());
+            label.userData = text;
             label.AddToClassList("toast");
             _toasts.Add(label);
             while (_toasts.childCount > maxToasts) _toasts.RemoveAt(0);
@@ -164,6 +175,8 @@ namespace Game.UI
         private void OnLanguageChanged()
         {
             _localizer.Apply();
+            foreach (var child in _toasts.Children())
+                if (child is Label label && label.userData is System.Func<string> text) label.text = text();
             RefreshAll();
         }
 
@@ -182,15 +195,15 @@ namespace Game.UI
         // Autosave runs every month, so only a failure is worth a message.
         private void OnAutosaved(bool ok)
         {
-            if (!ok) Toast(Loc.Get("ui.msg.save_failed"));
+            if (!ok) Toast(() => Loc.Get("ui.msg.save_failed"));
         }
 
         private void OnSalesEnded(ReleasedGame game) =>
-            Toast(Loc.Get("ui.msg.sales_ended", game.Concept.Name, game.UnitsSold));
+            Toast(() => Loc.Get("ui.msg.sales_ended", game.Concept.Name, game.UnitsSold));
 
         private void OnTrendNews(IReadOnlyList<TrendNews> news)
         {
-            foreach (var item in news) Toast(Loc.News(item, Data));
+            foreach (var item in news) Toast(() => Loc.News(item, Data));
         }
     }
 

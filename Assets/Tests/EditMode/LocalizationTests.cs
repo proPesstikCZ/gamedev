@@ -98,7 +98,8 @@ namespace Game.Tests
         [Test]
         public void EveryKeyInUxml_ExistsInBothLanguages()
         {
-            var keyInUxml = new Regex("text=\"#([^\"]+)\"");
+            // Fields (TextField, DropdownField, sliders) carry their key in label="#…".
+            var keyInUxml = new Regex("\\b(?:text|label)=\"#([^\"]+)\"");
             var missing = new List<string>();
             int found = 0;
             foreach (var path in System.IO.Directory.GetFiles("Assets/Game/UI", "*.uxml", System.IO.SearchOption.AllDirectories))
